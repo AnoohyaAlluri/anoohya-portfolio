@@ -1,0 +1,378 @@
+const stackItems = [
+  { icon: "📊", title: "Analytics", detail: "GA4, funnels, KPIs, attribution" },
+  { icon: "🤖", title: "AI & ML", detail: "Prediction, segmentation, workflow AI" },
+  { icon: "🖥️", title: "Dashboards", detail: "Power BI, Tableau, Looker, Streamlit" },
+  { icon: "⚙️", title: "Automation", detail: "Apps Script, CRM workflows, reporting" },
+  { icon: "🔎", title: "SEO", detail: "SEO, AEO, GEO, content strategy" },
+  { icon: "💬", title: "Social Media", detail: "Content systems, reels, campaign planning" },
+  { icon: "✉️", title: "Email", detail: "Mailchimp, lifecycle, nurture flows" },
+  { icon: "💻", title: "Coding", detail: "Python, SQL, R, data workflows" },
+];
+
+const projects = [
+  {
+    tag: "Dashboards",
+    title: "Lead Intelligence Dashboard",
+    description:
+      "Built a marketing intelligence dashboard to centralize lead sources, conversion signals, attribution gaps, and executive KPIs.",
+    tools: ["Python", "Streamlit", "GA4", "Google Ads"],
+  },
+  {
+    tag: "Attribution",
+    title: "GA4 + Campaign Tracking System",
+    description:
+      "Mapped marketing events, lead actions, and traffic sources into a cleaner tracking framework for campaign optimization.",
+    tools: ["GA4", "GTM", "Meta Pixel", "CRO"],
+  },
+  {
+    tag: "SEO / AEO / GEO",
+    title: "Local Growth Content Framework",
+    description:
+      "Developed search-ready content systems for property management topics, FAQs, landing pages, and AI-assisted discoverability.",
+    tools: ["SEO", "Content", "Analytics", "AI"],
+  },
+  {
+    tag: "Automation",
+    title: "CRM + Review Workflow",
+    description:
+      "Designed trigger-based outreach and review generation workflows to reduce manual follow-up and improve operational visibility.",
+    tools: ["CRM", "Mailchimp", "Apps Script", "Automation"],
+  },
+  {
+    tag: "Predictive Analytics",
+    title: "Campaign Prediction Models",
+    description:
+      "Applied regression, classification, and segmentation models to improve targeting, forecasting, and marketing decision-making.",
+    tools: ["Python", "R", "SQL", "Tableau"],
+  },
+];
+
+const tools = [
+  "Python",
+  "SQL",
+  "R",
+  "GA4",
+  "GTM",
+  "Google Ads",
+  "Meta Ads",
+  "Tableau",
+  "Power BI",
+  "Looker Studio",
+  "HubSpot",
+  "Salesforce",
+  "Mailchimp",
+  "SEO",
+  "A/B Testing",
+  "CRO",
+];
+
+const proofLinks = [
+  {
+    title: "GitHub",
+    text: "Code, analytics projects, and portfolio case studies",
+    href: "https://github.com/AnoohyaAlluri",
+  },
+  {
+    title: "Tableau Public",
+    text: "Dashboard and visualization work",
+    href: "https://public.tableau.com/app/profile/anoohya.allurii/vizzes",
+  },
+  {
+    title: "LinkedIn",
+    text: "Professional background and experience",
+    href: "https://www.linkedin.com/in/anoohyaalluri/",
+  },
+  {
+    title: "Linktree",
+    text: "Certifications, publication, and additional proof links",
+    href: "https://linktr.ee/anoohyaalluri",
+  },
+];
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-[#f7f0e6] text-[#202020]">
+      <section className="relative overflow-hidden bg-[#6f86b8] px-4 py-8 sm:px-8">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-[#e6dacb] bg-[#fbf5ec] shadow-2xl">
+          <nav className="flex items-center justify-between border-b border-[#eadfce] px-6 py-5 sm:px-10">
+            <div className="flex items-center gap-3 text-lg font-semibold tracking-tight">
+              <img
+                src="/images/anoohya-headshot.jpg.jpg"
+                alt="Anoohya Alluri"
+                className="h-11 w-11 rounded-full border-2 border-white object-cover shadow-md"
+              />
+              <div>
+                Anoohya Alluri <span className="text-[#d69aa7]">✦</span>
+              </div>
+            </div>
+
+            <div className="hidden items-center gap-8 text-sm font-medium md:flex">
+              <a href="#about" className="hover:text-[#6f86b8]">
+                About
+              </a>
+              <a href="#projects" className="hover:text-[#6f86b8]">
+                Projects
+              </a>
+              <a href="#skills" className="hover:text-[#6f86b8]">
+                Skills
+              </a>
+              <a href="#proof" className="hover:text-[#6f86b8]">
+                Proof
+              </a>
+            </div>
+
+            <a
+              href="mailto:anoohyaalluri@gmail.com"
+              className="rounded-full bg-[#203354] px-5 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#16243c]"
+            >
+              Let&apos;s Connect ↗
+            </a>
+          </nav>
+
+          <section className="grid gap-10 px-6 py-12 sm:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:py-16">
+            <div className="flex flex-col justify-center">
+              <p className="mb-4 font-serif text-xl italic text-[#d36d81]">
+                hey there! 👋
+              </p>
+
+              <h1 className="max-w-4xl font-serif text-6xl font-black leading-[0.9] tracking-tight text-[#202020] sm:text-7xl lg:text-8xl">
+                Hi, I&apos;m{" "}
+                <span className="block text-[#5f78ab]">Anoohya Alluri</span>
+              </h1>
+
+              <h2 className="mt-6 text-xl font-semibold text-[#2a2a2a] sm:text-2xl">
+                Marketing Technology & Analytics Specialist
+              </h2>
+
+              <p className="mt-5 max-w-xl text-base leading-7 text-[#3d3d3d] sm:text-lg">
+                I turn marketing data into decisions and automate what matters.
+                Analytics, AI, dashboards, attribution, SEO, and digital content
+                work together here to drive growth.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="/Resume/MA.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl bg-[#203354] px-6 py-3 text-center text-sm font-bold text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  View Resume ↓
+                </a>
+                <a
+                  href="#projects"
+                  className="rounded-xl border border-[#203354] bg-white/60 px-6 py-3 text-center text-sm font-bold text-[#203354] transition hover:-translate-y-1 hover:bg-white"
+                >
+                  Explore Projects ↗
+                </a>
+                <a
+                  href="mailto:anoohyaalluri@gmail.com"
+                  className="rounded-xl bg-[#f1c5cc] px-6 py-3 text-center text-sm font-bold text-[#70323c] transition hover:-translate-y-1 hover:bg-[#ebb3bd]"
+                >
+                  Contact Me ✉
+                </a>
+              </div>
+            </div>
+
+            <div className="relative min-h-[460px]">
+              <div className="absolute right-0 top-6 h-72 w-72 rounded-full bg-[#eec3cc] blur-3xl" />
+
+              <div className="absolute left-4 top-6 z-10 rotate-[-6deg] rounded-2xl bg-white p-4 shadow-xl sm:left-8">
+                <p className="font-serif text-lg italic leading-7 text-[#2f2f2f]">
+                  Data tells
+                  <br />
+                  the story.
+                  <br />
+                  I help make it
+                  <br />
+                  impactful. 💗
+                </p>
+              </div>
+
+              <div className="absolute bottom-4 right-0 w-[92%] rotate-2 rounded-[2rem] bg-[#6f86b8] p-5 shadow-2xl sm:right-4 sm:w-[88%]">
+                <div className="rounded-[1.5rem] border border-white/40 bg-[#f8efe4] p-5">
+                  <div className="relative flex h-80 items-center justify-center overflow-hidden rounded-[1.25rem] border-2 border-dashed border-[#d8c4ad] bg-white/70">
+                    <img
+                      src="/images/anoohya-full.jpg.png"
+                      alt="Anoohya Alluri full portrait"
+                      className="h-full w-full object-cover object-top"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute bottom-0 left-0 z-20 rotate-[-8deg] rounded-xl bg-[#fff4f6] px-5 py-4 text-sm font-semibold text-[#7b3b46] shadow-md">
+                Always learning.
+                <br />
+                Always building.
+                <br />
+                Always growing. ✦
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="about"
+            className="border-y border-[#eadfce] px-6 py-10 sm:px-10"
+          >
+            <div className="mx-auto max-w-5xl text-center">
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                Portfolio concept
+              </p>
+              <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
+                What&apos;s in My Marketing{" "}
+                <span className="rounded-full border-2 border-[#d69aa7] px-3 text-[#5f78ab]">
+                  Analytics
+                </span>{" "}
+                Stack?
+              </h2>
+              <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-[#4a4a4a]">
+                A creative proof hub for the work I do across marketing
+                analytics, attribution, automation, dashboards, AI workflows,
+                SEO, and social media systems.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {stackItems.map((item) => (
+                <div
+                  key={item.title}
+                  className="group rounded-3xl border border-[#e4d7c5] bg-white/70 p-5 shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+                >
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#eef1f8] text-3xl transition group-hover:rotate-6">
+                    {item.icon}
+                  </div>
+                  <h3 className="font-serif text-2xl font-bold">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-[#555]">
+                    {item.detail}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section id="projects" className="px-6 py-12 sm:px-10">
+            <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                  Featured proof
+                </p>
+                <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
+                  Case Studies
+                </h2>
+              </div>
+              <p className="max-w-xl text-sm leading-6 text-[#555]">
+                Built for hiring managers who need to understand my work
+                quickly: what problem I solved, what tools I used, and what
+                business value the project created.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-5 lg:grid-cols-5">
+              {projects.map((project) => (
+                <article
+                  key={project.title}
+                  className="rounded-3xl border border-[#e4d7c5] bg-white p-5 shadow-md transition hover:-translate-y-2 hover:shadow-2xl"
+                >
+                  <div className="mb-4 h-32 rounded-2xl bg-gradient-to-br from-[#203354] via-[#5f78ab] to-[#eec3cc] p-4 text-white">
+                    <p className="text-xs font-bold uppercase tracking-widest">
+                      {project.tag}
+                    </p>
+                    <div className="mt-8 h-2 w-20 rounded-full bg-white/60" />
+                    <div className="mt-3 h-2 w-28 rounded-full bg-white/30" />
+                  </div>
+                  <h3 className="font-serif text-xl font-bold leading-tight">
+                    {project.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-[#555]">
+                    {project.description}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.tools.map((tool) => (
+                      <span
+                        key={tool}
+                        className="rounded-full bg-[#f5edf0] px-3 py-1 text-xs font-semibold text-[#70323c]"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section
+            id="skills"
+            className="border-y border-[#eadfce] bg-[#fffaf3] px-6 py-10 sm:px-10"
+          >
+            <div className="text-center">
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                Tools & technologies
+              </p>
+              <h2 className="mt-3 font-serif text-4xl font-black">
+                Hard Skills I Work With
+              </h2>
+            </div>
+
+            <div className="mx-auto mt-8 flex max-w-5xl flex-wrap justify-center gap-3">
+              {tools.map((tool) => (
+                <span
+                  key={tool}
+                  className="rounded-2xl border border-[#e4d7c5] bg-white px-5 py-3 text-sm font-bold text-[#203354] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </section>
+
+          <section
+            id="proof"
+            className="bg-[#5f78ab] px-6 py-12 text-white sm:px-10"
+          >
+            <div className="mx-auto max-w-6xl">
+              <div className="text-center">
+                <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f1c5cc]">
+                  Proof & links
+                </p>
+                <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
+                  Everything Recruiters Need in One Place
+                </h2>
+              </div>
+
+              <div className="mt-10 grid gap-5 md:grid-cols-4">
+                {proofLinks.map((link) => (
+                  <a
+                    key={link.title}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-3xl border border-white/20 bg-white/10 p-6 backdrop-blur transition hover:-translate-y-2 hover:bg-white/20"
+                  >
+                    <h3 className="font-serif text-2xl font-bold">
+                      {link.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-white/85">
+                      {link.text}
+                    </p>
+                    <p className="mt-5 text-sm font-bold">Open ↗</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <footer className="px-6 py-8 text-center text-sm text-[#555] sm:px-10">
+            <p>
+              Built as a creative marketing analytics portfolio for Anoohya
+              Alluri.
+            </p>
+          </footer>
+        </div>
+      </section>
+    </main>
+  );
+}ss
