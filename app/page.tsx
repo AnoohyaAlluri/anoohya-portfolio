@@ -238,7 +238,7 @@ export default function Home() {
                 work together here to drive growth.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
                   href="/Resume/MA.pdf"
                   target="_blank"
@@ -247,12 +247,21 @@ export default function Home() {
                 >
                   View Resume ↓
                 </a>
+
                 <a
                   href="#projects"
                   className="rounded-xl border border-[#203354] bg-white/60 px-6 py-3 text-center text-sm font-bold text-[#203354] transition hover:-translate-y-1 hover:bg-white"
                 >
                   Explore Projects ↗
                 </a>
+
+                <a
+                  href="#credentials"
+                  className="rounded-xl border border-[#d69aa7] bg-[#fff4f6] px-6 py-3 text-center text-sm font-bold text-[#70323c] transition hover:-translate-y-1 hover:bg-[#f8d9df]"
+                >
+                  Certifications ✦
+                </a>
+
                 <a
                   href="mailto:anoohyaalluri@gmail.com"
                   className="rounded-xl bg-[#f1c5cc] px-6 py-3 text-center text-sm font-bold text-[#70323c] transition hover:-translate-y-1 hover:bg-[#ebb3bd]"
@@ -262,7 +271,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative min-h-[540px]">
+            <div className="relative min-h-[460px] sm:min-h-[500px] lg:min-h-[520px]">
               <div className="absolute right-0 top-6 h-72 w-72 rounded-full bg-[#eec3cc] blur-3xl" />
 
               <div className="absolute left-4 top-6 z-10 rotate-[-6deg] rounded-2xl bg-white p-4 shadow-xl sm:left-8">
@@ -279,11 +288,11 @@ export default function Home() {
 
               <div className="absolute bottom-4 right-0 w-[92%] rotate-2 rounded-[2rem] bg-[#6f86b8] p-5 shadow-2xl sm:right-4 sm:w-[88%]">
                 <div className="rounded-[1.5rem] border border-white/40 bg-[#f8efe4] p-5">
-                  <div className="relative flex h-[420px] items-center justify-center overflow-hidden rounded-[1.25rem] border-2 border-dashed border-[#d8c4ad] bg-white/70 sm:h-[460px] lg:h-[500px]">
+                  <div className="relative flex h-[340px] items-center justify-center overflow-hidden rounded-[1.25rem] border-2 border-dashed border-[#d8c4ad] bg-white/70 sm:h-[390px] lg:h-[430px]">
                     <img
                       src="/images/anoohya-full.jpg.png"
-                      alt="Anoohya Alluri full portrait"
-                      className="h-full w-full object-contain object-center"
+                      alt="Anoohya Alluri portrait"
+                      className="h-full w-full object-cover object-[center_28%]"
                     />
                   </div>
                 </div>
