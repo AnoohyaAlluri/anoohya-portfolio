@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect } from "react";
+
 const stackItems = [
   { icon: "📊", title: "Analytics", detail: "GA4, funnels, KPIs, attribution" },
   { icon: "🤖", title: "AI & ML", detail: "Prediction, segmentation, workflow AI" },
@@ -66,6 +70,81 @@ const tools = [
   "CRO",
 ];
 
+const credentials = [
+  {
+    title: "SQL Advanced",
+    issuer: "HackerRank",
+    date: "Issued Aug 2025",
+    detail:
+      "Advanced SQL certification validating SQL querying, database logic, and analytical problem-solving.",
+    skills: ["SQL", "SSAS", "Data Analysis"],
+    href: "https://www.hackerrank.com/certificates/944c5575cd92",
+  },
+  {
+    title: "Google Analytics",
+    issuer: "Google",
+    date: "Issued Jul 2025 · Expires Jul 2026",
+    detail:
+      "Validated knowledge of Google Analytics measurement, reporting, traffic analysis, and marketing performance tracking.",
+    skills: ["Google Analytics", "Marketing Analytics", "Reporting"],
+    href: "https://linktr.ee/anoohyaalluri",
+  },
+  {
+    title: "Scholar with Recognition",
+    issuer: "The University of Texas at Dallas",
+    date: "Issued Mar 2025",
+    detail:
+      "Academic recognition in the MS Business Analytics program at UT Dallas for performance, growth, and contribution.",
+    skills: ["Business Analytics", "Artificial Intelligence", "Data Analytics"],
+    href: "https://linktr.ee/anoohyaalluri",
+  },
+  {
+    title: "MSBA Program Mentor Certificate",
+    issuer: "MS Business Analytics & Artificial Intelligence at UT Dallas",
+    date: "Issued Jan 2025",
+    detail:
+      "Certificate of appreciation for mentoring incoming MSBA students through academic guidance, leadership, and peer support.",
+    skills: ["Mentoring", "Leadership", "Business Analytics"],
+    href: "https://linktr.ee/anoohyaalluri",
+  },
+  {
+    title: "Gen AI",
+    issuer: "Google",
+    date: "Issued Jun 2024",
+    detail:
+      "Credential focused on generative AI applications, including AI-assisted marketing, productivity, and content workflows.",
+    skills: ["Generative AI", "AI for Marketing", "Workflow Innovation"],
+    href: "https://linktr.ee/anoohyaalluri",
+  },
+  {
+    title: "Google Analytics",
+    issuer: "Google",
+    date: "Issued May 2024 · Expired May 2025",
+    detail:
+      "Earlier Google Analytics certification supporting foundational analytics, data interpretation, and website performance analysis.",
+    skills: ["Data Visualization", "Data Analysis", "Google Analytics"],
+    href: "https://linktr.ee/anoohyaalluri",
+  },
+  {
+    title: "Tableau Boot Camp",
+    issuer: "EnVision UTD",
+    date: "Issued Sep 2023 · Expires Dec 2034",
+    detail:
+      "Completed Tableau Boot Camp covering data exploration, cleaning, manipulation, dashboarding, and visual storytelling.",
+    skills: ["Tableau", "Data Visualization", "Dashboard Design"],
+    href: "https://linktr.ee/anoohyaalluri",
+  },
+  {
+    title: "R Programming",
+    issuer: "Udemy",
+    date: "Issued Jul 2023",
+    detail:
+      "Training in R programming and analytical workflows for data analysis, statistical thinking, and business problem-solving.",
+    skills: ["R Programming", "Analytical Skills", "Data Analysis"],
+    href: "https://linktr.ee/anoohyaalluri",
+  },
+];
+
 const proofLinks = [
   {
     title: "GitHub",
@@ -90,6 +169,12 @@ const proofLinks = [
 ];
 
 export default function Home() {
+  useEffect(() => {
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   return (
     <main className="min-h-screen bg-[#f7f0e6] text-[#202020]">
       <section className="relative overflow-hidden bg-[#6f86b8] px-4 py-8 sm:px-8">
@@ -115,6 +200,9 @@ export default function Home() {
               </a>
               <a href="#skills" className="hover:text-[#6f86b8]">
                 Skills
+              </a>
+              <a href="#credentials" className="hover:text-[#6f86b8]">
+                Credentials
               </a>
               <a href="#proof" className="hover:text-[#6f86b8]">
                 Proof
@@ -174,7 +262,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative min-h-[460px]">
+            <div className="relative min-h-[540px]">
               <div className="absolute right-0 top-6 h-72 w-72 rounded-full bg-[#eec3cc] blur-3xl" />
 
               <div className="absolute left-4 top-6 z-10 rotate-[-6deg] rounded-2xl bg-white p-4 shadow-xl sm:left-8">
@@ -191,11 +279,11 @@ export default function Home() {
 
               <div className="absolute bottom-4 right-0 w-[92%] rotate-2 rounded-[2rem] bg-[#6f86b8] p-5 shadow-2xl sm:right-4 sm:w-[88%]">
                 <div className="rounded-[1.5rem] border border-white/40 bg-[#f8efe4] p-5">
-                  <div className="relative flex h-80 items-center justify-center overflow-hidden rounded-[1.25rem] border-2 border-dashed border-[#d8c4ad] bg-white/70">
+                  <div className="relative flex h-[420px] items-center justify-center overflow-hidden rounded-[1.25rem] border-2 border-dashed border-[#d8c4ad] bg-white/70 sm:h-[460px] lg:h-[500px]">
                     <img
                       src="/images/anoohya-full.jpg.png"
                       alt="Anoohya Alluri full portrait"
-                      className="h-full w-full object-cover object-top"
+                      className="h-full w-full object-contain object-center"
                     />
                   </div>
                 </div>
@@ -325,6 +413,65 @@ export default function Home() {
                 >
                   {tool}
                 </span>
+              ))}
+            </div>
+          </section>
+
+          <section
+            id="credentials"
+            className="border-y border-[#eadfce] bg-[#fbf5ec] px-6 py-12 sm:px-10"
+          >
+            <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                  Certifications & proof
+                </p>
+                <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
+                  Verified Credentials
+                </h2>
+              </div>
+              <p className="max-w-xl text-sm leading-6 text-[#555]">
+                Certifications, academic recognition, and professional learning
+                proof supporting my work across analytics, SQL, AI, Tableau, R,
+                and marketing measurement.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+              {credentials.map((credential) => (
+                <a
+                  key={credential.title + credential.date}
+                  href={credential.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-3xl border border-[#e4d7c5] bg-white p-5 shadow-md transition hover:-translate-y-2 hover:shadow-2xl"
+                >
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#6f86b8]">
+                    {credential.issuer}
+                  </p>
+                  <h3 className="mt-3 font-serif text-xl font-bold leading-tight">
+                    {credential.title}
+                  </h3>
+                  <p className="mt-2 text-xs font-semibold text-[#8a4b57]">
+                    {credential.date}
+                  </p>
+                  <p className="mt-3 text-sm leading-6 text-[#555]">
+                    {credential.detail}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {credential.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-full bg-[#f5edf0] px-3 py-1 text-xs font-semibold text-[#70323c]"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="mt-5 text-sm font-bold text-[#203354]">
+                    View credential ↗
+                  </p>
+                </a>
               ))}
             </div>
           </section>
