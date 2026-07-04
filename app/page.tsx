@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const stackItems = [
   { icon: "📊", title: "Analytics", detail: "GA4, funnels, KPIs, attribution" },
@@ -169,6 +169,8 @@ const proofLinks = [
 ];
 
 export default function Home() {
+  const [certificationsOpen, setCertificationsOpen] = useState(false);
+
   useEffect(() => {
     if (!window.location.hash) {
       window.scrollTo(0, 0);
@@ -290,9 +292,9 @@ export default function Home() {
                 <div className="rounded-[1.5rem] border border-white/40 bg-[#f8efe4] p-5">
                   <div className="relative flex h-[340px] items-center justify-center overflow-hidden rounded-[1.25rem] border-2 border-dashed border-[#d8c4ad] bg-white/70 sm:h-[390px] lg:h-[430px]">
                     <img
-                      src="/images/anoohya-full.jpg.png"
+                      src="/images/anoohya-hero-half.jpg"
                       alt="Anoohya Alluri portrait"
-                      className="h-full w-full object-cover object-[center_28%]"
+                      className="h-full w-full object-cover object-[center_38%]"
                     />
                   </div>
                 </div>
@@ -436,53 +438,95 @@ export default function Home() {
                   Certifications & proof
                 </p>
                 <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
-                  Verified Credentials
+                  Credential Folder
                 </h2>
               </div>
               <p className="max-w-xl text-sm leading-6 text-[#555]">
-                Certifications, academic recognition, and professional learning
-                proof supporting my work across analytics, SQL, AI, Tableau, R,
-                and marketing measurement.
+                Click the folder to open my certification files. Each file links
+                to the related credential, proof page, or certificate source.
               </p>
             </div>
 
-            <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-              {credentials.map((credential) => (
-                <a
-                  key={credential.title + credential.date}
-                  href={credential.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-3xl border border-[#e4d7c5] bg-white p-5 shadow-md transition hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#6f86b8]">
-                    {credential.issuer}
-                  </p>
-                  <h3 className="mt-3 font-serif text-xl font-bold leading-tight">
-                    {credential.title}
-                  </h3>
-                  <p className="mt-2 text-xs font-semibold text-[#8a4b57]">
-                    {credential.date}
-                  </p>
-                  <p className="mt-3 text-sm leading-6 text-[#555]">
-                    {credential.detail}
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {credential.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="rounded-full bg-[#f5edf0] px-3 py-1 text-xs font-semibold text-[#70323c]"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+            <button
+              type="button"
+              onClick={() => setCertificationsOpen(!certificationsOpen)}
+              className="mt-10 w-full rounded-[2rem] border border-[#e4d7c5] bg-white p-6 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-16 w-20 items-center justify-center rounded-2xl bg-[#f1c5cc] text-4xl shadow-sm">
+                    📁
                   </div>
-                  <p className="mt-5 text-sm font-bold text-[#203354]">
-                    View credential ↗
-                  </p>
-                </a>
-              ))}
-            </div>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                      Professional proof folder
+                    </p>
+                    <h3 className="mt-1 font-serif text-3xl font-black text-[#202020]">
+                      Certifications
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-[#555]">
+                      SQL, Google Analytics, AI, Tableau, R, mentoring, and
+                      academic recognition.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="rounded-full bg-[#203354] px-5 py-2 text-center text-sm font-bold text-white">
+                  {certificationsOpen ? "Close folder ↑" : "Open folder ↓"}
+                </div>
+              </div>
+            </button>
+
+            {certificationsOpen && (
+              <div className="mt-6 rounded-[2rem] border border-[#e4d7c5] bg-[#fffaf3] p-5 shadow-inner">
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                  {credentials.map((credential) => (
+                    <a
+                      key={credential.title + credential.date}
+                      href={credential.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group rounded-3xl border border-[#e4d7c5] bg-white p-5 shadow-md transition hover:-translate-y-2 hover:shadow-2xl"
+                    >
+                      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#eef1f8] text-3xl transition group-hover:rotate-6">
+                        📄
+                      </div>
+
+                      <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#6f86b8]">
+                        {credential.issuer}
+                      </p>
+
+                      <h3 className="mt-3 font-serif text-xl font-bold leading-tight">
+                        {credential.title}
+                      </h3>
+
+                      <p className="mt-2 text-xs font-semibold text-[#8a4b57]">
+                        {credential.date}
+                      </p>
+
+                      <p className="mt-3 text-sm leading-6 text-[#555]">
+                        {credential.detail}
+                      </p>
+
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {credential.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="rounded-full bg-[#f5edf0] px-3 py-1 text-xs font-semibold text-[#70323c]"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+
+                      <p className="mt-5 text-sm font-bold text-[#203354]">
+                        Open certificate ↗
+                      </p>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </section>
 
           <section
