@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const stackItems = [
   { icon: "📊", title: "Analytics", detail: "GA4, funnels, KPIs, attribution" },
@@ -157,6 +157,8 @@ const proofLinks = [
 ];
 
 export default function Home() {
+  const [certificationsOpen, setCertificationsOpen] = useState(false);
+
   useEffect(() => {
     if (!window.location.hash) {
       window.scrollTo(0, 0);
@@ -608,7 +610,7 @@ export default function Home() {
                   Certifications & proof
                 </p>
                 <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
-                  Certificate Proof Wall
+                  Credential Folder
                 </h2>
               </div>
 
@@ -619,92 +621,132 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative mt-10 rounded-[2rem] border border-[#e4d7c5] bg-white/60 p-5 shadow-inner">
-              <div className="mb-6 flex items-center justify-between">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
-                    Proof board
-                  </p>
-                  <h3 className="font-serif text-2xl font-black">
-                    Verified Learning & Recognition
-                  </h3>
+            <button
+              type="button"
+              onClick={() => setCertificationsOpen(!certificationsOpen)}
+              className="group relative mt-10 w-full overflow-hidden rounded-[2rem] border border-[#e4d7c5] bg-white p-6 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#f1c5cc]/50 blur-2xl transition group-hover:scale-125" />
+              <div className="absolute -bottom-10 left-1/3 h-28 w-28 rounded-full bg-[#6f86b8]/20 blur-2xl transition group-hover:scale-125" />
+
+              <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center gap-5">
+                  <div className="relative">
+                    <div className="absolute -right-2 -top-2 h-7 w-12 rounded-t-xl bg-[#d69aa7]" />
+                    <div className="relative flex h-20 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f1c5cc] to-[#d8e3ea] text-5xl shadow-md transition group-hover:-rotate-3 group-hover:scale-105">
+                      📁
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                      Recruiter proof folder
+                    </p>
+                    <h3 className="mt-1 font-serif text-3xl font-black text-[#202020]">
+                      Open Certificate Proof Wall
+                    </h3>
+                    <p className="mt-2 max-w-2xl text-sm leading-6 text-[#555]">
+                      Click to view verified credentials, technical
+                      certifications, professional recognition, and published
+                      research in a certificate wall format.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="hidden rounded-full bg-[#fff4f6] px-4 py-2 text-sm font-bold text-[#70323c] shadow-sm sm:block">
-                  Click any certificate ↗
+                <div className="rounded-full bg-[#203354] px-5 py-2 text-center text-sm font-bold text-white shadow-md transition group-hover:bg-[#16243c]">
+                  {certificationsOpen ? "Close folder ↑" : "Open folder ↓"}
                 </div>
               </div>
+            </button>
 
-              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                {credentials.map((credential, index) => (
-                  <a
-                    key={credential.title + credential.date}
-                    href={credential.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative block min-h-[360px] rounded-[1.6rem] bg-[#efe7dc] p-3 shadow-[0_16px_35px_rgba(32,32,32,0.10)] transition hover:-translate-y-2 hover:shadow-2xl"
-                  >
-                    <div
-                      className={`absolute left-1/2 top-[-14px] z-20 -translate-x-1/2 text-4xl drop-shadow-sm transition group-hover:-translate-y-1 ${
-                        index % 2 === 0 ? "rotate-[-6deg]" : "rotate-[6deg]"
-                      }`}
+            {certificationsOpen && (
+              <div className="relative mt-8 rounded-[2rem] border border-[#e4d7c5] bg-white/60 p-5 shadow-inner">
+                <div className="mb-6 flex items-center justify-between">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                      Proof board
+                    </p>
+                    <h3 className="font-serif text-2xl font-black">
+                      Verified Learning & Recognition
+                    </h3>
+                  </div>
+
+                  <div className="hidden rounded-full bg-[#fff4f6] px-4 py-2 text-sm font-bold text-[#70323c] shadow-sm sm:block">
+                    Click any certificate ↗
+                  </div>
+                </div>
+
+                <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  {credentials.map((credential, index) => (
+                    <a
+                      key={credential.title + credential.date}
+                      href={credential.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative block min-h-[360px] rounded-[1.6rem] bg-[#efe7dc] p-3 shadow-[0_16px_35px_rgba(32,32,32,0.10)] transition hover:-translate-y-2 hover:shadow-2xl"
                     >
-                      🎀
-                    </div>
-
-                    <div
-                      className={`relative h-full rounded-[1.25rem] border border-[#d8c6ad] bg-[#fffdf8] p-6 text-center ${
-                        index % 2 === 0 ? "rotate-[-1deg]" : "rotate-[1deg]"
-                      } transition group-hover:rotate-0`}
-                    >
-                      <div className="absolute left-5 top-5 h-10 w-10 rounded-full border border-[#eadfce] bg-[#f8efe4]" />
-                      <div className="absolute right-5 top-5 h-10 w-10 rounded-full border border-[#eadfce] bg-[#f8efe4]" />
-
-                      <div className="mx-auto mt-5 flex h-16 w-16 items-center justify-center rounded-full border border-[#d8c6ad] bg-gradient-to-br from-[#f8efe4] to-[#d8e3ea] text-3xl shadow-inner">
-                        ✦
+                      <div
+                        className={`absolute left-1/2 top-[-14px] z-20 -translate-x-1/2 text-4xl drop-shadow-sm transition group-hover:-translate-y-1 ${
+                          index % 2 === 0 ? "rotate-[-6deg]" : "rotate-[6deg]"
+                        }`}
+                      >
+                        🎀
                       </div>
 
-                      <p className="mt-5 text-xs font-bold uppercase tracking-[0.3em] text-[#6f86b8]">
-                        {credential.issuer}
-                      </p>
+                      <div
+                        className={`relative h-full rounded-[1.25rem] border border-[#d8c6ad] bg-[#fffdf8] p-6 text-center ${
+                          index % 2 === 0 ? "rotate-[-1deg]" : "rotate-[1deg]"
+                        } transition group-hover:rotate-0`}
+                      >
+                        <div className="absolute left-5 top-5 h-10 w-10 rounded-full border border-[#eadfce] bg-[#f8efe4]" />
+                        <div className="absolute right-5 top-5 h-10 w-10 rounded-full border border-[#eadfce] bg-[#f8efe4]" />
 
-                      <h3 className="mx-auto mt-3 max-w-xs font-serif text-2xl font-black leading-tight text-[#202020]">
-                        {credential.title}
-                      </h3>
+                        <div className="mx-auto mt-5 flex h-16 w-16 items-center justify-center rounded-full border border-[#d8c6ad] bg-gradient-to-br from-[#f8efe4] to-[#d8e3ea] text-3xl shadow-inner">
+                          ✦
+                        </div>
 
-                      <p className="mt-2 text-sm font-bold text-[#8a4b57]">
-                        {credential.proofType}
-                      </p>
+                        <p className="mt-5 text-xs font-bold uppercase tracking-[0.3em] text-[#6f86b8]">
+                          {credential.issuer}
+                        </p>
 
-                      <div className="mx-auto mt-4 h-px w-28 bg-[#d8c6ad]" />
+                        <h3 className="mx-auto mt-3 max-w-xs font-serif text-2xl font-black leading-tight text-[#202020]">
+                          {credential.title}
+                        </h3>
 
-                      <p className="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-[#70323c]">
-                        {credential.date}
-                      </p>
+                        <p className="mt-2 text-sm font-bold text-[#8a4b57]">
+                          {credential.proofType}
+                        </p>
 
-                      <p className="mt-4 text-sm leading-6 text-[#555]">
-                        {credential.detail}
-                      </p>
+                        <div className="mx-auto mt-4 h-px w-28 bg-[#d8c6ad]" />
 
-                      <div className="mt-5 flex flex-wrap justify-center gap-2">
-                        {credential.skills.map((skill) => (
-                          <span
-                            key={skill}
-                            className="rounded-full bg-[#f5edf0] px-3 py-1 text-[11px] font-bold text-[#70323c]"
-                          >
-                            {skill}
-                          </span>
-                        ))}
+                        <p className="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-[#70323c]">
+                          {credential.date}
+                        </p>
+
+                        <p className="mt-4 text-sm leading-6 text-[#555]">
+                          {credential.detail}
+                        </p>
+
+                        <div className="mt-5 flex flex-wrap justify-center gap-2">
+                          {credential.skills.map((skill) => (
+                            <span
+                              key={skill}
+                              className="rounded-full bg-[#f5edf0] px-3 py-1 text-[11px] font-bold text-[#70323c]"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+
+                        <div className="mt-6 inline-flex rounded-full bg-[#203354] px-5 py-2 text-sm font-bold text-white shadow-md transition group-hover:bg-[#16243c]">
+                          View Credential ↗
+                        </div>
                       </div>
-
-                      <div className="mt-6 inline-flex rounded-full bg-[#203354] px-5 py-2 text-sm font-bold text-white shadow-md transition group-hover:bg-[#16243c]">
-                        View Credential ↗
-                      </div>
-                    </div>
-                  </a>
-                ))}
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </section>
 
           <section
