@@ -182,6 +182,9 @@ export default function Home() {
               <a href="#projects" className="hover:text-[#6f86b8]">
                 Projects
               </a>
+              <a href="#creative" className="hover:text-[#6f86b8]">
+                Creative
+              </a>
               <a href="#skills" className="hover:text-[#6f86b8]">
                 Skills
               </a>
@@ -243,10 +246,10 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="#credentials"
+                  href="#creative"
                   className="rounded-xl border border-[#d69aa7] bg-[#fff4f6] px-6 py-3 text-center text-sm font-bold text-[#70323c] transition hover:-translate-y-1 hover:bg-[#f8d9df]"
                 >
-                  Open Credentials Folder ✦
+                  View Creative Proof ✦
                 </a>
 
                 <a
@@ -258,7 +261,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative min-h-[460px] sm:min-h-[500px] lg:min-h-[520px]">
+            <div className="relative min-h-[500px] sm:min-h-[540px] lg:min-h-[560px]">
               <div className="absolute right-0 top-6 h-72 w-72 rounded-full bg-[#eec3cc] blur-3xl" />
 
               <div className="absolute left-4 top-6 z-10 rotate-[-6deg] rounded-2xl bg-white p-4 shadow-xl sm:left-8">
@@ -275,11 +278,11 @@ export default function Home() {
 
               <div className="absolute bottom-4 right-0 w-[92%] rotate-2 rounded-[2rem] bg-[#6f86b8] p-5 shadow-2xl sm:right-4 sm:w-[88%]">
                 <div className="rounded-[1.5rem] border border-white/40 bg-[#f8efe4] p-5">
-                  <div className="relative flex h-[340px] items-center justify-center overflow-hidden rounded-[1.25rem] border-2 border-dashed border-[#d8c4ad] bg-white/70 sm:h-[390px] lg:h-[430px]">
+                  <div className="relative flex h-[380px] items-center justify-center overflow-hidden rounded-[1.25rem] border-2 border-dashed border-[#d8c4ad] bg-white/70 sm:h-[430px] lg:h-[470px]">
                     <img
-                      src="/images/anoohya-hero-half.jpg.jpg"
-                      alt="Anoohya Alluri portrait"
-                      className="h-full w-full object-cover object-[center_50%] brightness-[0.96] contrast-[0.94] saturate-[0.98]"
+                      src="/images/anoohya-full.jpg.png"
+                      alt="Anoohya Alluri full portrait"
+                      className="h-full w-full object-cover object-[center_32%]"
                     />
                   </div>
                 </div>
@@ -385,6 +388,109 @@ export default function Home() {
                   </div>
                 </article>
               ))}
+            </div>
+          </section>
+
+          <section
+            id="creative"
+            className="overflow-hidden border-y border-[#eadfce] bg-[#fffaf3] px-6 py-14 sm:px-10"
+          >
+            <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                  Creative campaign studio
+                </p>
+                <h2 className="mt-3 font-serif text-4xl font-black leading-tight sm:text-5xl">
+                  Social media proof, shown like a live campaign system.
+                </h2>
+                <p className="mt-5 max-w-xl text-sm leading-7 text-[#555] sm:text-base">
+                  Built a repeatable content production workflow for WPM across
+                  educational carousels, founder-led reels, owner-risk messaging,
+                  property performance content, and campaign CTAs. This section
+                  shows the creative side of the marketing system: strategy,
+                  content planning, visual direction, AI-assisted production, and
+                  platform-ready execution.
+                </p>
+
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {[
+                    "Content strategy",
+                    "Carousel design",
+                    "Founder-led reels",
+                    "CTA planning",
+                    "AI-assisted video",
+                    "Campaign operations",
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-2xl border border-[#eadfce] bg-white/70 px-4 py-3 text-sm font-bold text-[#203354] shadow-sm"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+
+                <p className="mt-6 rounded-2xl bg-[#f5edf0] px-5 py-4 text-sm leading-6 text-[#70323c]">
+                  Portfolio framing: this is not just posting content. It shows
+                  a structured creative workflow connected to brand positioning,
+                  owner education, lead-generation messaging, and executive
+                  approval cycles.
+                </p>
+              </div>
+
+              <div className="relative mx-auto w-full max-w-[430px] [perspective:1200px]">
+                <div className="absolute -left-16 top-16 h-44 w-44 rounded-full bg-[#d8e3ea] blur-2xl" />
+                <div className="absolute -right-10 bottom-16 h-48 w-48 rounded-full bg-[#f1c5cc] blur-2xl" />
+
+                <div className="relative mx-auto rotate-[-3deg] transform rounded-[3.2rem] border-[10px] border-[#151515] bg-[#151515] p-3 shadow-[0_35px_80px_rgba(32,51,84,0.35)] transition duration-500 hover:rotate-0 hover:scale-[1.02]">
+                  <div className="absolute left-1/2 top-3 z-20 h-6 w-28 -translate-x-1/2 rounded-b-2xl bg-[#151515]" />
+
+                  <div className="relative overflow-hidden rounded-[2.35rem] border border-white/10 bg-white">
+                    <div className="flex items-center justify-between border-b border-[#e7e7e7] bg-white px-5 pb-3 pt-8">
+                      <span className="text-lg font-bold text-[#202020]">‹</span>
+                      <div className="text-center">
+                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#777]">
+                          Instagram proof
+                        </p>
+                        <p className="text-sm font-black text-[#202020]">
+                          westsidepropertymgmt
+                        </p>
+                      </div>
+                      <span className="text-lg font-bold text-[#202020]">•••</span>
+                    </div>
+
+                    <div className="relative bg-white p-[3px]">
+                      <img
+                        src="/social/wpm-social-grid.png"
+                        alt="WPM social media campaign grid proof"
+                        className="h-full w-full object-cover"
+                      />
+
+                      <div className="pointer-events-none absolute right-[17%] top-[31%] flex h-9 w-9 animate-pulse items-center justify-center rounded-full bg-white/90 text-sm font-black text-[#203354] shadow-lg">
+                        ▶
+                      </div>
+
+                      <div className="pointer-events-none absolute right-[8%] top-[64%] flex h-9 w-9 animate-pulse items-center justify-center rounded-full bg-white/90 text-sm font-black text-[#203354] shadow-lg">
+                        ▶
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mx-auto mt-8 max-w-sm rounded-3xl border border-[#eadfce] bg-white/80 p-5 text-center shadow-md">
+                  <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                    Visual proof
+                  </p>
+                  <h3 className="mt-2 font-serif text-2xl font-black">
+                    WPM Social Content System
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-[#555]">
+                    Strategy-led reels, carousels, founder messaging, and
+                    owner-education content packaged as a portfolio-ready proof
+                    asset.
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
 
