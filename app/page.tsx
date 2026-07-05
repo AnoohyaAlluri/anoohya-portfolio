@@ -258,7 +258,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative min-h-[460px] sm:min-h-[500px] lg:min-h-[520px]">
+            <div className="relative min-h-[500px] sm:min-h-[540px] lg:min-h-[560px]">
               <div className="absolute right-0 top-6 h-72 w-72 rounded-full bg-[#eec3cc] blur-3xl" />
 
               <div className="absolute left-4 top-6 z-10 rotate-[-6deg] rounded-2xl bg-white p-4 shadow-xl sm:left-8">
@@ -275,11 +275,11 @@ export default function Home() {
 
               <div className="absolute bottom-4 right-0 w-[92%] rotate-2 rounded-[2rem] bg-[#6f86b8] p-5 shadow-2xl sm:right-4 sm:w-[88%]">
                 <div className="rounded-[1.5rem] border border-white/40 bg-[#f8efe4] p-5">
-                  <div className="relative flex h-[340px] items-center justify-center overflow-hidden rounded-[1.25rem] border-2 border-dashed border-[#d8c4ad] bg-white/70 sm:h-[390px] lg:h-[430px]">
+                  <div className="relative flex h-[380px] items-center justify-center overflow-hidden rounded-[1.25rem] border-2 border-dashed border-[#d8c4ad] bg-white/70 sm:h-[430px] lg:h-[470px]">
                     <img
-                      src="/images/anoohya-hero-half.jpg.jpg"
-                      alt="Anoohya Alluri portrait"
-                      className="h-full w-full object-cover object-[center_50%] brightness-[0.96] contrast-[0.94] saturate-[0.98]"
+                      src="/images/anoohya-full.jpg.png"
+                      alt="Anoohya Alluri full portrait"
+                      className="h-full w-full object-cover object-[center_32%]"
                     />
                   </div>
                 </div>
