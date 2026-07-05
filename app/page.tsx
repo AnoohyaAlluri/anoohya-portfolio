@@ -395,7 +395,7 @@ export default function Home() {
             id="creative"
             className="overflow-hidden border-y border-[#eadfce] bg-[#fffaf3] px-6 py-16 sm:px-10"
           >
-            <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
               <div>
                 <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
                   Creative campaign studio
@@ -440,19 +440,19 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="relative mx-auto w-full max-w-[470px] [perspective:1500px]">
-                <div className="absolute -left-20 top-16 h-52 w-52 rounded-full bg-[#d8e3ea] blur-3xl" />
-                <div className="absolute -right-16 bottom-20 h-56 w-56 rounded-full bg-[#f1c5cc] blur-3xl" />
+              <div className="relative mx-auto w-full max-w-[420px] [perspective:1400px]">
+                <div className="absolute -left-12 top-12 h-44 w-44 rounded-full bg-[#d8e3ea] blur-3xl" />
+                <div className="absolute -right-12 bottom-16 h-48 w-48 rounded-full bg-[#f1c5cc] blur-3xl" />
 
-                <div className="relative mx-auto origin-center rotate-[-4deg] rounded-[3.7rem] bg-gradient-to-br from-[#070707] via-[#2a2a2a] to-[#050505] p-[11px] shadow-[0_45px_90px_rgba(32,51,84,0.42)] transition duration-500 hover:rotate-[-1deg] hover:scale-[1.02]">
-                  <div className="absolute -left-[7px] top-28 h-16 w-2 rounded-l-xl bg-[#1c1c1c]" />
-                  <div className="absolute -left-[7px] top-48 h-20 w-2 rounded-l-xl bg-[#1c1c1c]" />
-                  <div className="absolute -right-[7px] top-40 h-24 w-2 rounded-r-xl bg-[#1c1c1c]" />
+                <div className="relative mx-auto w-[290px] origin-center rotate-[-3deg] rounded-[3.2rem] bg-gradient-to-br from-[#111111] via-[#242424] to-[#050505] p-[10px] shadow-[0_30px_70px_rgba(32,51,84,0.28)] transition duration-500 hover:rotate-0 hover:scale-[1.01] sm:w-[330px] lg:w-[360px]">
+                  <div className="absolute -left-[5px] top-24 h-14 w-[5px] rounded-l-xl bg-[#1b1b1b]" />
+                  <div className="absolute -left-[5px] top-40 h-16 w-[5px] rounded-l-xl bg-[#1b1b1b]" />
+                  <div className="absolute -right-[5px] top-32 h-20 w-[5px] rounded-r-xl bg-[#1b1b1b]" />
 
-                  <div className="relative overflow-hidden rounded-[3rem] bg-white">
-                    <div className="absolute left-1/2 top-0 z-30 h-7 w-32 -translate-x-1/2 rounded-b-3xl bg-[#0e0e0f]" />
+                  <div className="relative overflow-hidden rounded-[2.7rem] bg-[#faf7f1]">
+                    <div className="absolute left-1/2 top-0 z-30 h-7 w-28 -translate-x-1/2 rounded-b-3xl bg-[#111111]" />
 
-                    <div className="flex items-center justify-between border-b border-[#ececec] bg-white px-5 pb-3 pt-9">
+                    <div className="flex items-center justify-between border-b border-[#ece7df] bg-[#fffdf9] px-4 pb-3 pt-9">
                       <span className="text-lg font-black text-[#202020]">‹</span>
                       <div className="text-center">
                         <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#777]">
@@ -465,25 +465,25 @@ export default function Home() {
                       <span className="text-lg font-black text-[#202020]">•••</span>
                     </div>
 
-                    <div className="relative h-[620px] overflow-hidden bg-white">
+                    <div className="relative h-[520px] overflow-hidden bg-[#f8f4ed] p-2 sm:h-[560px]">
                       <img
                         src="/social/wpm-social-grid.png"
                         alt="WPM social media campaign grid proof"
-                        className="h-full w-full object-cover object-top"
+                        className="h-full w-full rounded-[1.4rem] object-contain object-center"
                       />
 
-                      <div className="pointer-events-none absolute right-[13%] top-[34%] flex h-10 w-10 animate-pulse items-center justify-center rounded-full bg-white/95 text-sm font-black text-[#203354] shadow-xl">
+                      <div className="pointer-events-none absolute right-[16%] top-[38%] flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-xs font-black text-[#203354] shadow-lg">
                         ▶
                       </div>
 
-                      <div className="pointer-events-none absolute right-[13%] top-[65%] flex h-10 w-10 animate-pulse items-center justify-center rounded-full bg-white/95 text-sm font-black text-[#203354] shadow-xl">
+                      <div className="pointer-events-none absolute right-[16%] top-[68%] flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-xs font-black text-[#203354] shadow-lg">
                         ▶
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="mx-auto mt-9 max-w-sm rounded-3xl border border-[#eadfce] bg-white/80 p-5 text-center shadow-md">
+                <div className="mx-auto mt-8 max-w-sm rounded-3xl border border-[#eadfce] bg-white/80 p-5 text-center shadow-md">
                   <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
                     Visual proof
                   </p>
