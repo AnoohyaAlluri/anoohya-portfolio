@@ -279,7 +279,7 @@ export default function Home() {
                     <img
                       src="/images/anoohya-hero-half.jpg.jpg"
                       alt="Anoohya Alluri portrait"
-                      className="h-full w-full object-cover object-[center_38%]"
+                      className="h-full w-full object-cover object-[center_50%] brightness-[0.96] contrast-[0.94] saturate-[0.98]"
                     />
                   </div>
                 </div>
