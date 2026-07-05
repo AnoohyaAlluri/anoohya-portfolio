@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const stackItems = [
   { icon: "📊", title: "Analytics", detail: "GA4, funnels, KPIs, attribution" },
@@ -75,6 +75,7 @@ const credentials = [
     title: "SQL Advanced",
     issuer: "HackerRank",
     date: "Issued Aug 2025",
+    proofType: "Verified SQL Credential",
     detail:
       "Advanced SQL certification validating SQL querying, database logic, and analytical problem-solving.",
     skills: ["SQL", "SSAS", "Data Analysis"],
@@ -84,6 +85,7 @@ const credentials = [
     title: "Google Analytics",
     issuer: "Google Skillshop",
     date: "Issued Jul 2025 · Expires Jul 2026",
+    proofType: "Measurement & Reporting Credential",
     detail:
       "Validated knowledge of Google Analytics measurement, reporting, traffic analysis, and marketing performance tracking.",
     skills: ["Google Analytics", "Marketing Analytics", "Reporting"],
@@ -93,6 +95,7 @@ const credentials = [
     title: "Gen AI",
     issuer: "Google",
     date: "Issued Jun 2024",
+    proofType: "AI Workflow Credential",
     detail:
       "Google credential focused on generative AI applications for marketing, productivity, and workflow innovation.",
     skills: ["Generative AI", "AI for Marketing", "Workflow Innovation"],
@@ -102,6 +105,7 @@ const credentials = [
     title: "R Programming",
     issuer: "Udemy",
     date: "Issued Jul 2023",
+    proofType: "Data Analysis Training",
     detail:
       "Training in R programming and analytical workflows for data analysis, statistical thinking, and business problem-solving.",
     skills: ["R Programming", "Analytical Skills", "Data Analysis"],
@@ -111,6 +115,7 @@ const credentials = [
     title: "R Systems Certificate",
     issuer: "R Systems",
     date: "Professional Recognition",
+    proofType: "Go-to-Market Strategy Recognition",
     detail:
       "Certificate of appreciation for customer research and development of a go-to-market strategy.",
     skills: ["Customer Research", "Go-to-Market Strategy", "Market Analysis"],
@@ -120,6 +125,7 @@ const credentials = [
     title: "Sensory Marketing Study",
     issuer: "Publication",
     date: "Published 2023",
+    proofType: "Published Research",
     detail:
       "Published research using survey data and statistical analysis to study sensory drivers of Gen Z purchase intent and brand loyalty.",
     skills: ["Research", "Marketing Analytics", "Survey Analysis"],
@@ -151,8 +157,6 @@ const proofLinks = [
 ];
 
 export default function Home() {
-  const [certificationsOpen, setCertificationsOpen] = useState(false);
-
   useEffect(() => {
     if (!window.location.hash) {
       window.scrollTo(0, 0);
@@ -597,131 +601,114 @@ export default function Home() {
 
           <section
             id="credentials"
-            className="border-y border-[#eadfce] bg-[#fbf5ec] px-6 py-12 sm:px-10"
+            className="relative overflow-hidden border-y border-[#eadfce] bg-[#fbf5ec] px-6 py-14 sm:px-10"
           >
-            <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div className="absolute -left-20 top-12 h-56 w-56 rounded-full bg-[#d8e3ea]/70 blur-3xl" />
+            <div className="absolute -right-20 bottom-12 h-64 w-64 rounded-full bg-[#f1c5cc]/70 blur-3xl" />
+
+            <div className="relative flex flex-col justify-between gap-5 md:flex-row md:items-end">
               <div>
                 <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
                   Certifications & proof
                 </p>
                 <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
-                  Credential Folder
+                  Certificate Proof Wall
                 </h2>
               </div>
+
               <p className="max-w-xl text-sm leading-6 text-[#555]">
-                Open this proof folder to view verified credentials that support
-                my work in analytics, SQL, AI, data visualization, marketing
-                measurement, and business intelligence.
+                Verified credentials and proof documents that support my
+                technical, analytics, AI, marketing technology, and research
+                skill set.
               </p>
             </div>
 
-            <button
-              type="button"
-              onClick={() => setCertificationsOpen(!certificationsOpen)}
-              className="group relative mt-10 w-full overflow-hidden rounded-[2rem] border border-[#e4d7c5] bg-white p-6 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
-            >
-              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#f1c5cc]/50 blur-2xl transition group-hover:scale-125" />
-              <div className="absolute -bottom-10 left-1/3 h-28 w-28 rounded-full bg-[#6f86b8]/20 blur-2xl transition group-hover:scale-125" />
-
-              <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-                <div className="flex items-center gap-5">
-                  <div className="relative">
-                    <div className="absolute -right-2 -top-2 h-7 w-12 rounded-t-xl bg-[#d69aa7]" />
-                    <div className="relative flex h-20 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f1c5cc] to-[#d8e3ea] text-5xl shadow-md transition group-hover:-rotate-3 group-hover:scale-105">
-                      📁
-                    </div>
-                  </div>
-
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
-                      Recruiter proof folder
-                    </p>
-                    <h3 className="mt-1 font-serif text-3xl font-black text-[#202020]">
-                      Certifications
-                    </h3>
-                    <p className="mt-2 max-w-2xl text-sm leading-6 text-[#555]">
-                      A curated file system of certifications, academic
-                      recognition, and technical proof that validates my
-                      analytics and marketing technology skill set.
-                    </p>
-                  </div>
+            <div className="relative mt-10 rounded-[2rem] border border-[#e4d7c5] bg-white/60 p-5 shadow-inner">
+              <div className="mb-6 flex items-center justify-between">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                    Proof board
+                  </p>
+                  <h3 className="font-serif text-2xl font-black">
+                    Verified Learning & Recognition
+                  </h3>
                 </div>
 
-                <div className="rounded-full bg-[#203354] px-5 py-2 text-center text-sm font-bold text-white shadow-md transition group-hover:bg-[#16243c]">
-                  {certificationsOpen
-                    ? "Close proof folder ↑"
-                    : "Open proof folder ↓"}
+                <div className="hidden rounded-full bg-[#fff4f6] px-4 py-2 text-sm font-bold text-[#70323c] shadow-sm sm:block">
+                  Click any certificate ↗
                 </div>
               </div>
-            </button>
 
-            {certificationsOpen && (
-              <div className="mt-6 rounded-[2rem] border border-[#e4d7c5] bg-[#fffaf3] p-5 shadow-inner">
-                <div className="mb-5 flex items-center gap-3">
-                  <span className="text-2xl">🗂️</span>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
-                      Folder opened
-                    </p>
-                    <h3 className="font-serif text-2xl font-black">
-                      Credential Files
-                    </h3>
-                  </div>
-                </div>
-
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                  {credentials.map((credential) => (
-                    <a
-                      key={credential.title + credential.date}
-                      href={credential.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group rounded-3xl border border-[#e4d7c5] bg-white p-5 shadow-md transition hover:-translate-y-2 hover:shadow-2xl"
+              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                {credentials.map((credential, index) => (
+                  <a
+                    key={credential.title + credential.date}
+                    href={credential.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative block min-h-[360px] rounded-[1.6rem] bg-[#efe7dc] p-3 shadow-[0_16px_35px_rgba(32,32,32,0.10)] transition hover:-translate-y-2 hover:rotate-0 hover:shadow-2xl"
+                  >
+                    <div
+                      className={`absolute left-1/2 top-[-14px] z-20 -translate-x-1/2 text-4xl drop-shadow-sm transition group-hover:-translate-y-1 ${
+                        index % 2 === 0 ? "rotate-[-6deg]" : "rotate-[6deg]"
+                      }`}
                     >
-                      <div className="mb-4 flex items-center justify-between">
-                        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#eef1f8] text-3xl transition group-hover:rotate-6">
-                          📄
-                        </div>
-                        <span className="rounded-full bg-[#f5edf0] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#70323c]">
-                          file
-                        </span>
+                      🎀
+                    </div>
+
+                    <div
+                      className={`relative h-full rounded-[1.25rem] border border-[#d8c6ad] bg-[#fffdf8] p-6 text-center ${
+                        index % 2 === 0 ? "rotate-[-1deg]" : "rotate-[1deg]"
+                      } transition group-hover:rotate-0`}
+                    >
+                      <div className="absolute left-5 top-5 h-10 w-10 rounded-full border border-[#eadfce] bg-[#f8efe4]" />
+                      <div className="absolute right-5 top-5 h-10 w-10 rounded-full border border-[#eadfce] bg-[#f8efe4]" />
+
+                      <div className="mx-auto mt-5 flex h-16 w-16 items-center justify-center rounded-full border border-[#d8c6ad] bg-gradient-to-br from-[#f8efe4] to-[#d8e3ea] text-3xl shadow-inner">
+                        ✦
                       </div>
 
-                      <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#6f86b8]">
+                      <p className="mt-5 text-xs font-bold uppercase tracking-[0.3em] text-[#6f86b8]">
                         {credential.issuer}
                       </p>
 
-                      <h3 className="mt-3 font-serif text-xl font-bold leading-tight">
+                      <h3 className="mx-auto mt-3 max-w-xs font-serif text-2xl font-black leading-tight text-[#202020]">
                         {credential.title}
                       </h3>
 
-                      <p className="mt-2 text-xs font-semibold text-[#8a4b57]">
+                      <p className="mt-2 text-sm font-bold text-[#8a4b57]">
+                        {credential.proofType}
+                      </p>
+
+                      <div className="mx-auto mt-4 h-px w-28 bg-[#d8c6ad]" />
+
+                      <p className="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-[#70323c]">
                         {credential.date}
                       </p>
 
-                      <p className="mt-3 text-sm leading-6 text-[#555]">
+                      <p className="mt-4 text-sm leading-6 text-[#555]">
                         {credential.detail}
                       </p>
 
-                      <div className="mt-4 flex flex-wrap gap-2">
+                      <div className="mt-5 flex flex-wrap justify-center gap-2">
                         {credential.skills.map((skill) => (
                           <span
                             key={skill}
-                            className="rounded-full bg-[#f5edf0] px-3 py-1 text-xs font-semibold text-[#70323c]"
+                            className="rounded-full bg-[#f5edf0] px-3 py-1 text-[11px] font-bold text-[#70323c]"
                           >
                             {skill}
                           </span>
                         ))}
                       </div>
 
-                      <p className="mt-5 text-sm font-bold text-[#203354]">
-                        View proof file ↗
-                      </p>
-                    </a>
-                  ))}
-                </div>
+                      <div className="mt-6 inline-flex rounded-full bg-[#203354] px-5 py-2 text-sm font-bold text-white shadow-md transition group-hover:bg-[#16243c]">
+                        View Credential ↗
+                      </div>
+                    </div>
+                  </a>
+                ))}
               </div>
-            )}
+            </div>
           </section>
 
           <section
