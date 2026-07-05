@@ -235,9 +235,10 @@ export default function Home() {
               </h2>
 
               <p className="mt-5 max-w-xl text-base leading-7 text-[#3d3d3d] sm:text-lg">
-                I turn marketing data into decisions and automate what matters.
-                Analytics, AI, dashboards, attribution, SEO, and digital content
-                work together here to drive growth.
+                I build analytics, automation, and marketing technology systems
+                that turn messy data into clear decisions. My work connects
+                attribution, SEO, dashboards, AI workflows, and growth operations
+                into measurable business visibility.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -254,14 +255,14 @@ export default function Home() {
                   href="#projects"
                   className="rounded-xl border border-[#203354] bg-white/60 px-6 py-3 text-center text-sm font-bold text-[#203354] transition hover:-translate-y-1 hover:bg-white"
                 >
-                  Explore Projects ↗
+                  View Case Studies ↗
                 </a>
 
                 <a
                   href="#credentials"
                   className="rounded-xl border border-[#d69aa7] bg-[#fff4f6] px-6 py-3 text-center text-sm font-bold text-[#70323c] transition hover:-translate-y-1 hover:bg-[#f8d9df]"
                 >
-                  Certifications ✦
+                  Open Credentials Folder ✦
                 </a>
 
                 <a
@@ -292,7 +293,7 @@ export default function Home() {
                 <div className="rounded-[1.5rem] border border-white/40 bg-[#f8efe4] p-5">
                   <div className="relative flex h-[340px] items-center justify-center overflow-hidden rounded-[1.25rem] border-2 border-dashed border-[#d8c4ad] bg-white/70 sm:h-[390px] lg:h-[430px]">
                     <img
-                      src="/images/anoohya-hero-half.jpg"
+                      src="/images/anoohya-hero-half.jpg.jpg"
                       alt="Anoohya Alluri portrait"
                       className="h-full w-full object-cover object-[center_38%]"
                     />
@@ -363,9 +364,9 @@ export default function Home() {
                 </h2>
               </div>
               <p className="max-w-xl text-sm leading-6 text-[#555]">
-                Built for hiring managers who need to understand my work
-                quickly: what problem I solved, what tools I used, and what
-                business value the project created.
+                Project files that show how I connect business problems with
+                tracking systems, dashboards, automation, AI workflows, and
+                growth-focused execution.
               </p>
             </div>
 
@@ -442,43 +443,66 @@ export default function Home() {
                 </h2>
               </div>
               <p className="max-w-xl text-sm leading-6 text-[#555]">
-                Click the folder to open my certification files. Each file links
-                to the related credential, proof page, or certificate source.
+                Open this proof folder to view verified credentials that support
+                my work in analytics, SQL, AI, data visualization, marketing
+                measurement, and business intelligence.
               </p>
             </div>
 
             <button
               type="button"
               onClick={() => setCertificationsOpen(!certificationsOpen)}
-              className="mt-10 w-full rounded-[2rem] border border-[#e4d7c5] bg-white p-6 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
+              className="group relative mt-10 w-full overflow-hidden rounded-[2rem] border border-[#e4d7c5] bg-white p-6 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
             >
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <div className="flex items-center gap-4">
-                  <div className="flex h-16 w-20 items-center justify-center rounded-2xl bg-[#f1c5cc] text-4xl shadow-sm">
-                    📁
+              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#f1c5cc]/50 blur-2xl transition group-hover:scale-125" />
+              <div className="absolute -bottom-10 left-1/3 h-28 w-28 rounded-full bg-[#6f86b8]/20 blur-2xl transition group-hover:scale-125" />
+
+              <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center gap-5">
+                  <div className="relative">
+                    <div className="absolute -right-2 -top-2 h-7 w-12 rounded-t-xl bg-[#d69aa7]" />
+                    <div className="relative flex h-20 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f1c5cc] to-[#d8e3ea] text-5xl shadow-md transition group-hover:-rotate-3 group-hover:scale-105">
+                      📁
+                    </div>
                   </div>
+
                   <div>
                     <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
-                      Professional proof folder
+                      Recruiter proof folder
                     </p>
                     <h3 className="mt-1 font-serif text-3xl font-black text-[#202020]">
                       Certifications
                     </h3>
-                    <p className="mt-2 text-sm leading-6 text-[#555]">
-                      SQL, Google Analytics, AI, Tableau, R, mentoring, and
-                      academic recognition.
+                    <p className="mt-2 max-w-2xl text-sm leading-6 text-[#555]">
+                      A curated file system of certifications, academic
+                      recognition, and technical proof that validates my
+                      analytics and marketing technology skill set.
                     </p>
                   </div>
                 </div>
 
-                <div className="rounded-full bg-[#203354] px-5 py-2 text-center text-sm font-bold text-white">
-                  {certificationsOpen ? "Close folder ↑" : "Open folder ↓"}
+                <div className="rounded-full bg-[#203354] px-5 py-2 text-center text-sm font-bold text-white shadow-md transition group-hover:bg-[#16243c]">
+                  {certificationsOpen
+                    ? "Close proof folder ↑"
+                    : "Open proof folder ↓"}
                 </div>
               </div>
             </button>
 
             {certificationsOpen && (
               <div className="mt-6 rounded-[2rem] border border-[#e4d7c5] bg-[#fffaf3] p-5 shadow-inner">
+                <div className="mb-5 flex items-center gap-3">
+                  <span className="text-2xl">🗂️</span>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                      Folder opened
+                    </p>
+                    <h3 className="font-serif text-2xl font-black">
+                      Credential Files
+                    </h3>
+                  </div>
+                </div>
+
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                   {credentials.map((credential) => (
                     <a
@@ -488,8 +512,13 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="group rounded-3xl border border-[#e4d7c5] bg-white p-5 shadow-md transition hover:-translate-y-2 hover:shadow-2xl"
                     >
-                      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#eef1f8] text-3xl transition group-hover:rotate-6">
-                        📄
+                      <div className="mb-4 flex items-center justify-between">
+                        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#eef1f8] text-3xl transition group-hover:rotate-6">
+                          📄
+                        </div>
+                        <span className="rounded-full bg-[#f5edf0] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#70323c]">
+                          file
+                        </span>
                       </div>
 
                       <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#6f86b8]">
@@ -520,7 +549,7 @@ export default function Home() {
                       </div>
 
                       <p className="mt-5 text-sm font-bold text-[#203354]">
-                        Open certificate ↗
+                        View proof file ↗
                       </p>
                     </a>
                   ))}
@@ -564,13 +593,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-
-          <footer className="px-6 py-8 text-center text-sm text-[#555] sm:px-10">
-            <p>
-              Built as a creative marketing analytics portfolio for Anoohya
-              Alluri.
-            </p>
-          </footer>
         </div>
       </section>
     </main>
