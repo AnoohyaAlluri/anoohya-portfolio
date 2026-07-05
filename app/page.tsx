@@ -82,7 +82,7 @@ const credentials = [
   },
   {
     title: "Google Analytics",
-    issuer: "Google",
+    issuer: "Google Skillshop",
     date: "Issued Jul 2025 · Expires Jul 2026",
     detail:
       "Validated knowledge of Google Analytics measurement, reporting, traffic analysis, and marketing performance tracking.",
@@ -114,43 +114,7 @@ const credentials = [
     detail:
       "Certificate of appreciation for customer research and development of a go-to-market strategy.",
     skills: ["Customer Research", "Go-to-Market Strategy", "Market Analysis"],
-    href: "/certifications/R-systems-certificate.pdf",
-  },
-  {
-    title: "Scholar with Recognition",
-    issuer: "The University of Texas at Dallas",
-    date: "Issued Mar 2025",
-    detail:
-      "Academic recognition in the MS Business Analytics program at UT Dallas for performance, growth, and contribution.",
-    skills: ["Business Analytics", "Artificial Intelligence", "Data Analytics"],
-    href: "https://linktr.ee/anoohyaalluri",
-  },
-  {
-    title: "MSBA Program Mentor Certificate",
-    issuer: "MS Business Analytics & Artificial Intelligence at UT Dallas",
-    date: "Issued Jan 2025",
-    detail:
-      "Certificate of appreciation for mentoring incoming MSBA students through academic guidance, leadership, and peer support.",
-    skills: ["Mentoring", "Leadership", "Business Analytics"],
-    href: "https://linktr.ee/anoohyaalluri",
-  },
-  {
-    title: "Google Analytics",
-    issuer: "Google",
-    date: "Issued May 2024 · Expired May 2025",
-    detail:
-      "Earlier Google Analytics certification supporting foundational analytics, data interpretation, and website performance analysis.",
-    skills: ["Data Visualization", "Data Analysis", "Google Analytics"],
-    href: "https://linktr.ee/anoohyaalluri",
-  },
-  {
-    title: "Tableau Boot Camp",
-    issuer: "EnVision UTD",
-    date: "Issued Sep 2023 · Expires Dec 2034",
-    detail:
-      "Completed Tableau Boot Camp covering data exploration, cleaning, manipulation, dashboarding, and visual storytelling.",
-    skills: ["Tableau", "Data Visualization", "Dashboard Design"],
-    href: "https://linktr.ee/anoohyaalluri",
+    href: "/R-systems-certificate.pdf",
   },
   {
     title: "Sensory Marketing Study",
@@ -180,9 +144,9 @@ const proofLinks = [
     href: "https://www.linkedin.com/in/anoohyaalluri/",
   },
   {
-    title: "Publication",
-    text: "Published sensory marketing research study",
-    href: "http://junikhyatjournal.in/no_1_Online_23/60_online_nov.pdf",
+    title: "Linktree",
+    text: "Certifications, publication, and additional proof links",
+    href: "https://linktr.ee/anoohyaalluri",
   },
 ];
 
@@ -523,7 +487,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                   {credentials.map((credential) => (
                     <a
                       key={credential.title + credential.date}
