@@ -474,8 +474,8 @@ export default function Home() {
                     <div className="bg-white px-4 py-4">
                       <div className="flex items-center gap-4">
                         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-[3px] shadow-md">
-                          <div className="flex h-full w-full items-center justify-center rounded-full bg-white text-2xl">
-                            📸
+                          <div className="flex h-full w-full items-center justify-center rounded-full bg-white text-xl font-black text-[#203354]">
+                            WPM
                           </div>
                         </div>
 
@@ -511,14 +511,18 @@ export default function Home() {
                         </p>
                       </div>
 
-                      <div className="mt-3 flex gap-2 overflow-hidden">
-                        {["Owner Tips", "Reels", "Campaigns"].map((item) => (
-                          <div key={item} className="text-center">
-                            <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-full border border-[#e7e0d7] bg-[#faf7f1] text-lg">
-                              ✦
+                      <div className="mt-3 flex gap-3 overflow-hidden">
+                        {[
+                          { label: "Creative", icon: "✦" },
+                          { label: "Reels", icon: "▻" },
+                          { label: "Campaigns", icon: "◆" },
+                        ].map((item) => (
+                          <div key={item.label} className="text-center">
+                            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-[#e7e0d7] bg-gradient-to-br from-[#fffaf3] to-[#f1c5cc]/50 text-lg font-black text-[#203354] shadow-sm">
+                              {item.icon}
                             </div>
                             <p className="mt-1 text-[9px] font-bold text-[#555]">
-                              {item}
+                              {item.label}
                             </p>
                           </div>
                         ))}
@@ -527,7 +531,7 @@ export default function Home() {
 
                     <div className="grid grid-cols-3 border-y border-[#ece7df] bg-white text-center text-lg text-[#202020]">
                       <div className="border-b-2 border-[#202020] py-2">▦</div>
-                      <div className="py-2">▶</div>
+                      <div className="py-2">▻</div>
                       <div className="py-2">☰</div>
                     </div>
 
@@ -537,14 +541,6 @@ export default function Home() {
                         alt="WPM social media campaign grid proof"
                         className="w-full object-contain object-top"
                       />
-
-                      <div className="pointer-events-none absolute right-[15%] top-[35%] flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-xs font-black text-[#203354] shadow-lg">
-                        ▶
-                      </div>
-
-                      <div className="pointer-events-none absolute right-[15%] top-[68%] flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-xs font-black text-[#203354] shadow-lg">
-                        ▶
-                      </div>
                     </div>
 
                     <div className="grid grid-cols-5 border-t border-[#ece7df] bg-white px-5 py-3 text-center text-lg text-[#202020]">
@@ -646,7 +642,7 @@ export default function Home() {
                     href={credential.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative block min-h-[360px] rounded-[1.6rem] bg-[#efe7dc] p-3 shadow-[0_16px_35px_rgba(32,32,32,0.10)] transition hover:-translate-y-2 hover:rotate-0 hover:shadow-2xl"
+                    className="group relative block min-h-[360px] rounded-[1.6rem] bg-[#efe7dc] p-3 shadow-[0_16px_35px_rgba(32,32,32,0.10)] transition hover:-translate-y-2 hover:shadow-2xl"
                   >
                     <div
                       className={`absolute left-1/2 top-[-14px] z-20 -translate-x-1/2 text-4xl drop-shadow-sm transition group-hover:-translate-y-1 ${
