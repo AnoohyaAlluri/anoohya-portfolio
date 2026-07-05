@@ -87,7 +87,34 @@ const credentials = [
     detail:
       "Validated knowledge of Google Analytics measurement, reporting, traffic analysis, and marketing performance tracking.",
     skills: ["Google Analytics", "Marketing Analytics", "Reporting"],
-    href: "https://linktr.ee/anoohyaalluri",
+    href: "https://skillshop.credential.net/ecc3d6f7-2eb1-4a46-bc3b-3f0e13a6a4bc#acc.OSmnNWrc",
+  },
+  {
+    title: "Gen AI",
+    issuer: "Google",
+    date: "Issued Jun 2024",
+    detail:
+      "Google credential focused on generative AI applications for marketing, productivity, and workflow innovation.",
+    skills: ["Generative AI", "AI for Marketing", "Workflow Innovation"],
+    href: "https://www.skills.google/public_profiles/032a9598-f8ad-4590-b13b-70df6d36d859/badges/9607505?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
+  },
+  {
+    title: "R Programming",
+    issuer: "Udemy",
+    date: "Issued Jul 2023",
+    detail:
+      "Training in R programming and analytical workflows for data analysis, statistical thinking, and business problem-solving.",
+    skills: ["R Programming", "Analytical Skills", "Data Analysis"],
+    href: "https://www.udemy.com/certificate/UC-ffd34fc5-ccfd-4cdf-a457-536fd89f85bb/",
+  },
+  {
+    title: "R Systems Certificate",
+    issuer: "R Systems",
+    date: "Professional Recognition",
+    detail:
+      "Certificate of appreciation for customer research and development of a go-to-market strategy.",
+    skills: ["Customer Research", "Go-to-Market Strategy", "Market Analysis"],
+    href: "/certifications/R-systems-certificate.pdf",
   },
   {
     title: "Scholar with Recognition",
@@ -105,15 +132,6 @@ const credentials = [
     detail:
       "Certificate of appreciation for mentoring incoming MSBA students through academic guidance, leadership, and peer support.",
     skills: ["Mentoring", "Leadership", "Business Analytics"],
-    href: "https://linktr.ee/anoohyaalluri",
-  },
-  {
-    title: "Gen AI",
-    issuer: "Google",
-    date: "Issued Jun 2024",
-    detail:
-      "Credential focused on generative AI applications, including AI-assisted marketing, productivity, and content workflows.",
-    skills: ["Generative AI", "AI for Marketing", "Workflow Innovation"],
     href: "https://linktr.ee/anoohyaalluri",
   },
   {
@@ -135,13 +153,13 @@ const credentials = [
     href: "https://linktr.ee/anoohyaalluri",
   },
   {
-    title: "R Programming",
-    issuer: "Udemy",
-    date: "Issued Jul 2023",
+    title: "Sensory Marketing Study",
+    issuer: "Publication",
+    date: "Published 2023",
     detail:
-      "Training in R programming and analytical workflows for data analysis, statistical thinking, and business problem-solving.",
-    skills: ["R Programming", "Analytical Skills", "Data Analysis"],
-    href: "https://linktr.ee/anoohyaalluri",
+      "Published research using survey data and statistical analysis to study sensory drivers of Gen Z purchase intent and brand loyalty.",
+    skills: ["Research", "Marketing Analytics", "Survey Analysis"],
+    href: "http://junikhyatjournal.in/no_1_Online_23/60_online_nov.pdf",
   },
 ];
 
@@ -158,13 +176,13 @@ const proofLinks = [
   },
   {
     title: "LinkedIn",
-    text: "Professional background and experience",
+    text: "Professional background, credentials, and work history",
     href: "https://www.linkedin.com/in/anoohyaalluri/",
   },
   {
-    title: "Linktree",
-    text: "Certifications, publication, and additional proof links",
-    href: "https://linktr.ee/anoohyaalluri",
+    title: "Publication",
+    text: "Published sensory marketing research study",
+    href: "http://junikhyatjournal.in/no_1_Online_23/60_online_nov.pdf",
   },
 ];
 
@@ -212,7 +230,9 @@ export default function Home() {
             </div>
 
             <a
-              href="mailto:anoohyaalluri@gmail.com"
+              href="https://www.linkedin.com/in/anoohyaalluri/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-[#203354] px-5 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#16243c]"
             >
               Let&apos;s Connect ↗
