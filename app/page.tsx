@@ -50,17 +50,14 @@
       <div className="absolute -right-12 bottom-16 h-48 w-48 rounded-full bg-[#f1c5cc] blur-3xl" />
 
       <div className="relative mx-auto w-[292px] origin-center rotate-[-3deg] rounded-[3.2rem] bg-gradient-to-br from-[#111111] via-[#242424] to-[#050505] p-[10px] shadow-[0_30px_70px_rgba(32,51,84,0.28)] transition duration-500 hover:rotate-0 hover:scale-[1.01] sm:w-[330px] lg:w-[360px]">
-        {/* side buttons */}
         <div className="absolute -left-[5px] top-24 h-14 w-[5px] rounded-l-xl bg-[#1b1b1b]" />
         <div className="absolute -left-[5px] top-40 h-16 w-[5px] rounded-l-xl bg-[#1b1b1b]" />
         <div className="absolute -right-[5px] top-32 h-20 w-[5px] rounded-r-xl bg-[#1b1b1b]" />
 
-        <div className="relative overflow-hidden rounded-[2.7rem] bg-[#faf7f1]">
-          {/* phone notch */}
+        <div className="relative overflow-hidden rounded-[2.7rem] bg-white">
           <div className="absolute left-1/2 top-0 z-30 h-7 w-28 -translate-x-1/2 rounded-b-3xl bg-[#111111]" />
 
-          {/* Instagram top bar */}
-          <div className="flex items-center justify-between border-b border-[#ece7df] bg-[#fffdf9] px-4 pb-3 pt-9">
+          <div className="flex items-center justify-between border-b border-[#ece7df] bg-white px-4 pb-3 pt-9">
             <span className="text-lg font-black text-[#202020]">‹</span>
 
             <div className="text-center">
@@ -75,8 +72,7 @@
             <span className="text-lg font-black text-[#202020]">•••</span>
           </div>
 
-          {/* Instagram profile header */}
-          <div className="bg-[#fffdf9] px-4 py-4">
+          <div className="bg-white px-4 py-4">
             <div className="flex items-center gap-4">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-[3px] shadow-md">
                 <div className="flex h-full w-full items-center justify-center rounded-full bg-white text-2xl">
@@ -87,21 +83,15 @@
               <div className="grid flex-1 grid-cols-3 text-center">
                 <div>
                   <p className="text-sm font-black text-[#202020]">72</p>
-                  <p className="text-[10px] font-semibold text-[#777]">
-                    posts
-                  </p>
+                  <p className="text-[10px] font-semibold text-[#777]">posts</p>
                 </div>
                 <div>
                   <p className="text-sm font-black text-[#202020]">2.4K</p>
-                  <p className="text-[10px] font-semibold text-[#777]">
-                    reach
-                  </p>
+                  <p className="text-[10px] font-semibold text-[#777]">reach</p>
                 </div>
                 <div>
                   <p className="text-sm font-black text-[#202020]">WPM</p>
-                  <p className="text-[10px] font-semibold text-[#777]">
-                    brand
-                  </p>
+                  <p className="text-[10px] font-semibold text-[#777]">brand</p>
                 </div>
               </div>
             </div>
@@ -115,39 +105,48 @@
               </p>
             </div>
 
-            <div className="mt-3 grid grid-cols-2 gap-2">
-              <div className="rounded-lg border border-[#e7e0d7] bg-white py-1.5 text-center text-[11px] font-bold text-[#202020]">
-                Campaign proof
-              </div>
-              <div className="rounded-lg border border-[#e7e0d7] bg-white py-1.5 text-center text-[11px] font-bold text-[#202020]">
-                Creative system
-              </div>
+            <div className="mt-3 flex gap-2 overflow-hidden">
+              {["Owner Tips", "Reels", "Campaigns"].map((item) => (
+                <div key={item} className="text-center">
+                  <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-full border border-[#e7e0d7] bg-[#faf7f1] text-lg">
+                    ✦
+                  </div>
+                  <p className="mt-1 text-[9px] font-bold text-[#555]">
+                    {item}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Instagram tabs */}
           <div className="grid grid-cols-3 border-y border-[#ece7df] bg-white text-center text-lg text-[#202020]">
             <div className="border-b-2 border-[#202020] py-2">▦</div>
             <div className="py-2">▶</div>
             <div className="py-2">☰</div>
           </div>
 
-          {/* grid screen */}
           <div className="relative bg-white p-[3px]">
             <img
               src="/social/wpm-social-grid.png"
               alt="WPM social media campaign grid proof"
-              className="w-full rounded-b-[1.9rem] object-contain object-top"
+              className="w-full object-contain object-top"
             />
 
-            {/* reel play indicators */}
-            <div className="pointer-events-none absolute right-[15%] top-[33%] flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-xs font-black text-[#203354] shadow-lg">
+            <div className="pointer-events-none absolute right-[15%] top-[35%] flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-xs font-black text-[#203354] shadow-lg">
               ▶
             </div>
 
-            <div className="pointer-events-none absolute right-[15%] top-[66%] flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-xs font-black text-[#203354] shadow-lg">
+            <div className="pointer-events-none absolute right-[15%] top-[68%] flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-xs font-black text-[#203354] shadow-lg">
               ▶
             </div>
+          </div>
+
+          <div className="grid grid-cols-5 border-t border-[#ece7df] bg-white px-5 py-3 text-center text-lg text-[#202020]">
+            <span>⌂</span>
+            <span>⌕</span>
+            <span>＋</span>
+            <span>▻</span>
+            <span>◉</span>
           </div>
         </div>
       </div>
