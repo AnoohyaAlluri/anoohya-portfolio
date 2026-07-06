@@ -231,20 +231,33 @@ export default function Home() {
       window.history.scrollRestoration = "manual";
     }
 
-    const openFromTop = () => {
+    const forceTop = () => {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
     };
 
-    if (!window.location.hash) {
-      openFromTop();
-      const firstTimer = window.setTimeout(openFromTop, 0);
-      const secondTimer = window.setTimeout(openFromTop, 250);
-
-      return () => {
-        window.clearTimeout(firstTimer);
-        window.clearTimeout(secondTimer);
-      };
+    if (window.location.hash) {
+      window.history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search
+      );
     }
+
+    forceTop();
+
+    const timers = [
+      window.setTimeout(forceTop, 0),
+      window.setTimeout(forceTop, 100),
+      window.setTimeout(forceTop, 300),
+      window.setTimeout(forceTop, 700),
+      window.setTimeout(forceTop, 1200),
+    ];
+
+    return () => {
+      timers.forEach((timer) => window.clearTimeout(timer));
+    };
   }, []);
 
   return (
