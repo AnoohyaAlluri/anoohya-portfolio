@@ -227,8 +227,23 @@ export default function Home() {
   const activeWebsiteSlide = websiteProofSlides[websiteSlide];
 
   useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    const openFromTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    };
+
     if (!window.location.hash) {
-      window.scrollTo(0, 0);
+      openFromTop();
+      const firstTimer = window.setTimeout(openFromTop, 0);
+      const secondTimer = window.setTimeout(openFromTop, 250);
+
+      return () => {
+        window.clearTimeout(firstTimer);
+        window.clearTimeout(secondTimer);
+      };
     }
   }, []);
 
@@ -478,7 +493,7 @@ export default function Home() {
             id="website-proof"
             className="overflow-hidden border-y border-[#eadfce] bg-[#fbf5ec] px-6 py-16 sm:px-10"
           >
-            <div className="grid gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
+            <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div>
                 <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
                   SEO / AEO / GEO website proof
@@ -520,41 +535,40 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="relative mx-auto w-full max-w-[760px]">
-                <div className="absolute -left-16 top-10 h-52 w-52 rounded-full bg-[#d8e3ea] blur-3xl" />
-                <div className="absolute -right-16 bottom-10 h-60 w-60 rounded-full bg-[#f1c5cc] blur-3xl" />
+              <div className="relative mx-auto w-full max-w-[720px]">
+                <div className="absolute -left-14 top-10 h-48 w-48 rounded-full bg-[#d8e3ea] blur-3xl" />
+                <div className="absolute -right-14 bottom-10 h-56 w-56 rounded-full bg-[#f1c5cc] blur-3xl" />
 
-                <div className="relative rounded-[2.25rem] bg-gradient-to-br from-[#111111] via-[#2a2a2a] to-[#050505] p-[10px] shadow-[0_40px_90px_rgba(32,51,84,0.35)]">
-                  <div className="overflow-hidden rounded-[1.8rem] bg-[#f7f3ec]">
-                    <div className="flex items-center justify-between border-b border-[#e5dccf] bg-[#f8f4ed] px-5 py-3">
+                <div className="relative rounded-[2rem] border border-[#d8c6ad] bg-[#151515] p-3 shadow-[0_35px_80px_rgba(32,51,84,0.30)]">
+                  <div className="overflow-hidden rounded-[1.5rem] bg-white">
+                    <div className="flex items-center justify-between border-b border-[#e8e2d8] bg-[#f8f4ed] px-4 py-3">
                       <div className="flex items-center gap-2">
-                        <span className="h-3.5 w-3.5 rounded-full bg-[#e58aa0]" />
-                        <span className="h-3.5 w-3.5 rounded-full bg-[#f2c85b]" />
-                        <span className="h-3.5 w-3.5 rounded-full bg-[#8fb8d8]" />
+                        <span className="h-3 w-3 rounded-full bg-[#d69aa7]" />
+                        <span className="h-3 w-3 rounded-full bg-[#f2c85b]" />
+                        <span className="h-3 w-3 rounded-full bg-[#8fb8d8]" />
                       </div>
 
-                      <div className="hidden min-w-[260px] rounded-full bg-white px-5 py-1.5 text-center text-xs font-black text-[#203354] shadow-sm sm:block">
+                      <div className="hidden rounded-full bg-white px-4 py-1 text-xs font-bold text-[#203354] shadow-sm sm:block">
                         westsidepropertymanagement.com
                       </div>
 
-                      <div className="text-xs font-black uppercase tracking-[0.18em] text-[#6f86b8]">
+                      <div className="text-xs font-bold text-[#777]">
                         SEO Proof
                       </div>
                     </div>
 
-                    <div className="relative aspect-[16/10] bg-white">
+                    <div className="relative bg-white">
                       <img
-                        key={activeWebsiteSlide.image}
                         src={activeWebsiteSlide.image}
                         alt={activeWebsiteSlide.title}
-                        className="h-full w-full object-cover object-top transition duration-500"
+                        className="h-auto w-full object-contain"
                       />
 
                       <button
                         type="button"
                         onClick={previousWebsiteSlide}
                         aria-label="Previous website proof"
-                        className="absolute left-4 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-3xl font-black text-[#203354] shadow-xl transition hover:scale-110"
+                        className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-2xl font-black text-[#203354] shadow-xl transition hover:scale-110"
                       >
                         ‹
                       </button>
@@ -563,26 +577,10 @@ export default function Home() {
                         type="button"
                         onClick={nextWebsiteSlide}
                         aria-label="Next website proof"
-                        className="absolute right-4 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-3xl font-black text-[#203354] shadow-xl transition hover:scale-110"
+                        className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-2xl font-black text-[#203354] shadow-xl transition hover:scale-110"
                       >
                         ›
                       </button>
-
-                      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2 rounded-full bg-white/90 px-4 py-2 shadow-lg">
-                        {websiteProofSlides.map((slide, index) => (
-                          <button
-                            key={slide.title}
-                            type="button"
-                            onClick={() => setWebsiteSlide(index)}
-                            aria-label={`View ${slide.title}`}
-                            className={`h-2.5 rounded-full transition ${
-                              websiteSlide === index
-                                ? "w-8 bg-[#203354]"
-                                : "w-2.5 bg-[#d8c6ad]"
-                            }`}
-                          />
-                        ))}
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -599,6 +597,22 @@ export default function Home() {
                   <p className="mt-2 text-sm leading-6 text-[#555]">
                     {activeWebsiteSlide.caption}
                   </p>
+
+                  <div className="mt-4 flex justify-center gap-2">
+                    {websiteProofSlides.map((slide, index) => (
+                      <button
+                        key={slide.title}
+                        type="button"
+                        onClick={() => setWebsiteSlide(index)}
+                        aria-label={`View ${slide.title}`}
+                        className={`h-2.5 rounded-full transition ${
+                          websiteSlide === index
+                            ? "w-8 bg-[#203354]"
+                            : "w-2.5 bg-[#d8c6ad]"
+                        }`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
