@@ -51,6 +51,58 @@ const projects = [
   },
 ];
 
+const websiteProofSlides = [
+  {
+    title: "Homepage UX + CTA Positioning",
+    label: "Website UX",
+    image: "/website/homepage-ux.png",
+    caption:
+      "Owner-focused homepage structure with clear positioning, trust messaging, and primary conversion CTAs.",
+  },
+  {
+    title: "Owner Journey Content Blocks",
+    label: "Information Architecture",
+    image: "/website/owner-guidance-cards.png",
+    caption:
+      "Segmented owner pathways for switchers, accidental landlords, and first-time investors.",
+  },
+  {
+    title: "LA Rental Market Resource",
+    label: "SEO Content System",
+    image: "/website/la-market-resource.png",
+    caption:
+      "Educational market resource designed to support owner education, search visibility, and lead capture.",
+  },
+  {
+    title: "Accidental Landlord Guide",
+    label: "Lead Magnet UX",
+    image: "/website/accidental-landlord-guide.png",
+    caption:
+      "Guide-style landing experience for property owners who need decision support before converting.",
+  },
+  {
+    title: "Guide Cover / Resource Design",
+    label: "Content Packaging",
+    image: "/website/guide-cover.png",
+    caption:
+      "Branded resource packaging that turns educational content into a conversion-ready asset.",
+  },
+  {
+    title: "Consultation Confirmation Page",
+    label: "Conversion Flow",
+    image: "/website/consultation-confirmation.png",
+    caption:
+      "Post-conversion confirmation experience supporting user reassurance and next-step clarity.",
+  },
+  {
+    title: "Santa Monica Local SEO Page",
+    label: "Local SEO Landing Page",
+    image: "/website/santa-monica-local-seo.png",
+    caption:
+      "City-specific service page structured for local search intent and high-value rental owner conversion.",
+  },
+];
+
 const tools = [
   "Python",
   "SQL",
@@ -158,6 +210,21 @@ const proofLinks = [
 
 export default function Home() {
   const [certificationsOpen, setCertificationsOpen] = useState(false);
+  const [websiteSlide, setWebsiteSlide] = useState(0);
+
+  const nextWebsiteSlide = () => {
+    setWebsiteSlide((current) =>
+      current === websiteProofSlides.length - 1 ? 0 : current + 1
+    );
+  };
+
+  const previousWebsiteSlide = () => {
+    setWebsiteSlide((current) =>
+      current === 0 ? websiteProofSlides.length - 1 : current - 1
+    );
+  };
+
+  const activeWebsiteSlide = websiteProofSlides[websiteSlide];
 
   useEffect(() => {
     if (!window.location.hash) {
@@ -187,6 +254,9 @@ export default function Home() {
               </a>
               <a href="#projects" className="hover:text-[#6f86b8]">
                 Projects
+              </a>
+              <a href="#website-proof" className="hover:text-[#6f86b8]">
+                Website
               </a>
               <a href="#creative" className="hover:text-[#6f86b8]">
                 Creative
@@ -249,6 +319,13 @@ export default function Home() {
                   className="rounded-xl border border-[#203354] bg-white/60 px-6 py-3 text-center text-sm font-bold text-[#203354] transition hover:-translate-y-1 hover:bg-white"
                 >
                   View Case Studies ↗
+                </a>
+
+                <a
+                  href="#website-proof"
+                  className="rounded-xl border border-[#6f86b8] bg-[#eef1f8] px-6 py-3 text-center text-sm font-bold text-[#203354] transition hover:-translate-y-1 hover:bg-white"
+                >
+                  View Website Proof ↔
                 </a>
 
                 <a
@@ -398,6 +475,135 @@ export default function Home() {
           </section>
 
           <section
+            id="website-proof"
+            className="overflow-hidden border-y border-[#eadfce] bg-[#fbf5ec] px-6 py-16 sm:px-10"
+          >
+            <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                  SEO / AEO / GEO website proof
+                </p>
+
+                <h2 className="mt-3 font-serif text-4xl font-black leading-tight sm:text-5xl">
+                  Website growth system shown inside a desktop screen.
+                </h2>
+
+                <p className="mt-5 max-w-xl text-sm leading-7 text-[#555] sm:text-base">
+                  Built and supported website improvements across homepage UX,
+                  local SEO landing pages, owner education resources,
+                  guide-style lead magnets, confirmation flows, and
+                  conversion-focused CTAs. This section shows the website as a
+                  growth system, not just page editing.
+                </p>
+
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {[
+                    "Homepage UX",
+                    "Local SEO pages",
+                    "AEO / GEO content",
+                    "Lead magnet UX",
+                    "CTA optimization",
+                    "Conversion flow",
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-2xl border border-[#eadfce] bg-white/70 px-4 py-3 text-sm font-bold text-[#203354] shadow-sm"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+
+                <p className="mt-6 rounded-2xl bg-[#f5edf0] px-5 py-4 text-sm leading-6 text-[#70323c]">
+                  Performance impact pending validation through GA4, Google
+                  Search Console, and lead-source tracking.
+                </p>
+              </div>
+
+              <div className="relative mx-auto w-full max-w-[720px]">
+                <div className="absolute -left-14 top-10 h-48 w-48 rounded-full bg-[#d8e3ea] blur-3xl" />
+                <div className="absolute -right-14 bottom-10 h-56 w-56 rounded-full bg-[#f1c5cc] blur-3xl" />
+
+                <div className="relative rounded-[2rem] border border-[#d8c6ad] bg-[#151515] p-3 shadow-[0_35px_80px_rgba(32,51,84,0.30)]">
+                  <div className="overflow-hidden rounded-[1.5rem] bg-white">
+                    <div className="flex items-center justify-between border-b border-[#e8e2d8] bg-[#f8f4ed] px-4 py-3">
+                      <div className="flex items-center gap-2">
+                        <span className="h-3 w-3 rounded-full bg-[#d69aa7]" />
+                        <span className="h-3 w-3 rounded-full bg-[#f2c85b]" />
+                        <span className="h-3 w-3 rounded-full bg-[#8fb8d8]" />
+                      </div>
+
+                      <div className="hidden rounded-full bg-white px-4 py-1 text-xs font-bold text-[#203354] shadow-sm sm:block">
+                        westsidepropertymanagement.com
+                      </div>
+
+                      <div className="text-xs font-bold text-[#777]">
+                        SEO Proof
+                      </div>
+                    </div>
+
+                    <div className="relative bg-white">
+                      <img
+                        src={activeWebsiteSlide.image}
+                        alt={activeWebsiteSlide.title}
+                        className="h-auto w-full object-contain"
+                      />
+
+                      <button
+                        type="button"
+                        onClick={previousWebsiteSlide}
+                        aria-label="Previous website proof"
+                        className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-2xl font-black text-[#203354] shadow-xl transition hover:scale-110"
+                      >
+                        ‹
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={nextWebsiteSlide}
+                        aria-label="Next website proof"
+                        className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-2xl font-black text-[#203354] shadow-xl transition hover:scale-110"
+                      >
+                        ›
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mx-auto mt-6 max-w-xl rounded-3xl border border-[#eadfce] bg-white/85 p-5 text-center shadow-md">
+                  <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                    {activeWebsiteSlide.label}
+                  </p>
+
+                  <h3 className="mt-2 font-serif text-2xl font-black">
+                    {activeWebsiteSlide.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-6 text-[#555]">
+                    {activeWebsiteSlide.caption}
+                  </p>
+
+                  <div className="mt-4 flex justify-center gap-2">
+                    {websiteProofSlides.map((slide, index) => (
+                      <button
+                        key={slide.title}
+                        type="button"
+                        onClick={() => setWebsiteSlide(index)}
+                        aria-label={`View ${slide.title}`}
+                        className={`h-2.5 rounded-full transition ${
+                          websiteSlide === index
+                            ? "w-8 bg-[#203354]"
+                            : "w-2.5 bg-[#d8c6ad]"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
             id="creative"
             className="overflow-hidden border-y border-[#eadfce] bg-[#fffaf3] px-6 py-16 sm:px-10"
           >
@@ -459,7 +665,9 @@ export default function Home() {
                     <div className="absolute left-1/2 top-0 z-30 h-7 w-28 -translate-x-1/2 rounded-b-3xl bg-[#111111]" />
 
                     <div className="flex items-center justify-between border-b border-[#ece7df] bg-white px-4 pb-3 pt-9">
-                      <span className="text-lg font-black text-[#202020]">‹</span>
+                      <span className="text-lg font-black text-[#202020]">
+                        ‹
+                      </span>
 
                       <div className="text-center">
                         <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#777]">
@@ -470,7 +678,9 @@ export default function Home() {
                         </p>
                       </div>
 
-                      <span className="text-lg font-black text-[#202020]">•••</span>
+                      <span className="text-lg font-black text-[#202020]">
+                        •••
+                      </span>
                     </div>
 
                     <div className="bg-white px-4 py-4">
@@ -483,19 +693,25 @@ export default function Home() {
 
                         <div className="grid flex-1 grid-cols-3 text-center">
                           <div>
-                            <p className="text-sm font-black text-[#202020]">72</p>
+                            <p className="text-sm font-black text-[#202020]">
+                              72
+                            </p>
                             <p className="text-[10px] font-semibold text-[#777]">
                               posts
                             </p>
                           </div>
                           <div>
-                            <p className="text-sm font-black text-[#202020]">2.4K</p>
+                            <p className="text-sm font-black text-[#202020]">
+                              2.4K
+                            </p>
                             <p className="text-[10px] font-semibold text-[#777]">
                               reach
                             </p>
                           </div>
                           <div>
-                            <p className="text-sm font-black text-[#202020]">WPM</p>
+                            <p className="text-sm font-black text-[#202020]">
+                              WPM
+                            </p>
                             <p className="text-[10px] font-semibold text-[#777]">
                               brand
                             </p>
