@@ -20,6 +20,7 @@ type FeaturedProject = {
   tools: string[];
   status: string;
   icon: string;
+  image?: string;
   previewClass: string;
   proof: string[];
   href?: string;
@@ -44,6 +45,7 @@ const featuredProjects: FeaturedProject[] = [
     tools: ["Python", "Pandas", "Data QA", "CRM Matching"],
     status: "Portfolio Ready",
     icon: "🧠",
+    image: "/projects/lead-intelligence-dashboard-preview.png",
     previewClass:
       "from-[#203354] via-[#5f78ab] to-[#d8e3ea]",
     proof: [
@@ -630,16 +632,27 @@ export default function Home() {
                       <div className="absolute -bottom-16 -left-10 h-40 w-40 rounded-full border border-white/20 bg-white/10" />
 
                       <div className="relative flex items-start justify-between gap-4">
-                        <div>
-                          <p className="max-w-[220px] text-[11px] font-black uppercase tracking-[0.22em] text-white/85">
+                        <div className="max-w-[230px]">
+                          <p className="text-[11px] font-black uppercase tracking-[0.22em] text-white/85">
                             {project.tag}
                           </p>
-                          <div className="mt-5 text-5xl">
-                            {project.icon}
-                          </div>
+
+                          {project.image ? (
+                            <div className="mt-4 overflow-hidden rounded-2xl border border-white/30 bg-white/95 p-2 shadow-xl">
+                              <img
+                                src={project.image}
+                                alt={`${project.title} preview`}
+                                className="h-24 w-full rounded-xl object-cover object-top"
+                              />
+                            </div>
+                          ) : (
+                            <div className="mt-5 text-5xl">
+                              {project.icon}
+                            </div>
+                          )}
                         </div>
 
-                        <span className="rounded-full border border-white/30 bg-white/15 px-3 py-1 text-[10px] font-bold uppercase tracking-wider backdrop-blur">
+                        <span className="max-w-[120px] rounded-full border border-white/30 bg-white/15 px-3 py-1 text-center text-[10px] font-bold uppercase tracking-wider backdrop-blur">
                           {project.status}
                         </span>
                       </div>
