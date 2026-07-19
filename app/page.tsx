@@ -13,13 +13,26 @@ const stackItems = [
   { icon: "💻", title: "Coding", detail: "Python, SQL, R, data workflows" },
 ];
 
-const projects = [
+type Project = {
+  tag: string;
+  title: string;
+  description: string;
+  tools: string[];
+  status?: string;
+  href?: string;
+  buttonLabel?: string;
+};
+
+const projects: Project[] = [
   {
-    tag: "Dashboards",
-    title: "Lead Intelligence Dashboard",
+    tag: "Marketing Analytics Engineering",
+    title: "Lead Intelligence & Attribution System",
     description:
-      "Built a marketing intelligence dashboard to centralize lead sources, conversion signals, attribution gaps, and executive KPIs.",
-    tools: ["Python", "Streamlit", "GA4", "Google Ads"],
+      "Built a public-safe lead intelligence pipeline for CRM data quality, match-confidence scoring, QA validation, exception routing, and analytics-ready reporting.",
+    tools: ["Python", "Pandas", "Data QA", "CRM Matching"],
+    status: "Portfolio Ready",
+    href: "https://github.com/AnoohyaAlluri/lead-intelligence-system",
+    buttonLabel: "View GitHub Project",
   },
   {
     tag: "Attribution",
@@ -497,6 +510,23 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
+
+                  {project.status && (
+                    <p className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-[#5f78ab]">
+                      {project.status}
+                    </p>
+                  )}
+
+                  {project.href && (
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-5 inline-flex rounded-full bg-[#203354] px-4 py-2 text-xs font-bold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#16243c]"
+                    >
+                      {project.buttonLabel ?? "View Project"} ↗
+                    </a>
+                  )}
                 </article>
               ))}
             </div>
