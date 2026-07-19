@@ -13,54 +13,179 @@ const stackItems = [
   { icon: "💻", title: "Coding", detail: "Python, SQL, R, data workflows" },
 ];
 
-type Project = {
+type FeaturedProject = {
   tag: string;
   title: string;
   description: string;
   tools: string[];
-  status?: string;
+  status: string;
+  icon: string;
+  previewClass: string;
+  proof: string[];
   href?: string;
   buttonLabel?: string;
 };
 
-const projects: Project[] = [
+type SupportingProject = {
+  title: string;
+  category: string;
+  description: string;
+  tools: string[];
+  href?: string;
+  buttonLabel?: string;
+};
+
+const featuredProjects: FeaturedProject[] = [
   {
     tag: "Marketing Analytics Engineering",
     title: "Lead Intelligence & Attribution System",
     description:
-      "Built a public-safe lead intelligence pipeline for CRM data quality, match-confidence scoring, QA validation, exception routing, and analytics-ready reporting.",
+      "Built a public-safe synthetic lead intelligence pipeline for CRM data quality, match-confidence scoring, QA validation, exception routing, and analytics-ready reporting.",
     tools: ["Python", "Pandas", "Data QA", "CRM Matching"],
     status: "Portfolio Ready",
+    icon: "🧠",
+    previewClass:
+      "from-[#203354] via-[#5f78ab] to-[#d8e3ea]",
+    proof: [
+      "Synthetic pipeline and QA tests",
+      "Architecture and KPI visuals",
+      "Public-safe GitHub documentation",
+    ],
     href: "https://github.com/AnoohyaAlluri/lead-intelligence-system",
-    buttonLabel: "View GitHub Project",
+    buttonLabel: "View GitHub Case Study",
   },
   {
-    tag: "Attribution",
-    title: "GA4 + Campaign Tracking System",
+    tag: "Operations Intelligence",
+    title: "Growth & Operations Command Center",
     description:
-      "Mapped marketing events, lead actions, and traffic sources into a cleaner tracking framework for campaign optimization.",
-    tools: ["GA4", "GTM", "Meta Pixel", "CRO"],
+      "Designed an evidence-linked leadership system for projects, KPIs, milestones, blockers, decisions, weekly execution, and executive reporting.",
+    tools: ["Google Sheets", "Apps Script", "Looker Studio", "Data Governance"],
+    status: "Case Study in Development",
+    icon: "🗂️",
+    previewClass:
+      "from-[#40577f] via-[#8fa5c8] to-[#f1c5cc]",
+    proof: [
+      "Project and KPI register",
+      "Evidence-linked reporting model",
+      "Leadership visibility framework",
+    ],
   },
   {
     tag: "SEO / AEO / GEO",
-    title: "Local Growth Content Framework",
+    title: "Local Growth & Search Authority System",
     description:
-      "Developed search-ready content systems for property management topics, FAQs, landing pages, and AI-assisted discoverability.",
-    tools: ["SEO", "Content", "Analytics", "AI"],
+      "Built a public-safe framework connecting local SEO, answer-engine optimization, generative-engine visibility, internal linking, content architecture, and conversion pathways.",
+    tools: ["SEO", "AEO", "GEO", "Search Analytics"],
+    status: "Portfolio Ready",
+    icon: "🔎",
+    previewClass:
+      "from-[#244c5a] via-[#6f9e9a] to-[#dce9df]",
+    proof: [
+      "Search-ready content architecture",
+      "Local intent and FAQ framework",
+      "Public-safe implementation guide",
+    ],
+    href:
+      "https://github.com/AnoohyaAlluri/seo-aeo-geo-local-growth-framework",
+    buttonLabel: "View GitHub Case Study",
   },
   {
-    tag: "Automation",
-    title: "CRM + Review Workflow",
+    tag: "Marketing Technology",
+    title: "Website Lead Capture & Attribution Pipeline",
     description:
-      "Designed trigger-based outreach and review generation workflows to reduce manual follow-up and improve operational visibility.",
-    tools: ["CRM", "Mailchimp", "Apps Script", "Automation"],
+      "Standardized owner-facing lead workflows and designed a cleaner path from form submission through source capture, routing, QA, and conversion verification.",
+    tools: ["GA4", "GTM", "Forms", "Apps Script"],
+    status: "Evidence Being Anonymized",
+    icon: "🧭",
+    previewClass:
+      "from-[#5d4162] via-[#a47d9b] to-[#f1d9e0]",
+    proof: [
+      "Multi-form tracking framework",
+      "Source and conversion logic",
+      "Workflow QA documentation",
+    ],
   },
   {
-    tag: "Predictive Analytics",
+    tag: "Paid Media Analytics",
+    title: "Conversion Integrity & Attribution Audit",
+    description:
+      "Audited platform-reported activity to distinguish qualified lead evidence from behavioral events and improve campaign measurement integrity.",
+    tools: ["Google Ads", "GA4", "GTM", "Attribution"],
+    status: "Case Study in Development",
+    icon: "🎯",
+    previewClass:
+      "from-[#6c4633] via-[#c28a68] to-[#f4dfcc]",
+    proof: [
+      "Conversion classification model",
+      "Tracking-gap diagnosis",
+      "Budget decision support",
+    ],
+  },
+  {
+    tag: "Business Analytics",
+    title: "Maintenance Operations Intelligence",
+    description:
+      "Analyzed operational work-order patterns to identify documentation gaps, cancellation risk, issue-category trends, and automation opportunities.",
+    tools: ["Python", "Excel", "Tableau", "Process Analytics"],
+    status: "Dashboard Planning",
+    icon: "⚙️",
+    previewClass:
+      "from-[#3d4a47] via-[#7b918a] to-[#dfe8e4]",
+    proof: [
+      "Operational bottleneck analysis",
+      "Data-quality gap detection",
+      "Dashboard and automation roadmap",
+    ],
+  },
+];
+
+const supportingProjects: SupportingProject[] = [
+  {
+    title: "Luxury Agent Outreach Automation",
+    category: "Growth Operations",
+    description:
+      "Controlled outreach pipeline with monthly suppression, duplicate prevention, follow-up logic, and public-safe workflow documentation.",
+    tools: ["Apps Script", "Google Sheets", "Email Automation"],
+    href:
+      "https://github.com/AnoohyaAlluri/luxury-rental-mls-outreach-pipeline",
+    buttonLabel: "View GitHub",
+  },
+  {
+    title: "Review Generation Automation",
+    category: "Reputation Operations",
+    description:
+      "Qualification, deduplication, send-control, and follow-up workflow for structured review outreach.",
+    tools: ["Apps Script", "QA Rules", "Email"],
+  },
+  {
+    title: "Direct Mail Campaign System",
+    category: "Campaign Operations",
+    description:
+      "Audience selection, vendor coordination, delivery tracking, CTA design, and attribution planning for owner acquisition.",
+    tools: ["Direct Mail", "Segmentation", "Attribution"],
+  },
+  {
+    title: "AI & PropTech Vendor Evaluation",
+    category: "AI Operations",
+    description:
+      "Structured vendor evaluation across problem fit, implementation effort, cost, integration, risk, and scalability.",
+    tools: ["AI Evaluation", "ROI", "Risk Analysis"],
+  },
+  {
     title: "Campaign Prediction Models",
+    category: "Predictive Analytics",
     description:
-      "Applied regression, classification, and segmentation models to improve targeting, forecasting, and marketing decision-making.",
-    tools: ["Python", "R", "SQL", "Tableau"],
+      "Regression, classification, and segmentation work supporting targeting, forecasting, and campaign decision-making.",
+    tools: ["Python", "R", "SQL", "Machine Learning"],
+  },
+  {
+    title: "Tableau Dashboard Collection",
+    category: "Data Visualization",
+    description:
+      "Interactive dashboards and geospatial analysis supporting segmentation, regional demand analysis, and business insight communication.",
+    tools: ["Tableau", "Mapbox", "Excel"],
+    href: "https://public.tableau.com/app/profile/anoohya.allurii/vizzes",
+    buttonLabel: "View Tableau",
   },
 ];
 
@@ -223,6 +348,7 @@ const proofLinks = [
 
 export default function Home() {
   const [certificationsOpen, setCertificationsOpen] = useState(false);
+  const [projectsOpen, setProjectsOpen] = useState(false);
   const [websiteSlide, setWebsiteSlide] = useState(0);
 
   const nextWebsiteSlide = () => {
@@ -464,71 +590,210 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="projects" className="px-6 py-12 sm:px-10">
-            <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
-              <div>
-                <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
-                  Featured proof
-                </p>
-                <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
-                  Case Studies
-                </h2>
-              </div>
-              <p className="max-w-xl text-sm leading-6 text-[#555]">
-                Project files that show how I connect business problems with
-                tracking systems, dashboards, automation, AI workflows, and
-                growth-focused execution.
-              </p>
-            </div>
+          <section
+            id="projects"
+            className="relative overflow-hidden border-y border-[#eadfce] bg-gradient-to-br from-[#eef1f8] via-[#fbf5ec] to-[#fff4f6] px-6 py-16 sm:px-10"
+          >
+            <div className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-[#9fb2d3]/30 blur-3xl" />
+            <div className="absolute -right-24 bottom-24 h-80 w-80 rounded-full bg-[#f1c5cc]/40 blur-3xl" />
 
-            <div className="mt-10 grid gap-5 lg:grid-cols-5">
-              {projects.map((project) => (
-                <article
-                  key={project.title}
-                  className="rounded-3xl border border-[#e4d7c5] bg-white p-5 shadow-md transition hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div className="mb-4 h-32 rounded-2xl bg-gradient-to-br from-[#203354] via-[#5f78ab] to-[#eec3cc] p-4 text-white">
-                    <p className="text-xs font-bold uppercase tracking-widest">
-                      {project.tag}
-                    </p>
-                    <div className="mt-8 h-2 w-20 rounded-full bg-white/60" />
-                    <div className="mt-3 h-2 w-28 rounded-full bg-white/30" />
-                  </div>
-                  <h3 className="font-serif text-xl font-bold leading-tight">
-                    {project.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-6 text-[#555]">
-                    {project.description}
+            <div className="relative">
+              <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                    Selected work
                   </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {project.tools.map((tool) => (
-                      <span
-                        key={tool}
-                        className="rounded-full bg-[#f5edf0] px-3 py-1 text-xs font-semibold text-[#70323c]"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
+                  <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
+                    Featured Case Studies
+                  </h2>
+                </div>
 
-                  {project.status && (
-                    <p className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-[#5f78ab]">
-                      {project.status}
-                    </p>
-                  )}
+                <p className="max-w-xl text-sm leading-7 text-[#555]">
+                  Evidence-backed systems across marketing analytics,
+                  attribution, automation, search growth, operations
+                  intelligence, and business analytics. Confidential work is
+                  represented through synthetic data, anonymized workflows, and
+                  public-safe documentation.
+                </p>
+              </div>
 
-                  {project.href && (
-                    <a
-                      href={project.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-5 inline-flex rounded-full bg-[#203354] px-4 py-2 text-xs font-bold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#16243c]"
+              <div className="mt-10 grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+                {featuredProjects.map((project) => (
+                  <article
+                    key={project.title}
+                    className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-white/70 bg-white/55 p-5 shadow-[0_22px_60px_rgba(32,51,84,0.13)] backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:bg-white/75 hover:shadow-[0_28px_75px_rgba(32,51,84,0.20)]"
+                  >
+                    <div
+                      className={`relative min-h-[190px] overflow-hidden rounded-[1.5rem] bg-gradient-to-br ${project.previewClass} p-5 text-white shadow-inner`}
                     >
-                      {project.buttonLabel ?? "View Project"} ↗
-                    </a>
-                  )}
-                </article>
-              ))}
+                      <div className="absolute -right-10 -top-12 h-36 w-36 rounded-full border border-white/25 bg-white/10" />
+                      <div className="absolute -bottom-16 -left-10 h-40 w-40 rounded-full border border-white/20 bg-white/10" />
+
+                      <div className="relative flex items-start justify-between gap-4">
+                        <div>
+                          <p className="max-w-[220px] text-[11px] font-black uppercase tracking-[0.22em] text-white/85">
+                            {project.tag}
+                          </p>
+                          <div className="mt-5 text-5xl">
+                            {project.icon}
+                          </div>
+                        </div>
+
+                        <span className="rounded-full border border-white/30 bg-white/15 px-3 py-1 text-[10px] font-bold uppercase tracking-wider backdrop-blur">
+                          {project.status}
+                        </span>
+                      </div>
+
+                      <div className="relative mt-5 grid grid-cols-3 gap-2">
+                        {project.proof.map((item, index) => (
+                          <div
+                            key={item}
+                            className="rounded-xl border border-white/25 bg-white/10 p-2 backdrop-blur"
+                          >
+                            <p className="text-base font-black">
+                              0{index + 1}
+                            </p>
+                            <p className="mt-1 text-[9px] font-semibold leading-3 text-white/80">
+                              {item}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="flex flex-1 flex-col px-1 pb-1 pt-5">
+                      <h3 className="font-serif text-2xl font-black leading-tight text-[#202020]">
+                        {project.title}
+                      </h3>
+
+                      <p className="mt-3 text-sm leading-6 text-[#555]">
+                        {project.description}
+                      </p>
+
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        {project.tools.map((tool) => (
+                          <span
+                            key={tool}
+                            className="rounded-full border border-[#eadfce] bg-white/75 px-3 py-1 text-xs font-bold text-[#70323c] shadow-sm"
+                          >
+                            {tool}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="mt-auto pt-6">
+                        {project.href ? (
+                          <a
+                            href={project.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex w-full items-center justify-center rounded-xl bg-[#203354] px-5 py-3 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#16243c]"
+                          >
+                            {project.buttonLabel ?? "View Case Study"} ↗
+                          </a>
+                        ) : (
+                          <div className="flex w-full items-center justify-center rounded-xl border border-[#c9d3e5] bg-[#eef1f8]/80 px-5 py-3 text-center text-xs font-bold uppercase tracking-[0.14em] text-[#5f78ab]">
+                            {project.status}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              <div className="mt-14">
+                <button
+                  type="button"
+                  onClick={() => setProjectsOpen(!projectsOpen)}
+                  className="group relative w-full overflow-hidden rounded-[2rem] border border-white/70 bg-white/60 p-6 text-left shadow-[0_20px_55px_rgba(32,51,84,0.12)] backdrop-blur-xl transition hover:-translate-y-1 hover:bg-white/80 hover:shadow-2xl"
+                >
+                  <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[#f1c5cc]/45 blur-2xl transition group-hover:scale-125" />
+                  <div className="absolute -bottom-12 left-1/3 h-36 w-36 rounded-full bg-[#8fa5c8]/30 blur-2xl transition group-hover:scale-125" />
+
+                  <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="flex items-center gap-5">
+                      <div className="relative">
+                        <div className="absolute -right-1 -top-2 h-8 w-14 rounded-t-2xl bg-[#d69aa7]" />
+                        <div className="relative flex h-20 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-[#d8e3ea] to-[#f1c5cc] text-5xl shadow-md transition group-hover:-rotate-3 group-hover:scale-105">
+                          🗂️
+                        </div>
+                      </div>
+
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
+                          Supporting project library
+                        </p>
+                        <h3 className="mt-1 font-serif text-3xl font-black text-[#202020]">
+                          Open More Projects
+                        </h3>
+                        <p className="mt-2 max-w-2xl text-sm leading-6 text-[#555]">
+                          Additional growth operations, automation, predictive
+                          analytics, campaign systems, AI evaluation, Tableau,
+                          and visualization work.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="rounded-full bg-[#203354] px-5 py-2 text-center text-sm font-bold text-white shadow-md transition group-hover:bg-[#16243c]">
+                      {projectsOpen ? "Close projects ↑" : "Open projects ↓"}
+                    </div>
+                  </div>
+                </button>
+
+                {projectsOpen && (
+                  <div className="mt-8 rounded-[2rem] border border-white/70 bg-white/40 p-5 shadow-inner backdrop-blur-xl">
+                    <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                      {supportingProjects.map((project) => (
+                        <article
+                          key={project.title}
+                          className="flex h-full flex-col rounded-[1.6rem] border border-white/75 bg-white/70 p-5 shadow-md backdrop-blur transition hover:-translate-y-1 hover:bg-white hover:shadow-xl"
+                        >
+                          <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#6f86b8]">
+                            {project.category}
+                          </p>
+
+                          <h3 className="mt-3 font-serif text-2xl font-black leading-tight">
+                            {project.title}
+                          </h3>
+
+                          <p className="mt-3 text-sm leading-6 text-[#555]">
+                            {project.description}
+                          </p>
+
+                          <div className="mt-5 flex flex-wrap gap-2">
+                            {project.tools.map((tool) => (
+                              <span
+                                key={tool}
+                                className="rounded-full bg-[#f5edf0] px-3 py-1 text-xs font-bold text-[#70323c]"
+                              >
+                                {tool}
+                              </span>
+                            ))}
+                          </div>
+
+                          <div className="mt-auto pt-6">
+                            {project.href ? (
+                              <a
+                                href={project.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex rounded-full bg-[#203354] px-4 py-2 text-xs font-bold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#16243c]"
+                              >
+                                {project.buttonLabel ?? "View Project"} ↗
+                              </a>
+                            ) : (
+                              <span className="inline-flex rounded-full border border-[#d8c6ad] bg-[#fffaf3] px-4 py-2 text-xs font-bold text-[#70323c]">
+                                Portfolio evidence in progress
+                              </span>
+                            )}
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </section>
 
