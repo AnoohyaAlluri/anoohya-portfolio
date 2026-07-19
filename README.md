@@ -1,36 +1,300 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✦ Anoohya Alluri | Marketing Technology & Analytics Portfolio
 
-## Getting Started
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-203354?style=for-the-badge)](https://anoohya-portfolio.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Anoohya_Alluri-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/anoohyaalluri/)
+[![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?style=for-the-badge&logo=tableau)](https://public.tableau.com/app/profile/anoohya.allurii/vizzes)
+[![GitHub](https://img.shields.io/badge/GitHub-Project_Portfolio-181717?style=for-the-badge&logo=github)](https://github.com/AnoohyaAlluri)
 
-First, run the development server:
+## 👋 About This Portfolio
+
+This repository powers my professional portfolio as a **Marketing Technology & Analytics Specialist** working across marketing analytics, attribution, automation, dashboards, AI workflows, search strategy, and growth operations.
+
+The portfolio is designed to show how I approach business problems as systems:
+
+- Identify the operational or marketing problem
+- Structure the data and workflow
+- Build a repeatable analytical or automation solution
+- Validate the output through QA
+- Translate findings into leadership-ready reporting
+- Document the system for future scale
+
+My work sits at the intersection of **marketing, analytics, technology, and operations**.
+
+## 🎯 Professional Focus
+
+I am building toward roles such as:
+
+- Marketing Analytics Engineer
+- Growth Operations Analyst
+- Marketing Technology Analyst
+- AI Marketing Engineer
+- Business Analytics Analyst
+- Marketing Operations Analyst
+- Growth Strategy Analyst
+
+## 🧠 Featured Case Studies
+
+### Lead Intelligence & Attribution System
+
+A public-safe synthetic pipeline for:
+
+- CRM data quality
+- Lead-source normalization
+- Match-confidence scoring
+- QA validation
+- Exception routing
+- Analytics-ready reporting
+
+**Tools:** Python, Pandas, CRM matching, data QA, synthetic data
+
+**Repository:** [Lead Intelligence System](https://github.com/AnoohyaAlluri/lead-intelligence-system)
+
+---
+
+### Growth & Operations Command Center
+
+A leadership-facing framework for:
+
+- Project and KPI tracking
+- Milestone visibility
+- Blocker and risk management
+- Decision logging
+- Weekly executive updates
+- Evidence-linked reporting
+
+**Tools:** Google Sheets, Apps Script, Looker Studio, data governance
+
+---
+
+### Local Growth & Search Authority System
+
+A public-safe framework connecting:
+
+- Local SEO
+- Answer Engine Optimization
+- Generative Engine Optimization
+- Internal linking
+- Content architecture
+- Conversion pathways
+- Search performance analysis
+
+**Tools:** SEO, AEO, GEO, Search Console, GA4, content strategy
+
+**Repository:** [SEO / AEO / GEO Local Growth Framework](https://github.com/AnoohyaAlluri/seo-aeo-geo-local-growth-framework)
+
+---
+
+### Website Lead Capture & Attribution Pipeline
+
+A marketing technology workflow designed to improve:
+
+- Form tracking
+- Source capture
+- Lead routing
+- Conversion verification
+- Workflow QA
+- Attribution integrity
+
+**Tools:** GA4, Google Tag Manager, forms, Apps Script
+
+---
+
+### Conversion Integrity & Attribution Audit
+
+An analytical framework for separating:
+
+- Qualified lead evidence
+- Possible conversion signals
+- Behavioral events
+- Platform-reported activity
+- Measurement gaps
+
+**Tools:** Google Ads, GA4, GTM, attribution analysis
+
+---
+
+### Maintenance Operations Intelligence
+
+An operations analytics project focused on:
+
+- Work-order trends
+- Documentation gaps
+- Cancellation risk
+- Issue-category analysis
+- Dashboard planning
+- Automation opportunities
+
+**Tools:** Python, Excel, Tableau, process analytics
+
+## 🗂️ Supporting Project Library
+
+The portfolio also includes work across:
+
+- Luxury agent outreach automation
+- Review generation automation
+- Direct mail campaign operations
+- AI and PropTech vendor evaluation
+- Predictive campaign modeling
+- Tableau dashboard development
+- Social media content systems
+- Website conversion and UX improvements
+
+## 🛠️ Technology Stack
+
+### Analytics and Data
+
+- Python
+- SQL
+- R
+- Pandas
+- Excel
+- Tableau
+- Power BI
+- Looker Studio
+
+### Marketing Technology
+
+- Google Analytics 4
+- Google Tag Manager
+- Google Ads
+- Meta Ads
+- Mailchimp
+- HubSpot
+- Salesforce
+- CRM workflows
+
+### Automation and Operations
+
+- Google Apps Script
+- Google Sheets
+- Workflow QA
+- Data validation
+- Process documentation
+- Executive reporting
+
+### Growth and Search
+
+- SEO
+- AEO
+- GEO
+- CRO
+- A/B testing
+- Content strategy
+- Local search optimization
+- Lead-generation systems
+
+## 🔐 Public-Safe Portfolio Approach
+
+This portfolio does not expose confidential company, client, tenant, owner, contact, address, or financial information.
+
+Where real operational work cannot be published directly, I use:
+
+- Synthetic datasets
+- Anonymized workflows
+- Public-safe diagrams
+- Recreated KPI visuals
+- Generalized business logic
+- Sanitized case-study documentation
+
+This preserves the technical and strategic value of the work without exposing private information.
+
+## 🖥️ Portfolio Experience
+
+The website includes:
+
+- Featured case-study cards
+- Project proof visuals
+- Website and SEO proof
+- Creative campaign examples
+- Technical skills
+- Verified credentials
+- GitHub, Tableau, LinkedIn, and publication links
+
+## 🚀 Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/AnoohyaAlluri/anoohya-portfolio.git
+cd anoohya-portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Production Build
 
-## Learn More
+Create a production build:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Start the production server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm start
+```
 
-## Deploy on Vercel
+## 🌐 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The portfolio is deployed with **Vercel**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Live site:** [anoohya-portfolio.vercel.app](https://anoohya-portfolio.vercel.app/)
+
+Updates pushed to the connected production branch trigger a new deployment.
+
+## 📁 Repository Structure
+
+```text
+anoohya-portfolio/
+├── app/
+│   └── page.tsx
+├── public/
+│   ├── images/
+│   ├── website/
+│   ├── social/
+│   ├── Resume/
+│   └── project visuals
+├── package.json
+├── next.config.ts
+└── README.md
+```
+
+## 📬 Contact
+
+- **LinkedIn:** [linkedin.com/in/anoohyaalluri](https://www.linkedin.com/in/anoohyaalluri/)
+- **GitHub:** [github.com/AnoohyaAlluri](https://github.com/AnoohyaAlluri)
+- **Tableau Public:** [Anoohya Alluri Tableau Profile](https://public.tableau.com/app/profile/anoohya.allurii/vizzes)
+- **Portfolio:** [anoohya-portfolio.vercel.app](https://anoohya-portfolio.vercel.app/)
+- **Linktree:** [linktr.ee/anoohyaalluri](https://linktr.ee/anoohyaalluri)
+
+---
+
+## ✦ Portfolio Positioning
+
+This portfolio demonstrates my ability to:
+
+- Identify business and operational problems
+- Build analytics and automation systems
+- Improve attribution and data quality
+- Translate complex workflows into decision-ready reporting
+- Connect marketing activity to measurable business visibility
+- Document systems for leadership, hiring managers, and future scale
+
+**Built with Next.js, TypeScript, Tailwind CSS, and Vercel.**
