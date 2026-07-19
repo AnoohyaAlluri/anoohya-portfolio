@@ -45,7 +45,7 @@ const featuredProjects: FeaturedProject[] = [
     tools: ["Python", "Pandas", "Data QA", "CRM Matching"],
     status: "Portfolio Ready",
     icon: "🧠",
-    image: "/projects/lead-intelligence-synthetic-kpi-summary%20%282%29.png",
+    image: "/lead-intelligence-kpi.png",
     previewClass:
       "from-[#203354] via-[#5f78ab] to-[#d8e3ea]",
     proof: [
