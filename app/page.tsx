@@ -642,7 +642,7 @@ export default function Home() {
                               <img
                                 src={project.image}
                                 alt={`${project.title} preview`}
-                                className="h-24 w-full rounded-xl object-cover object-top"
+                                className="h-32 w-full rounded-xl object-contain"
                               />
                             </div>
                           ) : (
