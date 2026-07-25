@@ -92,20 +92,23 @@ const featuredProjects: FeaturedProject[] = [
     buttonLabel: "View GitHub Case Study",
   },
   {
-    tag: "Marketing Technology",
-    title: "Website Lead Capture & Attribution Pipeline",
+    tag: "Growth Operations & Automation",
+    title: "Luxury Rental Lead Pipeline & Outreach Automation",
     description:
-      "Standardized owner-facing lead workflows and designed a cleaner path from form submission through source capture, routing, QA, and conversion verification.",
-    tools: ["GA4", "GTM", "Forms", "Apps Script"],
-    status: "Evidence Being Anonymized",
-    icon: "🧭",
+      "Built a public-safe data pipeline that cleaned and qualified luxury rental listing records, generated campaign-ready outreach queues, applied automated QA controls, and produced analytics-ready campaign outputs.",
+    tools: ["Python", "Pandas", "Data Pipeline", "Pytest"],
+    status: "Portfolio Ready",
+    icon: "🏙️",
     previewClass:
-      "from-[#5d4162] via-[#a47d9b] to-[#f1d9e0]",
+      "from-[#51436f] via-[#8c78ad] to-[#ddd5eb]",
     proof: [
-      "Multi-form tracking framework",
-      "Source and conversion logic",
-      "Workflow QA documentation",
+      "Synthetic listing-data pipeline",
+      "Qualification and suppression rules",
+      "Automated QA and GitHub documentation",
     ],
+    href:
+      "https://github.com/AnoohyaAlluri/luxury-rental-mls-outreach-pipeline",
+    buttonLabel: "View GitHub Case Study",
   },
   {
     tag: "Paid Media Analytics",
@@ -142,16 +145,6 @@ const featuredProjects: FeaturedProject[] = [
 ];
 
 const supportingProjects: SupportingProject[] = [
-  {
-    title: "Luxury Agent Outreach Automation",
-    category: "Growth Operations",
-    description:
-      "Controlled outreach pipeline with monthly suppression, duplicate prevention, follow-up logic, and public-safe workflow documentation.",
-    tools: ["Apps Script", "Google Sheets", "Email Automation"],
-    href:
-      "https://github.com/AnoohyaAlluri/luxury-rental-mls-outreach-pipeline",
-    buttonLabel: "View GitHub",
-  },
   {
     title: "Review Generation Automation",
     category: "Reputation Operations",
