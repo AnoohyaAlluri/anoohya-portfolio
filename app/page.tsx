@@ -4,28 +4,28 @@ import { useEffect, useState } from "react";
 
 const stackItems = [
   {
-    icon: "📐",
-    title: "Measurement Architecture",
+    icon: "🔍",
+    title: "Diagnose Measurement Gaps",
     detail:
-      "Connect GA4, CRM, campaign, website, and operational data into reliable reporting structures.",
+      "Trace fragmented signals across marketing, CRM, website, and operational systems to identify where visibility breaks.",
+  },
+  {
+    icon: "🧩",
+    title: "Engineer Reliable Workflows",
+    detail:
+      "Standardize data, define QA rules, and build repeatable processes that produce consistent analytical outputs.",
   },
   {
     icon: "⚙️",
-    title: "Growth Operations",
+    title: "Automate Execution",
     detail:
-      "Design scalable workflows for lead management, campaign execution, QA, and follow-up.",
-  },
-  {
-    icon: "🤖",
-    title: "Automation & AI Systems",
-    detail:
-      "Use code, automation, and AI-assisted workflows to reduce friction and improve execution quality.",
+      "Use code, workflow logic, and AI-assisted systems to reduce manual effort and improve execution quality.",
   },
   {
     icon: "📊",
-    title: "Executive Decision Support",
+    title: "Support Better Decisions",
     detail:
-      "Translate fragmented signals into KPIs, risk visibility, priorities, and decision-ready insights.",
+      "Translate analysis into KPIs, priorities, risks, and executive-ready recommendations.",
   },
 ];
 
@@ -33,6 +33,7 @@ type FeaturedProject = {
   tag: string;
   title: string;
   description: string;
+  businessValue: string;
   tools: string[];
   status: string;
   icon: string;
@@ -67,9 +68,11 @@ const featuredProjects: FeaturedProject[] = [
     tag: "Marketing Analytics Engineering",
     title: "Lead Intelligence & Attribution System",
     description:
-      "Engineered a synthetic lead intelligence system that standardizes fragmented acquisition data, scores match confidence, routes exceptions, validates data quality, and prepares reporting-ready outputs.",
+      "I engineered a lead intelligence system that standardizes fragmented acquisition data, scores match confidence, routes exceptions, validates data quality, and produces reporting-ready outputs.",
+    businessValue:
+      "Creates a more reliable view of lead origin, match quality, conversion status, and records requiring review.",
     tools: ["Python", "Pandas", "Data Quality", "Attribution"],
-    status: "Published Case Study",
+    status: "Case Study",
     icon: "🧠",
     image: "/lead-intelligence-kpi.png",
     previewClass:
@@ -86,16 +89,18 @@ const featuredProjects: FeaturedProject[] = [
     tag: "SEO / AEO / GEO",
     title: "Local Growth & Search Authority System",
     description:
-      "Designed a search growth framework connecting local SEO, answer-engine optimization, generative-engine visibility, content architecture, internal linking, structured answers, and conversion pathways.",
+      "I designed a search growth framework connecting local SEO, answer-engine optimization, generative-engine visibility, content architecture, internal linking, structured answers, and conversion pathways.",
+    businessValue:
+      "Connects search visibility, content structure, trust, and conversion pathways into one growth framework.",
     tools: ["SEO", "AEO", "GEO", "Search Analytics"],
-    status: "Published Case Study",
+    status: "Case Study",
     icon: "🔎",
     previewClass:
       "from-[#244c5a] via-[#6f9e9a] to-[#dce9df]",
     proof: [
       "Local intent and content architecture",
       "Internal linking and answer system",
-      "Live website implementation proof",
+      "Live website implementation",
     ],
     href:
       "https://github.com/AnoohyaAlluri/seo-aeo-geo-local-growth-framework",
@@ -107,9 +112,11 @@ const featuredProjects: FeaturedProject[] = [
     tag: "Growth Operations & Automation",
     title: "Luxury Rental Lead Pipeline & Outreach Automation",
     description:
-      "Engineered a synthetic listing-to-outreach pipeline that cleans property data, applies qualification and suppression logic, generates campaign queues, and validates outputs before activation.",
+      "I engineered a listing-to-outreach pipeline that cleans property data, applies qualification and suppression logic, generates campaign queues, and validates outputs before activation.",
+    businessValue:
+      "Turns raw listing records into qualified outreach queues with consistent suppression and QA controls.",
     tools: ["Python", "Pandas", "Data Pipeline", "Pytest"],
-    status: "Published Case Study",
+    status: "Case Study",
     icon: "🏙️",
     previewClass:
       "from-[#51436f] via-[#8c78ad] to-[#ddd5eb]",
@@ -129,19 +136,19 @@ const internalInitiatives: InternalInitiative[] = [
     title: "Growth & Operations Command Center",
     category: "Operations Intelligence",
     description:
-      "Built the operating model for a leadership command center that consolidates project health, KPI attainment, blockers, decisions, evidence, and weekly execution into one decision-support workflow.",
+      "I built the operating model for a leadership command center that consolidates project health, KPI attainment, blockers, decisions, milestones, and weekly execution into one decision-support workflow.",
     tools: ["Python", "Pandas", "Streamlit", "Data Governance"],
     proof: [
-      "Portfolio health and KPI tracking",
+      "Project health and KPI tracking",
       "Risk, blocker, and decision visibility",
-      "Evidence-linked executive reporting",
+      "Executive reporting and decision logs",
     ],
   },
   {
     title: "Conversion Integrity & Attribution Audit",
     category: "Paid Media Analytics",
     description:
-      "Separated business outcomes from soft platform events, diagnosed tracking gaps, and created a conversion-governance framework for more reliable paid-media decisions.",
+      "I separated business outcomes from soft platform events, diagnosed tracking gaps, and created a conversion-governance framework for more reliable paid-media decisions.",
     tools: ["Google Ads", "GA4", "GTM", "Attribution"],
     proof: [
       "Outcome and event classification",
@@ -153,7 +160,7 @@ const internalInitiatives: InternalInitiative[] = [
     title: "Maintenance Operations Intelligence",
     category: "Business Analytics",
     description:
-      "Evaluated work-order patterns and process signals to surface documentation gaps, cancellation risk, recurring issue categories, and automation opportunities.",
+      "I evaluated work-order patterns and process signals to surface documentation gaps, cancellation risk, recurring issue categories, and automation opportunities.",
     tools: ["Python", "Excel", "Tableau", "Process Analytics"],
     proof: [
       "Work-order pattern analysis",
@@ -168,7 +175,7 @@ const supportingProjects: SupportingProject[] = [
     title: "SQL Data Warehouse",
     category: "Data Engineering",
     description:
-      "Designed a layered SQL warehouse using bronze, silver, and gold architecture to standardize raw data and deliver analytics-ready business models.",
+      "I designed a layered SQL warehouse using bronze, silver, and gold architecture to standardize raw data and deliver analytics-ready business models.",
     tools: ["SQL", "ETL", "Data Modeling", "Data Warehouse"],
     href:
       "https://github.com/AnoohyaAlluri/sql-data-warehouse-project",
@@ -178,7 +185,7 @@ const supportingProjects: SupportingProject[] = [
     title: "SQL Business Analytics",
     category: "Data Analytics",
     description:
-      "Applied SQL for exploratory analysis, KPI evaluation, segmentation, performance diagnostics, and decision-ready business reporting.",
+      "I applied SQL to exploratory analysis, KPI evaluation, segmentation, performance diagnostics, and decision-ready business reporting.",
     tools: ["SQL", "EDA", "KPI Analysis", "Reporting"],
     href:
       "https://github.com/AnoohyaAlluri/sql-data-analytics-project",
@@ -188,7 +195,7 @@ const supportingProjects: SupportingProject[] = [
     title: "Tableau Dashboard Collection",
     category: "Data Visualization",
     description:
-      "Created interactive dashboards and geospatial analyses for customer segmentation, regional demand evaluation, and executive insight communication.",
+      "I created interactive dashboards and geospatial analyses for customer segmentation, regional demand evaluation, and executive insight communication.",
     tools: ["Tableau", "Mapbox", "Excel", "Data Visualization"],
     href:
       "https://public.tableau.com/app/profile/anoohya.allurii/vizzes",
@@ -202,73 +209,91 @@ const websiteProofSlides = [
     label: "Website UX",
     image: "/website/homepage-ux.png",
     caption:
-      "Reframed owner-facing hierarchy, trust signals, and CTA placement around a clear consultation path.",
+      "I reframed owner-facing hierarchy, trust signals, and CTA placement around a clear consultation path.",
   },
   {
     title: "Owner Journey Content Blocks",
     label: "Information Architecture",
     image: "/website/owner-guidance-cards.png",
     caption:
-      "Mapped distinct conversion pathways for switchers, accidental landlords, and first-time investors.",
+      "I mapped distinct conversion pathways for switchers, accidental landlords, and first-time investors.",
   },
   {
     title: "LA Rental Market Resource",
     label: "SEO Content System",
     image: "/website/la-market-resource.png",
     caption:
-      "Structured educational content to support search discovery, owner decision-making, and lead capture.",
+      "I structured educational content to support search discovery, owner decision-making, and lead capture.",
   },
   {
     title: "Accidental Landlord Guide",
     label: "Lead Magnet UX",
     image: "/website/accidental-landlord-guide.png",
     caption:
-      "Built a problem-aware guide experience that moves uncertain owners toward a clear next step.",
+      "I built a problem-aware guide experience that moves uncertain owners toward a clear next step.",
   },
   {
     title: "Guide Cover / Resource Design",
     label: "Content Packaging",
     image: "/website/guide-cover.png",
     caption:
-      "Packaged educational content as a branded, reusable acquisition asset.",
+      "I packaged educational content as a branded, reusable acquisition asset.",
   },
   {
     title: "Consultation Confirmation Page",
     label: "Conversion Flow",
     image: "/website/consultation-confirmation.png",
     caption:
-      "Clarified post-conversion expectations and next steps after consultation requests.",
+      "I clarified post-conversion expectations and next steps after consultation requests.",
   },
   {
     title: "Santa Monica Local SEO Page",
     label: "Local SEO Landing Page",
     image: "/website/santa-monica-local-seo.png",
     caption:
-      "Aligned local search intent, service messaging, proof, and CTA pathways for high-value property owners.",
+      "I aligned local search intent, service messaging, trust signals, and CTA pathways for high-value property owners.",
   },
 ];
 
-const tools = [
-  "Python",
-  "SQL",
-  "Pandas",
-  "Power BI",
-  "Tableau",
-  "Streamlit",
-  "Microsoft Excel",
-  "Power Query",
-  "DAX",
-  "GA4",
-  "Google Tag Manager",
-  "Google Ads",
-  "Meta Ads",
-  "Google Search Console",
-  "HubSpot",
-  "Mailchimp",
-  "Google Apps Script",
-  "ETL",
-  "Attribution Analysis",
-  "SEO / AEO / GEO",
+const toolGroups = [
+  {
+    title: "Data & Engineering",
+    tools: ["Python", "SQL", "Pandas", "Microsoft Excel", "Power Query", "ETL"],
+  },
+  {
+    title: "Measurement & Business Intelligence",
+    tools: [
+      "GA4",
+      "Google Tag Manager",
+      "Power BI",
+      "Tableau",
+      "Streamlit",
+      "Looker Studio",
+      "DAX",
+      "Attribution Analysis",
+    ],
+  },
+  {
+    title: "Growth & Search",
+    tools: [
+      "Google Ads",
+      "Meta Ads",
+      "Google Search Console",
+      "SEO / AEO / GEO",
+      "CRO",
+    ],
+  },
+  {
+    title: "Automation & CRM",
+    tools: [
+      "Google Apps Script",
+      "HubSpot",
+      "Mailchimp",
+      "CRM Workflows",
+      "Workflow Automation",
+      "Data QA",
+    ],
+  },
 ];
 
 const credentials = [
@@ -334,10 +359,10 @@ const credentials = [
   },
 ];
 
-const proofLinks = [
+const resourceLinks = [
   {
     title: "GitHub",
-    text: "Production-style code, data pipelines, QA logic, and case-study documentation",
+    text: "Data pipelines, automation logic, QA controls, and case-study documentation",
     href: "https://github.com/AnoohyaAlluri",
   },
   {
@@ -347,13 +372,13 @@ const proofLinks = [
   },
   {
     title: "LinkedIn",
-    text: "Experience, credentials, and professional project context",
+    text: "Professional experience, credentials, and project context",
     href: "https://www.linkedin.com/in/anoohyaalluri/",
   },
   {
-    title: "Linktree",
-    text: "Central access to certifications, research, and additional evidence",
-    href: "https://linktr.ee/anoohyaalluri",
+    title: "Resume",
+    text: "Experience, technical skills, and selected business impact",
+    href: "/resume",
   },
 ];
 
@@ -434,10 +459,10 @@ export default function Home() {
                 Projects
               </a>
               <a href="#website-proof" className="hover:text-[#6f86b8]">
-                Web Systems
+                Web Growth
               </a>
               <a href="#creative" className="hover:text-[#6f86b8]">
-                Campaign Systems
+                Campaign Operations
               </a>
               <a href="#skills" className="hover:text-[#6f86b8]">
                 Skills
@@ -445,8 +470,8 @@ export default function Home() {
               <a href="#credentials" className="hover:text-[#6f86b8]">
                 Credentials
               </a>
-              <a href="#proof" className="hover:text-[#6f86b8]">
-                Proof
+              <a href="#contact" className="hover:text-[#6f86b8]">
+                Contact
               </a>
             </div>
 
@@ -456,14 +481,14 @@ export default function Home() {
               rel="noopener noreferrer"
               className="rounded-full bg-[#203354] px-5 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#16243c]"
             >
-              Connect on LinkedIn ↗
+              LinkedIn ↗
             </a>
           </nav>
 
           <section className="grid gap-10 px-6 py-12 sm:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:py-16">
             <div className="flex flex-col justify-center">
               <p className="mb-4 text-sm font-black uppercase tracking-[0.24em] text-[#d36d81]">
-                Marketing Analytics | Growth Operations | AI Automation
+                Marketing Analytics | Growth Operations | Automation
               </p>
 
               <h1 className="max-w-4xl font-serif text-6xl font-black leading-[0.9] tracking-tight text-[#202020] sm:text-7xl lg:text-8xl">
@@ -472,50 +497,36 @@ export default function Home() {
               </h1>
 
               <h2 className="mt-6 max-w-2xl text-xl font-semibold leading-8 text-[#2a2a2a] sm:text-2xl">
-                Marketing Analytics Engineer & Growth Operations Analyst
+                Marketing Analytics & Growth Operations Analyst
               </h2>
 
               <p className="mt-5 max-w-2xl text-base leading-7 text-[#3d3d3d] sm:text-lg">
-                I design measurement, automation, and decision-support systems
-                that connect marketing data, CRM workflows, search performance,
-                campaign execution, and operational reporting. My focus is
-                turning fragmented inputs into reliable systems leaders can use.
+                I build measurement and automation systems that connect
+                marketing, CRM, website, and operational data. My strength is
+                moving from an unclear business problem to a reliable workflow,
+                analytical model, and decision-ready output.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
-                  href="/resume"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-xl bg-[#203354] px-6 py-3 text-center text-sm font-bold text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  View Resume ↓
-                </a>
-
-                <a
                   href="#projects"
-                  className="rounded-xl border border-[#203354] bg-white/60 px-6 py-3 text-center text-sm font-bold text-[#203354] transition hover:-translate-y-1 hover:bg-white"
+                  className="rounded-xl bg-[#203354] px-6 py-3 text-center text-sm font-bold text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
                 >
                   Explore Case Studies ↗
                 </a>
 
                 <a
-                  href="#website-proof"
-                  className="rounded-xl border border-[#6f86b8] bg-[#eef1f8] px-6 py-3 text-center text-sm font-bold text-[#203354] transition hover:-translate-y-1 hover:bg-white"
+                  href="/resume"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl border border-[#203354] bg-white/70 px-6 py-3 text-center text-sm font-bold text-[#203354] transition hover:-translate-y-1 hover:bg-white"
                 >
-                  Review Web Systems ↔
+                  View Resume ↓
                 </a>
 
                 <a
-                  href="#creative"
+                  href="#contact"
                   className="rounded-xl border border-[#d69aa7] bg-[#fff4f6] px-6 py-3 text-center text-sm font-bold text-[#70323c] transition hover:-translate-y-1 hover:bg-[#f8d9df]"
-                >
-                  View Campaign Systems ✦
-                </a>
-
-                <a
-                  href="mailto:anoohyaifo@gmail.com"
-                  className="rounded-xl bg-[#f1c5cc] px-6 py-3 text-center text-sm font-bold text-[#70323c] transition hover:-translate-y-1 hover:bg-[#ebb3bd]"
                 >
                   Contact ✉
                 </a>
@@ -527,13 +538,13 @@ export default function Home() {
 
               <div className="absolute left-4 top-6 z-10 rotate-[-6deg] rounded-2xl bg-white p-4 shadow-xl sm:left-8">
                 <p className="font-serif text-lg italic leading-7 text-[#2f2f2f]">
-                  From fragmented
+                  Diagnose.
                   <br />
-                  data to
+                  Design.
                   <br />
-                  decision-ready
+                  Build.
                   <br />
-                  systems. ✦
+                  Improve. ✦
                 </p>
               </div>
 
@@ -550,11 +561,11 @@ export default function Home() {
               </div>
 
               <div className="absolute bottom-0 left-0 z-20 rotate-[-8deg] rounded-xl bg-[#fff4f6] px-5 py-4 text-sm font-semibold text-[#7b3b46] shadow-md">
-                Measure.
+                Analytics.
                 <br />
-                Automate.
+                Automation.
                 <br />
-                Operationalize. ✦
+                Execution. ✦
               </div>
             </div>
           </section>
@@ -565,19 +576,19 @@ export default function Home() {
           >
             <div className="mx-auto max-w-5xl text-center">
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
-                Professional value
+                What I bring
               </p>
               <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
-                I connect data, marketing, and operations into{" "}
+                I bridge analytics, automation, and{" "}
                 <span className="rounded-full border-2 border-[#d69aa7] px-3 text-[#5f78ab]">
-                  decision systems
+                  execution
                 </span>
               </h2>
               <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-[#4a4a4a]">
-                My differentiator is the ability to move from business problem
-                to measurement design, workflow automation, analytical output,
-                and executive-ready action without treating each function as a
-                separate silo.
+                I combine analytical depth with operational execution. I can
+                identify a measurement or workflow problem, design the system
+                around it, build the analytical output, and communicate the
+                decision clearly to stakeholders.
               </p>
             </div>
 
@@ -612,18 +623,18 @@ export default function Home() {
               <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
                 <div>
                   <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
-                    Evidence of capability
+                    Selected work
                   </p>
                   <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
-                    Featured Systems & Case Studies
+                    Marketing Analytics & Growth Systems
                   </h2>
                 </div>
 
                 <p className="max-w-xl text-sm leading-7 text-[#555]">
-                  Selected work demonstrating how I diagnose measurement
-                  gaps, engineer data workflows, automate execution, and
-                  translate operational complexity into decision-ready systems.
-                  Synthetic or anonymized assets are used where required.
+                  Lead intelligence, search growth, and outreach automation
+                  projects that demonstrate data engineering, measurement
+                  design, workflow logic, quality controls, and business
+                  decision support.
                 </p>
               </div>
 
@@ -691,6 +702,15 @@ export default function Home() {
                         {project.description}
                       </p>
 
+                      <div className="mt-4 rounded-2xl border border-[#d8e3ea] bg-[#eef1f8]/75 p-4">
+                        <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#5f78ab]">
+                          Business value
+                        </p>
+                        <p className="mt-2 text-sm leading-6 text-[#39465f]">
+                          {project.businessValue}
+                        </p>
+                      </div>
+
                       <div className="mt-5 flex flex-wrap gap-2">
                         {project.tools.map((tool) => (
                           <span
@@ -748,17 +768,17 @@ export default function Home() {
                 <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
                   <div>
                     <p className="text-xs font-black uppercase tracking-[0.25em] text-[#6f86b8]">
-                      Strategic systems
+                      Business systems
                     </p>
                     <h3 className="mt-2 font-serif text-3xl font-black text-[#202020] sm:text-4xl">
-                      Growth, Analytics & Operations Initiatives
+                      Additional Analytics & Operations Systems
                     </h3>
                   </div>
 
                   <p className="max-w-xl text-sm leading-6 text-[#555]">
-                    Selected systems and analyses developed to strengthen
-                    executive visibility, measurement integrity, operational
-                    efficiency, and data-informed decision-making.
+                    Leadership reporting, conversion governance, and
+                    operational intelligence systems focused on stronger
+                    measurement, execution, and decision quality.
                   </p>
                 </div>
 
@@ -773,9 +793,6 @@ export default function Home() {
                           {initiative.category}
                         </p>
 
-                        <span className="rounded-full bg-[#eef1f8] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#5f78ab]">
-                          Strategic Initiative
-                        </span>
                       </div>
 
                       <h4 className="mt-4 font-serif text-2xl font-black leading-tight text-[#202020]">
@@ -839,7 +856,7 @@ export default function Home() {
                           SQL, BI & Applied Analytics
                         </h3>
                         <p className="mt-2 max-w-2xl text-sm leading-6 text-[#555]">
-                          Supporting technical work in data engineering, SQL analysis, dashboard development, and visual decision support.
+                          SQL warehouse design, business analysis, dashboard development, and visual decision support.
                         </p>
                       </div>
                     </div>
@@ -893,7 +910,7 @@ export default function Home() {
                               </a>
                             ) : (
                               <span className="inline-flex rounded-full border border-[#d8c6ad] bg-[#fffaf3] px-4 py-2 text-xs font-bold text-[#70323c]">
-                                Portfolio evidence in progress
+                                Project summary
                               </span>
                             )}
                           </div>
@@ -913,29 +930,27 @@ export default function Home() {
             <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div>
                 <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
-                  Search growth & conversion architecture
+                  Web growth & conversion
                 </p>
 
                 <h2 className="mt-3 font-serif text-4xl font-black leading-tight sm:text-5xl">
-                  Web experiences designed for visibility, trust, and qualified action.
+                  I treat the website as a measurable acquisition system.
                 </h2>
 
                 <p className="mt-5 max-w-xl text-sm leading-7 text-[#555] sm:text-base">
-                  Designed and supported website improvements across local
-                  search architecture, owner journeys, offer clarity, CTA
-                  consistency, lead-magnet experiences, trust signals, and
-                  conversion measurement. The objective is a connected growth
-                  system, not isolated page edits.
+                  I connect search intent, audience pathways, offer clarity,
+                  trust signals, lead capture, and conversion measurement so
+                  each page supports a defined business objective.
                 </p>
 
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
                   {[
-                    "Homepage UX",
-                    "Local SEO pages",
-                    "AEO / GEO content",
-                    "Lead magnet UX",
-                    "CTA optimization",
-                    "Conversion flow",
+                    "Search architecture",
+                    "Audience pathways",
+                    "Offer and CTA consistency",
+                    "Lead capture",
+                    "Trust and authority",
+                    "Conversion measurement",
                   ].map((item) => (
                     <div
                       key={item}
@@ -947,10 +962,18 @@ export default function Home() {
                 </div>
 
                 <p className="mt-6 rounded-2xl bg-[#f5edf0] px-5 py-4 text-sm leading-6 text-[#70323c]">
-                  Core approach: one clear offer, consistent CTA language,
-                  low-friction forms, trust-building content, and measurable
-                  conversion paths.
+                  Focus: align search intent, message, offer, and measurement
+                  so each page has a clear role in the acquisition journey.
                 </p>
+
+                <a
+                  href="https://www.westsidepropertymanagement.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex rounded-xl bg-[#203354] px-5 py-3 text-sm font-bold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#16243c]"
+                >
+                  View Live Website ↗
+                </a>
               </div>
 
               <div className="relative mx-auto w-full max-w-[720px]">
@@ -985,7 +1008,7 @@ export default function Home() {
                       <button
                         type="button"
                         onClick={previousWebsiteSlide}
-                        aria-label="Previous website proof"
+                        aria-label="Previous website project"
                         className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-2xl font-black text-[#203354] shadow-xl transition hover:scale-110"
                       >
                         ‹
@@ -994,7 +1017,7 @@ export default function Home() {
                       <button
                         type="button"
                         onClick={nextWebsiteSlide}
-                        aria-label="Next website proof"
+                        aria-label="Next website project"
                         className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-2xl font-black text-[#203354] shadow-xl transition hover:scale-110"
                       >
                         ›
@@ -1043,18 +1066,17 @@ export default function Home() {
             <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
               <div>
                 <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
-                  Campaign strategy & content operations
+                  Campaign operations
                 </p>
 
                 <h2 className="mt-3 font-serif text-4xl font-black leading-tight sm:text-5xl">
-                  Creative execution built as a repeatable growth workflow.
+                  I turn content strategy into a repeatable growth workflow.
                 </h2>
 
                 <p className="mt-5 max-w-xl text-sm leading-7 text-[#555] sm:text-base">
-                  Built a repeatable campaign workflow spanning audience
-                  insight, message strategy, content planning, visual direction,
-                  AI-assisted production, review cycles, CTA design, and
-                  platform-ready execution.
+                  I connect audience insight, message strategy, content
+                  planning, visual direction, AI-assisted production, review
+                  cycles, CTA design, and platform-ready execution.
                 </p>
 
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -1076,8 +1098,9 @@ export default function Home() {
                 </div>
 
                 <p className="mt-6 rounded-2xl bg-[#f5edf0] px-5 py-4 text-sm leading-6 text-[#70323c]">
-                  Each asset is connected to audience intent, business risk,
-                  brand standards, CTA strategy, and approval workflow.
+                  The system links each asset to audience intent, brand
+                  standards, CTA strategy, approval workflow, and performance
+                  measurement.
                 </p>
               </div>
 
@@ -1100,7 +1123,7 @@ export default function Home() {
 
                       <div className="text-center">
                         <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#777]">
-                          Instagram proof
+                          Campaign preview
                         </p>
                         <p className="text-sm font-black text-[#202020]">
                           westsidepropertymgmt
@@ -1185,7 +1208,7 @@ export default function Home() {
                     <div className="relative bg-white p-[3px]">
                       <img
                         src="/social/wpm-social-grid.png"
-                        alt="WPM social media campaign grid proof"
+                        alt="WPM social media campaign grid"
                         className="w-full object-contain object-top"
                       />
                     </div>
@@ -1219,7 +1242,7 @@ export default function Home() {
 
           <section
             id="skills"
-            className="border-y border-[#eadfce] bg-[#fffaf3] px-6 py-10 sm:px-10"
+            className="border-y border-[#eadfce] bg-[#fffaf3] px-6 py-14 sm:px-10"
           >
             <div className="text-center">
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
@@ -1229,19 +1252,33 @@ export default function Home() {
                 Platforms, Methods & Analytical Tools
               </h2>
               <p className="mx-auto mt-4 max-w-3xl text-sm leading-6 text-[#555] sm:text-base">
-                A working stack spanning data analysis, measurement, automation,
-                CRM, visualization, reporting, and search growth.
+                I use these tools as an integrated working stack for data
+                preparation, measurement, automation, visualization, and growth
+                operations.
               </p>
             </div>
 
-            <div className="mx-auto mt-8 flex max-w-5xl flex-wrap justify-center gap-3">
-              {tools.map((tool) => (
-                <span
-                  key={tool}
-                  className="rounded-2xl border border-[#e4d7c5] bg-white px-5 py-3 text-sm font-bold text-[#203354] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+            <div className="mx-auto mt-10 grid max-w-6xl gap-5 md:grid-cols-2">
+              {toolGroups.map((group) => (
+                <article
+                  key={group.title}
+                  className="rounded-[1.5rem] border border-[#e4d7c5] bg-white/80 p-6 shadow-sm"
                 >
-                  {tool}
-                </span>
+                  <h3 className="font-serif text-2xl font-black text-[#202020]">
+                    {group.title}
+                  </h3>
+
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {group.tools.map((tool) => (
+                      <span
+                        key={tool}
+                        className="rounded-full border border-[#e4d7c5] bg-[#fbf5ec] px-4 py-2 text-sm font-bold text-[#203354]"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </article>
               ))}
             </div>
           </section>
@@ -1256,17 +1293,17 @@ export default function Home() {
             <div className="relative flex flex-col justify-between gap-5 md:flex-row md:items-end">
               <div>
                 <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
-                  Validated capability
+                  Credentials & research
                 </p>
                 <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
-                  Credentials, Research & Professional Proof
+                  Credentials, Research & Recognition
                 </h2>
               </div>
 
               <p className="max-w-xl text-sm leading-6 text-[#555]">
-                Selected certifications, published research, and professional
-                recognition supporting my analytical, technical, marketing
-                systems, and applied research capabilities.
+                Certifications, published research, and professional
+                recognition supporting the analytical, technical, marketing,
+                and research capabilities applied across my work.
               </p>
             </div>
 
@@ -1289,21 +1326,21 @@ export default function Home() {
 
                   <div>
                     <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
-                      Evidence library
+                      Credentials library
                     </p>
                     <h3 className="mt-1 font-serif text-3xl font-black text-[#202020]">
                       Open Credentials & Research
                     </h3>
                     <p className="mt-2 max-w-2xl text-sm leading-6 text-[#555]">
                       Review certifications, technical learning,
-                      professional recognition, and published research that
-                      support the capabilities shown throughout this portfolio.
+                      professional recognition, and published research supporting
+                      the skills applied across these projects.
                     </p>
                   </div>
                 </div>
 
                 <div className="rounded-full bg-[#203354] px-5 py-2 text-center text-sm font-bold text-white shadow-md transition group-hover:bg-[#16243c]">
-                  {certificationsOpen ? "Close evidence ↑" : "View evidence ↓"}
+                  {certificationsOpen ? "Close credentials ↑" : "View credentials ↓"}
                 </div>
               </div>
             </button>
@@ -1313,7 +1350,7 @@ export default function Home() {
                 <div className="mb-6 flex items-center justify-between">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6f86b8]">
-                      Verified credentials
+                      Credentials & research
                     </p>
                     <h3 className="font-serif text-2xl font-black">
                       Technical Learning, Research & Recognition
@@ -1321,32 +1358,20 @@ export default function Home() {
                   </div>
 
                   <div className="hidden rounded-full bg-[#fff4f6] px-4 py-2 text-sm font-bold text-[#70323c] shadow-sm sm:block">
-                    Open any credential ↗
+                    Open credential ↗
                   </div>
                 </div>
 
                 <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                  {credentials.map((credential, index) => (
+                  {credentials.map((credential) => (
                     <a
                       key={credential.title + credential.date}
                       href={credential.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative block min-h-[360px] rounded-[1.6rem] bg-[#efe7dc] p-3 shadow-[0_16px_35px_rgba(32,32,32,0.10)] transition hover:-translate-y-2 hover:shadow-2xl"
+                      className="group block min-h-[340px] rounded-[1.6rem] border border-[#e4d7c5] bg-white/85 p-6 text-center shadow-[0_16px_35px_rgba(32,32,32,0.08)] transition hover:-translate-y-2 hover:shadow-xl"
                     >
-                      <div
-                        className={`absolute left-1/2 top-[-14px] z-20 -translate-x-1/2 text-4xl drop-shadow-sm transition group-hover:-translate-y-1 ${
-                          index % 2 === 0 ? "rotate-[-6deg]" : "rotate-[6deg]"
-                        }`}
-                      >
-                        🎀
-                      </div>
-
-                      <div
-                        className={`relative h-full rounded-[1.25rem] border border-[#d8c6ad] bg-[#fffdf8] p-6 text-center ${
-                          index % 2 === 0 ? "rotate-[-1deg]" : "rotate-[1deg]"
-                        } transition group-hover:rotate-0`}
-                      >
+                      <div className="relative h-full">
                         <div className="absolute left-5 top-5 h-10 w-10 rounded-full border border-[#eadfce] bg-[#f8efe4]" />
                         <div className="absolute right-5 top-5 h-10 w-10 rounded-full border border-[#eadfce] bg-[#f8efe4]" />
 
@@ -1399,25 +1424,25 @@ export default function Home() {
           </section>
 
           <section
-            id="proof"
-            className="bg-[#5f78ab] px-6 py-12 text-white sm:px-10"
+            id="resources"
+            className="bg-[#5f78ab] px-6 py-14 text-white sm:px-10"
           >
             <div className="mx-auto max-w-6xl">
               <div className="text-center">
                 <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f1c5cc]">
-                  Professional evidence
+                  Professional resources
                 </p>
                 <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
-                  Code, Dashboards, Credentials & Career Proof
+                  Code, Dashboards, Credentials & Profile
                 </h2>
                 <p className="mx-auto mt-4 max-w-3xl text-sm leading-6 text-white/85 sm:text-base">
-                  Direct access to the code, visualization work, professional
-                  history, certifications, and research behind this portfolio.
+                  Explore my implementation work, visual analytics, professional
+                  experience, and technical background.
                 </p>
               </div>
 
               <div className="mt-10 grid gap-5 md:grid-cols-4">
-                {proofLinks.map((link) => (
+                {resourceLinks.map((link) => (
                   <a
                     key={link.title}
                     href={link.href}
@@ -1434,6 +1459,55 @@ export default function Home() {
                     <p className="mt-5 text-sm font-bold">Open ↗</p>
                   </a>
                 ))}
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="contact"
+            className="bg-[#203354] px-6 py-16 text-white sm:px-10"
+          >
+            <div className="mx-auto max-w-5xl text-center">
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f1c5cc]">
+                Contact
+              </p>
+
+              <h2 className="mt-3 font-serif text-4xl font-black leading-tight sm:text-5xl">
+                Building clearer measurement, smarter workflows, and stronger
+                growth operations.
+              </h2>
+
+              <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-white/85">
+                I am interested in opportunities where I can combine marketing
+                analytics, automation, data systems, and executive reporting to
+                improve how teams measure performance and execute growth.
+              </p>
+
+              <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap">
+                <a
+                  href="mailto:anoohyaifo@gmail.com"
+                  className="rounded-xl bg-[#f1c5cc] px-6 py-3 text-sm font-bold text-[#70323c] shadow-lg transition hover:-translate-y-1 hover:bg-[#ebb3bd]"
+                >
+                  Email Me ✉
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/anoohyaalluri/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl border border-white/40 bg-white/10 px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-1 hover:bg-white/20"
+                >
+                  LinkedIn ↗
+                </a>
+
+                <a
+                  href="/resume"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl border border-white/40 bg-white/10 px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-1 hover:bg-white/20"
+                >
+                  View Resume ↓
+                </a>
               </div>
             </div>
           </section>
