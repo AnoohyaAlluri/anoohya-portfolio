@@ -169,14 +169,6 @@ const supportingProjects: SupportingProject[] = [
       "https://github.com/AnoohyaAlluri/sql-data-analytics-project",
     buttonLabel: "View GitHub",
   },
-  
-  {
-    title: "Campaign Prediction Models",
-    category: "Predictive Analytics",
-    description:
-      "Built classification and segmentation models to predict campaign response, evaluate customer conversion probability, and support targeted marketing decisions.",
-    tools: ["Python", "R", "Machine Learning", "Segmentation"],
-  },
   {
     title: "Tableau Dashboard Collection",
     category: "Data Visualization",
@@ -186,13 +178,6 @@ const supportingProjects: SupportingProject[] = [
     href:
       "https://public.tableau.com/app/profile/anoohya.allurii/vizzes",
     buttonLabel: "View Tableau",
-  },
-  {
-    title: "AI & PropTech Evaluation Framework",
-    category: "AI Operations",
-    description:
-      "Developed a structured framework for evaluating AI and property-technology tools across business fit, implementation effort, cost, integration, risk, and scalability.",
-    tools: ["AI Evaluation", "ROI Analysis", "Risk Analysis", "Operations"],
   },
 ];
 
@@ -767,8 +752,7 @@ export default function Home() {
                           Open More Projects
                         </h3>
                         <p className="mt-2 max-w-2xl text-sm leading-6 text-[#555]">
-                          Additional SQL, predictive analytics, AI evaluation,
-                          Tableau, and data visualization work.
+                          Additional SQL, Tableau, and data visualization work.
                         </p>
                       </div>
                     </div>
