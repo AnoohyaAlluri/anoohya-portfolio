@@ -165,16 +165,7 @@ const supportingProjects: SupportingProject[] = [
       "https://github.com/AnoohyaAlluri/sql-data-analytics-project",
     buttonLabel: "View GitHub",
   },
-  {
-    title: "Retail Sales Analytics",
-    category: "Business Intelligence",
-    description:
-      "Analyzed retail sales data using SQL to evaluate revenue patterns, customer behavior, product performance, and operational trends.",
-    tools: ["SQL", "Sales Analytics", "Customer Analysis", "KPIs"],
-    href:
-      "https://github.com/AnoohyaAlluri/sql_retail_sales_analytics",
-    buttonLabel: "View GitHub",
-  },
+  
   {
     title: "Campaign Prediction Models",
     category: "Predictive Analytics",
