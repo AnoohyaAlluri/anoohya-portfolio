@@ -92,6 +92,8 @@ const featuredProjects: FeaturedProject[] = [
     href:
       "https://github.com/AnoohyaAlluri/seo-aeo-geo-local-growth-framework",
     buttonLabel: "View GitHub Case Study",
+    liveHref: "https://www.westsidepropertymanagement.com/",
+    liveButtonLabel: "View Live Website",
   },
   {
     tag: "Growth Operations & Automation",
@@ -698,15 +700,36 @@ export default function Home() {
                       </div>
 
                       <div className="mt-auto pt-6">
-                        {project.href ? (
-                          <a
-                            href={project.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex w-full items-center justify-center rounded-xl bg-[#203354] px-5 py-3 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#16243c]"
+                        {project.href || project.liveHref ? (
+                          <div
+                            className={`grid gap-3 ${
+                              project.href && project.liveHref
+                                ? "sm:grid-cols-2"
+                                : ""
+                            }`}
                           >
-                            {project.buttonLabel ?? "View Case Study"} ↗
-                          </a>
+                            {project.href && (
+                              <a
+                                href={project.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex w-full items-center justify-center rounded-xl bg-[#203354] px-4 py-3 text-center text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#16243c]"
+                              >
+                                {project.buttonLabel ?? "View Case Study"} ↗
+                              </a>
+                            )}
+
+                            {project.liveHref && (
+                              <a
+                                href={project.liveHref}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex w-full items-center justify-center rounded-xl border border-[#203354] bg-white/80 px-4 py-3 text-center text-sm font-bold text-[#203354] shadow-md transition hover:-translate-y-0.5 hover:bg-white"
+                              >
+                                {project.liveButtonLabel ?? "View Live Website"} ↗
+                              </a>
+                            )}
+                          </div>
                         ) : (
                           <div className="flex w-full items-center justify-center rounded-xl border border-[#c9d3e5] bg-[#eef1f8]/80 px-5 py-3 text-center text-xs font-bold uppercase tracking-[0.14em] text-[#5f78ab]">
                             {project.status}
@@ -744,9 +767,8 @@ export default function Home() {
                           Open More Projects
                         </h3>
                         <p className="mt-2 max-w-2xl text-sm leading-6 text-[#555]">
-                          Additional growth operations, automation, predictive
-                          analytics, campaign systems, AI evaluation, Tableau,
-                          and visualization work.
+                          Additional SQL, predictive analytics, AI evaluation,
+                          Tableau, and data visualization work.
                         </p>
                       </div>
                     </div>
