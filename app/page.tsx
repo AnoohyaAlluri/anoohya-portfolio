@@ -25,6 +25,8 @@ type FeaturedProject = {
   proof: string[];
   href?: string;
   buttonLabel?: string;
+  liveHref?: string;
+  liveButtonLabel?: string;
 };
 
 type SupportingProject = {
