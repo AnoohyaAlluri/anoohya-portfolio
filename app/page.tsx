@@ -38,6 +38,14 @@ type SupportingProject = {
   buttonLabel?: string;
 };
 
+type InternalInitiative = {
+  title: string;
+  category: string;
+  description: string;
+  tools: string[];
+  proof: string[];
+};
+
 const featuredProjects: FeaturedProject[] = [
   {
     tag: "Marketing Analytics Engineering",
@@ -57,22 +65,6 @@ const featuredProjects: FeaturedProject[] = [
     ],
     href: "https://github.com/AnoohyaAlluri/lead-intelligence-system",
     buttonLabel: "View GitHub Case Study",
-  },
-  {
-    tag: "Operations Intelligence",
-    title: "Growth & Operations Command Center",
-    description:
-      "Designed an evidence-linked leadership system for projects, KPIs, milestones, blockers, decisions, weekly execution, and executive reporting.",
-    tools: ["Google Sheets", "Apps Script", "Looker Studio", "Data Governance"],
-    status: "Case Study in Development",
-    icon: "🗂️",
-    previewClass:
-      "from-[#40577f] via-[#8fa5c8] to-[#f1c5cc]",
-    proof: [
-      "Project and KPI register",
-      "Evidence-linked reporting model",
-      "Leadership visibility framework",
-    ],
   },
   {
     tag: "SEO / AEO / GEO",
@@ -114,16 +106,27 @@ const featuredProjects: FeaturedProject[] = [
       "https://github.com/AnoohyaAlluri/luxury-rental-mls-outreach-pipeline",
     buttonLabel: "View GitHub Case Study",
   },
+];
+
+const internalInitiatives: InternalInitiative[] = [
   {
-    tag: "Paid Media Analytics",
+    title: "Growth & Operations Command Center",
+    category: "Operations Intelligence",
+    description:
+      "Designed an evidence-linked leadership system for projects, KPIs, milestones, blockers, decisions, weekly execution, and executive reporting.",
+    tools: ["Python", "Pandas", "Streamlit", "Data Governance"],
+    proof: [
+      "Project and KPI register",
+      "Risk and blocker classification",
+      "Executive reporting workflow",
+    ],
+  },
+  {
     title: "Conversion Integrity & Attribution Audit",
+    category: "Paid Media Analytics",
     description:
       "Audited platform-reported activity to distinguish qualified lead evidence from behavioral events and improve campaign measurement integrity.",
     tools: ["Google Ads", "GA4", "GTM", "Attribution"],
-    status: "Case Study in Development",
-    icon: "🎯",
-    previewClass:
-      "from-[#6c4633] via-[#c28a68] to-[#f4dfcc]",
     proof: [
       "Conversion classification model",
       "Tracking-gap diagnosis",
@@ -131,19 +134,15 @@ const featuredProjects: FeaturedProject[] = [
     ],
   },
   {
-    tag: "Business Analytics",
     title: "Maintenance Operations Intelligence",
+    category: "Business Analytics",
     description:
       "Analyzed operational work-order patterns to identify documentation gaps, cancellation risk, issue-category trends, and automation opportunities.",
     tools: ["Python", "Excel", "Tableau", "Process Analytics"],
-    status: "Dashboard Planning",
-    icon: "⚙️",
-    previewClass:
-      "from-[#3d4a47] via-[#7b918a] to-[#dfe8e4]",
     proof: [
       "Operational bottleneck analysis",
       "Data-quality gap detection",
-      "Dashboard and automation roadmap",
+      "Automation opportunity mapping",
     ],
   },
 ];
@@ -601,11 +600,10 @@ export default function Home() {
                 </div>
 
                 <p className="max-w-xl text-sm leading-7 text-[#555]">
-                  Evidence-backed systems across marketing analytics,
-                  attribution, automation, search growth, operations
-                  intelligence, and business analytics. Confidential work is
-                  represented through synthetic data, anonymized workflows, and
-                  public-safe documentation.
+                  Three public, evidence-backed case studies supported by
+                  GitHub documentation, live implementation proof, synthetic
+                  data, and public-safe workflows. Additional professional work
+                  is summarized separately as internal initiatives.
                 </p>
               </div>
 
@@ -726,6 +724,75 @@ export default function Home() {
                 ))}
               </div>
 
+              <section className="mt-14 rounded-[2rem] border border-white/70 bg-white/45 p-6 shadow-[0_18px_50px_rgba(32,51,84,0.10)] backdrop-blur-xl sm:p-8">
+                <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+                  <div>
+                    <p className="text-xs font-black uppercase tracking-[0.25em] text-[#6f86b8]">
+                      Professional work
+                    </p>
+                    <h3 className="mt-2 font-serif text-3xl font-black text-[#202020] sm:text-4xl">
+                      Selected Internal Initiatives
+                    </h3>
+                  </div>
+
+                  <p className="max-w-xl text-sm leading-6 text-[#555]">
+                    Additional systems and analyses from professional work.
+                    Confidential details are summarized without linking private
+                    company data, dashboards, or internal files.
+                  </p>
+                </div>
+
+                <div className="mt-7 grid gap-5 lg:grid-cols-3">
+                  {internalInitiatives.map((initiative) => (
+                    <article
+                      key={initiative.title}
+                      className="flex h-full flex-col rounded-[1.5rem] border border-[#e4d7c5] bg-white/80 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <p className="text-[11px] font-black uppercase tracking-[0.2em] text-[#6f86b8]">
+                          {initiative.category}
+                        </p>
+
+                        <span className="rounded-full bg-[#eef1f8] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#5f78ab]">
+                          Internal Initiative
+                        </span>
+                      </div>
+
+                      <h4 className="mt-4 font-serif text-2xl font-black leading-tight text-[#202020]">
+                        {initiative.title}
+                      </h4>
+
+                      <p className="mt-3 text-sm leading-6 text-[#555]">
+                        {initiative.description}
+                      </p>
+
+                      <div className="mt-5 space-y-2">
+                        {initiative.proof.map((item) => (
+                          <div
+                            key={item}
+                            className="flex items-start gap-2 text-sm leading-5 text-[#444]"
+                          >
+                            <span className="mt-1 text-[#6f86b8]">●</span>
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="mt-auto flex flex-wrap gap-2 pt-5">
+                        {initiative.tools.map((tool) => (
+                          <span
+                            key={tool}
+                            className="rounded-full bg-[#f5edf0] px-3 py-1 text-xs font-bold text-[#70323c]"
+                          >
+                            {tool}
+                          </span>
+                        ))}
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
               <div className="mt-14">
                 <button
                   type="button"
@@ -752,7 +819,7 @@ export default function Home() {
                           Open More Projects
                         </h3>
                         <p className="mt-2 max-w-2xl text-sm leading-6 text-[#555]">
-                          Additional SQL, Tableau, and data visualization work.
+                          Additional SQL engineering, business analytics, Tableau, and data visualization work.
                         </p>
                       </div>
                     </div>
