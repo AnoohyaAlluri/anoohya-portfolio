@@ -146,41 +146,58 @@ const featuredProjects: FeaturedProject[] = [
 
 const supportingProjects: SupportingProject[] = [
   {
-    title: "Review Generation Automation",
-    category: "Reputation Operations",
+    title: "SQL Data Warehouse",
+    category: "Data Engineering",
     description:
-      "Qualification, deduplication, send-control, and follow-up workflow for structured review outreach.",
-    tools: ["Apps Script", "QA Rules", "Email"],
+      "Designed a layered SQL data warehouse using bronze, silver, and gold architecture to transform raw source data into analytics-ready business datasets.",
+    tools: ["SQL", "ETL", "Data Modeling", "Data Warehouse"],
+    href:
+      "https://github.com/AnoohyaAlluri/sql-data-warehouse-project",
+    buttonLabel: "View GitHub",
   },
   {
-    title: "Direct Mail Campaign System",
-    category: "Campaign Operations",
+    title: "SQL Business Analytics",
+    category: "Data Analytics",
     description:
-      "Audience selection, vendor coordination, delivery tracking, CTA design, and attribution planning for owner acquisition.",
-    tools: ["Direct Mail", "Segmentation", "Attribution"],
+      "Applied SQL-based exploratory, performance, segmentation, and trend analysis to convert structured business data into decision-ready insights.",
+    tools: ["SQL", "EDA", "KPI Analysis", "Reporting"],
+    href:
+      "https://github.com/AnoohyaAlluri/sql-data-analytics-project",
+    buttonLabel: "View GitHub",
   },
   {
-    title: "AI & PropTech Vendor Evaluation",
-    category: "AI Operations",
+    title: "Retail Sales Analytics",
+    category: "Business Intelligence",
     description:
-      "Structured vendor evaluation across problem fit, implementation effort, cost, integration, risk, and scalability.",
-    tools: ["AI Evaluation", "ROI", "Risk Analysis"],
+      "Analyzed retail sales data using SQL to evaluate revenue patterns, customer behavior, product performance, and operational trends.",
+    tools: ["SQL", "Sales Analytics", "Customer Analysis", "KPIs"],
+    href:
+      "https://github.com/AnoohyaAlluri/sql_retail_sales_analytics",
+    buttonLabel: "View GitHub",
   },
   {
     title: "Campaign Prediction Models",
     category: "Predictive Analytics",
     description:
-      "Regression, classification, and segmentation work supporting targeting, forecasting, and campaign decision-making.",
-    tools: ["Python", "R", "SQL", "Machine Learning"],
+      "Built classification and segmentation models to predict campaign response, evaluate customer conversion probability, and support targeted marketing decisions.",
+    tools: ["Python", "R", "Machine Learning", "Segmentation"],
   },
   {
     title: "Tableau Dashboard Collection",
     category: "Data Visualization",
     description:
-      "Interactive dashboards and geospatial analysis supporting segmentation, regional demand analysis, and business insight communication.",
-    tools: ["Tableau", "Mapbox", "Excel"],
-    href: "https://public.tableau.com/app/profile/anoohya.allurii/vizzes",
+      "Created interactive dashboards and geospatial analyses supporting customer segmentation, regional demand analysis, and executive insight communication.",
+    tools: ["Tableau", "Mapbox", "Excel", "Data Visualization"],
+    href:
+      "https://public.tableau.com/app/profile/anoohya.allurii/vizzes",
     buttonLabel: "View Tableau",
+  },
+  {
+    title: "AI & PropTech Evaluation Framework",
+    category: "AI Operations",
+    description:
+      "Developed a structured framework for evaluating AI and property-technology tools across business fit, implementation effort, cost, integration, risk, and scalability.",
+    tools: ["AI Evaluation", "ROI Analysis", "Risk Analysis", "Operations"],
   },
 ];
 
