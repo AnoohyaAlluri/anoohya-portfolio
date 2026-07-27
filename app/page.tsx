@@ -136,7 +136,7 @@ const internalInitiatives: InternalInitiative[] = [
     title: "Growth & Operations Command Center",
     category: "Operations Intelligence",
     description:
-      "I built the operating model for a leadership command center that consolidates project health, KPI attainment, blockers, decisions, milestones, and weekly execution into one decision-support workflow.",
+      "I designed and developed the operating model for a leadership command center that consolidates project health, KPI attainment, blockers, decisions, milestones, and weekly execution into one decision-support workflow.",
     tools: ["Python", "Pandas", "Streamlit", "Data Governance"],
     proof: [
       "Project health and KPI tracking",
