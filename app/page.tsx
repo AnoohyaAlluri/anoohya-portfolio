@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const stackItems = [
   {
@@ -407,6 +407,40 @@ export default function Home() {
   };
 
   const activeWebsiteSlide = websiteProofSlides[websiteSlide];
+
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    const forceTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+
+    if (window.location.hash) {
+      window.history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search
+      );
+    }
+
+    forceTop();
+
+    const timers = [
+      window.setTimeout(forceTop, 0),
+      window.setTimeout(forceTop, 100),
+      window.setTimeout(forceTop, 300),
+      window.setTimeout(forceTop, 700),
+      window.setTimeout(forceTop, 1200),
+    ];
+
+    return () => {
+      timers.forEach((timer) => window.clearTimeout(timer));
+    };
+  }, []);
 
   return (
     <main className="min-h-screen bg-[#f7f0e6] text-[#202020]">
