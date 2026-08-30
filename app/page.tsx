@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const stackItems = [
   {
@@ -33,6 +33,7 @@ type FeaturedProject = {
   tag: string;
   title: string;
   description: string;
+  problemSolved: string;
   businessValue: string;
   tools: string[];
   status: string;
@@ -69,6 +70,8 @@ const featuredProjects: FeaturedProject[] = [
     title: "Lead Intelligence & Attribution System",
     description:
       "I engineered a lead intelligence system that standardizes fragmented acquisition data, scores match confidence, routes exceptions, validates data quality, and produces reporting-ready outputs.",
+    problemSolved:
+      "Lead records were fragmented across acquisition and operational sources, making lead origin, match quality, conversion status, and exceptions difficult to evaluate consistently.",
     businessValue:
       "Creates a more reliable view of lead origin, match quality, conversion status, and records requiring review.",
     tools: ["Python", "Pandas", "Data Quality", "Attribution"],
@@ -90,6 +93,8 @@ const featuredProjects: FeaturedProject[] = [
     title: "Local Growth & Search Authority System",
     description:
       "I designed a search growth framework connecting local SEO, answer-engine optimization, generative-engine visibility, content architecture, internal linking, structured answers, and conversion pathways.",
+    problemSolved:
+      "Search, content, trust signals, and conversion pathways were being treated as separate activities instead of one measurable local acquisition system.",
     businessValue:
       "Connects search visibility, content structure, trust, and conversion pathways into one growth framework.",
     tools: ["SEO", "AEO", "GEO", "Search Analytics"],
@@ -113,6 +118,8 @@ const featuredProjects: FeaturedProject[] = [
     title: "Luxury Rental Lead Pipeline & Outreach Automation",
     description:
       "I engineered a listing-to-outreach pipeline that cleans property data, applies qualification and suppression logic, generates campaign queues, and validates outputs before activation.",
+    problemSolved:
+      "Raw listing data required repeated manual review and suppression checks before outreach, creating inconsistency and avoidable operational effort.",
     businessValue:
       "Turns raw listing records into qualified outreach queues with consistent suppression and QA controls.",
     tools: ["Python", "Pandas", "Data Pipeline", "Pytest"],
@@ -401,40 +408,6 @@ export default function Home() {
 
   const activeWebsiteSlide = websiteProofSlides[websiteSlide];
 
-  useEffect(() => {
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-
-    const forceTop = () => {
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    };
-
-    if (window.location.hash) {
-      window.history.replaceState(
-        null,
-        "",
-        window.location.pathname + window.location.search
-      );
-    }
-
-    forceTop();
-
-    const timers = [
-      window.setTimeout(forceTop, 0),
-      window.setTimeout(forceTop, 100),
-      window.setTimeout(forceTop, 300),
-      window.setTimeout(forceTop, 700),
-      window.setTimeout(forceTop, 1200),
-    ];
-
-    return () => {
-      timers.forEach((timer) => window.clearTimeout(timer));
-    };
-  }, []);
-
   return (
     <main className="min-h-screen bg-[#f7f0e6] text-[#202020]">
       <section className="relative overflow-hidden bg-[#6f86b8] px-4 py-8 sm:px-8">
@@ -485,10 +458,10 @@ export default function Home() {
             </a>
           </nav>
 
-          <section className="grid gap-10 px-6 py-12 sm:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:py-16">
+          <section className="grid gap-10 px-6 py-12 sm:px-10 lg:grid-cols-[1.15fr_0.85fr] lg:py-16">
             <div className="flex flex-col justify-center">
               <p className="mb-4 text-sm font-black uppercase tracking-[0.24em] text-[#d36d81]">
-                Marketing Analytics | Growth Operations | Automation
+                Marketing Analytics | MarTech | Growth Operations
               </p>
 
               <h1 className="max-w-4xl font-serif text-6xl font-black leading-[0.9] tracking-tight text-[#202020] sm:text-7xl lg:text-8xl">
@@ -501,10 +474,10 @@ export default function Home() {
               </h2>
 
               <p className="mt-5 max-w-2xl text-base leading-7 text-[#3d3d3d] sm:text-lg">
-                I build measurement and automation systems that connect
-                marketing, CRM, website, and operational data. My strength is
-                moving from an unclear business problem to a reliable workflow,
-                analytical model, and decision-ready output.
+                I build measurement, attribution, and automation systems that
+                connect marketing, CRM, website, and operational data. I turn
+                fragmented data and manual workflows into reliable analytics,
+                scalable processes, and decision-ready reporting.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -521,7 +494,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="rounded-xl border border-[#203354] bg-white/70 px-6 py-3 text-center text-sm font-bold text-[#203354] transition hover:-translate-y-1 hover:bg-white"
                 >
-                  View Resume ↓
+                  View Resume ↗
                 </a>
 
                 <a
@@ -530,6 +503,27 @@ export default function Home() {
                 >
                   Contact ✉
                 </a>
+              </div>
+
+              <div className="mt-8 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
+                {[
+                  ["Measurement", "GA4 · GTM · Attribution"],
+                  ["Analytics", "SQL · Power BI · Tableau"],
+                  ["Growth", "SEO · AEO · GEO · CRO"],
+                  ["Automation", "CRM · Apps Script · AI"],
+                ].map(([title, detail]) => (
+                  <div
+                    key={title}
+                    className="rounded-2xl border border-[#e4d7c5] bg-white/70 px-4 py-4 shadow-sm"
+                  >
+                    <p className="text-xs font-black uppercase tracking-[0.14em] text-[#5f78ab]">
+                      {title}
+                    </p>
+                    <p className="mt-1 text-xs font-semibold leading-5 text-[#444]">
+                      {detail}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -585,10 +579,11 @@ export default function Home() {
                 </span>
               </h2>
               <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-[#4a4a4a]">
-                I combine analytical depth with operational execution. I can
-                identify a measurement or workflow problem, design the system
-                around it, build the analytical output, and communicate the
-                decision clearly to stakeholders.
+                I work across the full problem-solving cycle: diagnosing
+                measurement or workflow gaps, structuring the data and process,
+                building the analytical or automation solution, validating the
+                output, and translating findings into decisions stakeholders can
+                act on.
               </p>
             </div>
 
@@ -631,10 +626,9 @@ export default function Home() {
                 </div>
 
                 <p className="max-w-xl text-sm leading-7 text-[#555]">
-                  Lead intelligence, search growth, and outreach automation
-                  projects that demonstrate data engineering, measurement
-                  design, workflow logic, quality controls, and business
-                  decision support.
+                  Case studies showing how I move from a business problem to
+                  measurement design, data and workflow logic, quality controls,
+                  implementation, and decision-ready outputs.
                 </p>
               </div>
 
@@ -702,7 +696,16 @@ export default function Home() {
                         {project.description}
                       </p>
 
-                      <div className="mt-4 rounded-2xl border border-[#d8e3ea] bg-[#eef1f8]/75 p-4">
+                      <div className="mt-4 rounded-2xl border border-[#eadfce] bg-[#fffaf3]/90 p-4">
+                        <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#70323c]">
+                          Problem solved
+                        </p>
+                        <p className="mt-2 text-sm leading-6 text-[#4b3a3e]">
+                          {project.problemSolved}
+                        </p>
+                      </div>
+
+                      <div className="mt-3 rounded-2xl border border-[#d8e3ea] bg-[#eef1f8]/75 p-4">
                         <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#5f78ab]">
                           Business value
                         </p>
@@ -1433,11 +1436,11 @@ export default function Home() {
                   Professional resources
                 </p>
                 <h2 className="mt-3 font-serif text-4xl font-black sm:text-5xl">
-                  Code, Dashboards, Credentials & Profile
+                  Implementation Proof & Professional Resources
                 </h2>
                 <p className="mx-auto mt-4 max-w-3xl text-sm leading-6 text-white/85 sm:text-base">
-                  Explore my implementation work, visual analytics, professional
-                  experience, and technical background.
+                  Review the code, dashboards, case studies, credentials, and
+                  experience behind the systems presented in this portfolio.
                 </p>
               </div>
 
@@ -1478,14 +1481,15 @@ export default function Home() {
               </h2>
 
               <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-white/85">
-                I am interested in opportunities where I can combine marketing
-                analytics, automation, data systems, and executive reporting to
-                improve how teams measure performance and execute growth.
+                I am interested in Marketing Analytics, MarTech, Growth
+                Operations, and analytics-driven automation roles where I can
+                improve measurement, lead generation, reporting visibility, and
+                scalable execution.
               </p>
 
               <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap">
                 <a
-                  href="mailto:anoohyaifo@gmail.com"
+                  href="mailto:anoohyaalluri@gmail.com"
                   className="rounded-xl bg-[#f1c5cc] px-6 py-3 text-sm font-bold text-[#70323c] shadow-lg transition hover:-translate-y-1 hover:bg-[#ebb3bd]"
                 >
                   Email Me ✉
@@ -1506,7 +1510,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="rounded-xl border border-white/40 bg-white/10 px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-1 hover:bg-white/20"
                 >
-                  View Resume ↓
+                  View Resume ↗
                 </a>
               </div>
             </div>
