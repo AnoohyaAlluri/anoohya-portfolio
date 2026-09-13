@@ -16,16 +16,18 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://anoohya-portfolio.vercel.app"),
 
   title: {
-    default: "Anoohya Alluri | Marketing Analytics & Lead Generation",
+    default:
+      "Anoohya Alluri | Marketing Analytics, Lead Generation & Growth Analytics",
     template: "%s | Anoohya Alluri",
   },
 
   description:
-    "Portfolio of Anoohya Alluri, a Marketing Analytics and Lead Generation Analyst specializing in SQL, Power BI, GA4, Adobe Analytics, attribution, CRM analytics, growth analytics, automation, and conversion optimization.",
+    "Portfolio of Anoohya Alluri, a Marketing Analytics and Lead Generation Analyst specializing in SQL, Power BI, GA4, Adobe Analytics, attribution, CRM analytics, acquisition analysis, marketing automation, experimentation, and conversion optimization.",
 
   keywords: [
     "Anoohya Alluri",
     "Marketing Analytics",
+    "Marketing Analyst",
     "Marketing Data Analyst",
     "Lead Generation Analyst",
     "Growth Marketing Analyst",
@@ -38,6 +40,7 @@ export const metadata: Metadata = {
     "Marketing Attribution",
     "Conversion Funnel Analysis",
     "Customer Journey Analytics",
+    "Customer Analytics",
     "CRM Analytics",
     "Marketing Automation",
     "Campaign Analytics",
@@ -47,6 +50,8 @@ export const metadata: Metadata = {
     "Power BI",
     "DAX",
     "Power Query",
+    "Python",
+    "Advanced Excel",
     "Adobe Analytics",
     "GA4",
     "Google Analytics 4",
@@ -80,14 +85,14 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Anoohya Alluri | Marketing Analytics & Lead Generation",
+    title:
+      "Anoohya Alluri | Marketing Analytics, Lead Generation & Growth Analytics",
     description:
-      "Marketing analytics, lead generation, growth analytics, attribution, CRM automation, SQL, Power BI, GA4, Adobe Analytics, and conversion optimization portfolio.",
+      "Marketing analytics, lead generation, acquisition analytics, attribution, CRM automation, SQL, Power BI, GA4, Adobe Analytics, experimentation, and growth optimization portfolio.",
     url: "https://anoohya-portfolio.vercel.app/",
     siteName: "Anoohya Alluri Portfolio",
     locale: "en_US",
     type: "website",
-
     images: [
       {
         url: "/portfolio-preview.png",
@@ -100,16 +105,16 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Anoohya Alluri | Marketing Analytics & Lead Generation",
+    title:
+      "Anoohya Alluri | Marketing Analytics, Lead Generation & Growth Analytics",
     description:
-      "Marketing analytics, lead generation, growth analytics, attribution, CRM, SQL, Power BI, GA4, Adobe Analytics, and MarTech portfolio.",
+      "Marketing analytics, lead generation, attribution, CRM analytics, SQL, Power BI, GA4, Adobe Analytics, experimentation, and MarTech portfolio.",
     images: ["/portfolio-preview.png"],
   },
 
   robots: {
     index: true,
     follow: true,
-
     googleBot: {
       index: true,
       follow: true,
@@ -119,9 +124,8 @@ export const metadata: Metadata = {
     },
   },
 
-  category: "Marketing Analytics",
-
   applicationName: "Anoohya Alluri Portfolio",
+  category: "Marketing Analytics",
 
   referrer: "origin-when-cross-origin",
 
@@ -142,9 +146,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        {children}
-      </body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
