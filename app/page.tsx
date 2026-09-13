@@ -2,33 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-/* -------------------------------------------------------------------------- */
-/*                               AT-A-GLANCE DATA                             */
-/* -------------------------------------------------------------------------- */
-
-const heroMetrics = [
-  {
-    value: "788+",
-    label: "Historical Leads Analyzed",
-    detail: "across 10+ acquisition sources",
-  },
-  {
-    value: "109",
-    label: "Converted Leads Identified",
-    detail: "through lifecycle analysis",
-  },
-  {
-    value: "35.2%",
-    label: "High-Value Lead Conversion",
-    detail: "vs. 13.8% overall",
-  },
-  {
-    value: "231 → 40",
-    label: "Owner Inquiries Validated",
-    detail: "raw submissions to qualified intent",
-  },
-];
-
 const stackItems = [
   {
     icon: "◎",
@@ -46,19 +19,15 @@ const stackItems = [
     icon: "↗",
     title: "Prioritize Growth",
     detail:
-      "Use funnel, attribution, statistical, and behavioral analysis to identify high-value audiences and acquisition gaps.",
+      "Use funnel, attribution, statistical, and behavioral analysis to identify high value audiences and acquisition gaps.",
   },
   {
     icon: "⚙",
     title: "Automate Execution",
     detail:
-      "Build governed CRM, outreach, reporting, and lead-management workflows that reduce manual effort and improve consistency.",
+      "Build governed CRM, outreach, reporting, and lead management workflows that reduce manual effort and improve consistency.",
   },
 ];
-
-/* -------------------------------------------------------------------------- */
-/*                                 EXPERIENCE                                 */
-/* -------------------------------------------------------------------------- */
 
 type ExperienceItem = {
   role: string;
@@ -80,8 +49,8 @@ const experienceItems: ExperienceItem[] = [
       "Lead generation analytics, acquisition measurement, marketing data, attribution, CRM automation, and executive reporting.",
     proof: [
       "Built lead intelligence across 788 historical leads and 10+ acquisition sources.",
-      "Identified 109 converted leads and 91 high-value opportunities.",
-      "Validated 231 raw website submissions into 40 qualified owner-intent inquiries.",
+      "Identified 109 converted leads and 91 high value opportunities.",
+      "Validated 231 raw website submissions into 40 qualified owner intent inquiries.",
       "Developed Power BI reporting across acquisition, funnels, leasing, and nearly 2,000 managed units.",
     ],
     tools: [
@@ -123,7 +92,7 @@ const experienceItems: ExperienceItem[] = [
     location: "Hyderabad, India",
     dates: "Jan 2022 – Aug 2023",
     positioning:
-      "SQL-based marketing analysis, BI reporting, customer segmentation, Adobe Analytics, experimentation, and retention analysis.",
+      "SQL based marketing analysis, BI reporting, customer segmentation, Adobe Analytics, experimentation, and retention analysis.",
     proof: [
       "Queried and validated campaign and customer data for recurring KPI reporting.",
       "Built Power BI dashboards covering channel, funnel, customer, and campaign performance.",
@@ -140,10 +109,6 @@ const experienceItems: ExperienceItem[] = [
     ],
   },
 ];
-
-/* -------------------------------------------------------------------------- */
-/*                                  PROJECTS                                  */
-/* -------------------------------------------------------------------------- */
 
 type FeaturedProject = {
   tag: string;
@@ -189,7 +154,7 @@ const featuredProjects: FeaturedProject[] = [
     problemSolved:
       "Lead and acquisition data existed across multiple systems, making it difficult to distinguish qualified demand, evaluate source quality, and connect marketing activity to downstream outcomes.",
     businessValue:
-      "Creates a defensible view of lead quality, source performance, conversion behavior, high-value opportunities, and records requiring follow-up or validation.",
+      "Creates a defensible view of lead quality, source performance, conversion behavior, high value opportunities, and records requiring follow up or validation.",
     tools: [
       "SQL Server",
       "Power BI",
@@ -204,7 +169,7 @@ const featuredProjects: FeaturedProject[] = [
     previewClass: "from-[#203354] via-[#5f78ab] to-[#d8e3ea]",
     proof: [
       "788 leads · 10+ sources",
-      "109 converted · 91 high-value",
+      "109 converted · 91 high value",
       "231 raw → 40 validated inquiries",
     ],
     href: "https://github.com/AnoohyaAlluri/lead-intelligence-system",
@@ -212,13 +177,13 @@ const featuredProjects: FeaturedProject[] = [
   },
   {
     tag: "Marketing Measurement & Attribution",
-    title: "Cross-Channel Measurement Architecture",
+    title: "Cross Channel Measurement Architecture",
     description:
-      "I standardized conversion measurement across GA4, Google Tag Manager, Google Ads, and Meta Pixel to improve attribution quality and separate meaningful lead actions from lower-value behavioral events.",
+      "I standardized conversion measurement across GA4, Google Tag Manager, Google Ads, and Meta Pixel to improve attribution quality and separate meaningful lead actions from lower value behavioral events.",
     problemSolved:
       "Fragmented event definitions and conversion configurations reduced confidence in campaign reporting and made business outcomes difficult to interpret consistently.",
     businessValue:
-      "Improves conversion governance, attribution reliability, lead measurement, and confidence in paid-media and growth reporting.",
+      "Improves conversion governance, attribution reliability, lead measurement, and confidence in paid media and growth reporting.",
     tools: [
       "GA4",
       "Google Tag Manager",
@@ -231,15 +196,15 @@ const featuredProjects: FeaturedProject[] = [
     previewClass: "from-[#244c5a] via-[#6f9e9a] to-[#dce9df]",
     proof: [
       "10+ conversion/event configurations",
-      "High-intent conversion governance",
-      "Source-to-outcome diagnostics",
+      "High intent conversion governance",
+      "Source to outcome diagnostics",
     ],
   },
   {
     tag: "CRM & Growth Automation",
     title: "Lead Outreach & Campaign Governance System",
     description:
-      "I designed CRM-based email and lead-management workflows combining segmentation, personalization, suppression rules, deduplication, audit controls, and response tracking.",
+      "I designed CRM based email and lead management workflows combining segmentation, personalization, suppression rules, deduplication, audit controls, and response tracking.",
     problemSolved:
       "Manual outreach required repeated eligibility, duplicate, and suppression checks, increasing the risk of inconsistent targeting and duplicate contact.",
     businessValue:
@@ -256,7 +221,7 @@ const featuredProjects: FeaturedProject[] = [
     icon: "↗",
     previewClass: "from-[#51436f] via-[#8c78ad] to-[#ddd5eb]",
     proof: [
-      "201 audited first-touch emails",
+      "201 audited first touch emails",
       "177 unique prospects",
       "Deduplication · DNC · audit controls",
     ],
@@ -268,11 +233,11 @@ const featuredProjects: FeaturedProject[] = [
     tag: "SEO / AEO / GEO Analytics",
     title: "Search Growth & Conversion Analytics Framework",
     description:
-      "I connected search-query data, landing-page behavior, local intent, content architecture, conversion paths, and measurement to identify high-intent organic growth opportunities.",
+      "I connected search query data, landing page behavior, local intent, content architecture, conversion paths, and measurement to identify high intent organic growth opportunities.",
     problemSolved:
-      "Search visibility, landing-page performance, content strategy, and conversion measurement were being evaluated separately instead of as one acquisition system.",
+      "Search visibility, landing page performance, content strategy, and conversion measurement were being evaluated separately instead of as one acquisition system.",
     businessValue:
-      "Connects search visibility with user intent, page performance, conversion pathways, and measurable owner-acquisition opportunities.",
+      "Connects search visibility with user intent, page performance, conversion pathways, and measurable owner acquisition opportunities.",
     tools: [
       "Google Search Console",
       "GA4",
@@ -287,7 +252,7 @@ const featuredProjects: FeaturedProject[] = [
     previewClass: "from-[#71505d] via-[#b47f8f] to-[#f0d9df]",
     proof: [
       "SEO · AEO · GEO framework",
-      "4 high-intent website assets",
+      "4 high intent website assets",
       "1,800+ monthly search impressions",
     ],
     href:
@@ -303,7 +268,7 @@ const internalInitiatives: InternalInitiative[] = [
     title: "Executive BI & Portfolio Intelligence",
     category: "Marketing Data & BI",
     description:
-      "Developed Power BI reporting with SQL, Power Query, and DAX to connect acquisition, campaign, funnel, leasing, and portfolio-level performance into executive-ready views.",
+      "Developed Power BI reporting with SQL, Power Query, and DAX to connect acquisition, campaign, funnel, leasing, and portfolio level performance into executive ready views.",
     tools: ["SQL", "Power BI", "Power Query", "DAX"],
     proof: [
       "Acquisition and funnel reporting",
@@ -315,12 +280,12 @@ const internalInitiatives: InternalInitiative[] = [
     title: "Paid Media & Conversion Integrity",
     category: "Growth Analytics",
     description:
-      "Audited campaign measurement, distinguished business outcomes from soft platform events, and used controlled changes to diagnose media-mix and conversion-quality issues.",
+      "Audited campaign measurement, distinguished business outcomes from soft platform events, and used controlled changes to diagnose media mix and conversion quality issues.",
     tools: ["Google Ads", "GA4", "GTM", "Experimentation"],
     proof: [
-      "Conversion-quality diagnosis",
+      "Conversion quality diagnosis",
       "CTR, CPC and conversion monitoring",
-      "2 controlled paid-media / SEO tests",
+      "2 controlled paid media / SEO tests",
     ],
   },
   {
@@ -331,7 +296,7 @@ const internalInitiatives: InternalInitiative[] = [
     tools: ["Python", "Excel", "Tableau", "Process Analytics"],
     proof: [
       "Operational pattern analysis",
-      "Process-gap identification",
+      "Process gap identification",
       "Automation opportunity mapping",
     ],
   },
@@ -342,7 +307,7 @@ const supportingProjects: SupportingProject[] = [
     title: "SQL Data Warehouse",
     category: "Data Engineering",
     description:
-      "Designed a bronze, silver, and gold SQL warehouse architecture to standardize raw data and produce analytics-ready business models.",
+      "Designed a bronze, silver, and gold SQL warehouse architecture to standardize raw data and produce analytics ready business models.",
     tools: ["SQL", "ETL", "Data Modeling", "Data Warehouse"],
     href: "https://github.com/AnoohyaAlluri/sql-data-warehouse-project",
     buttonLabel: "View GitHub",
@@ -351,7 +316,7 @@ const supportingProjects: SupportingProject[] = [
     title: "SQL Business Analytics",
     category: "Data Analytics",
     description:
-      "Applied SQL to exploratory analysis, KPI evaluation, segmentation, performance diagnostics, and decision-ready business reporting.",
+      "Applied SQL to exploratory analysis, KPI evaluation, segmentation, performance diagnostics, and decision ready business reporting.",
     tools: ["SQL", "EDA", "KPI Analysis", "Segmentation"],
     href: "https://github.com/AnoohyaAlluri/sql-data-analytics-project",
     buttonLabel: "View GitHub",
@@ -367,38 +332,34 @@ const supportingProjects: SupportingProject[] = [
   },
 ];
 
-/* -------------------------------------------------------------------------- */
-/*                              WEBSITE PROOF                                 */
-/* -------------------------------------------------------------------------- */
-
 const websiteProofSlides = [
   {
     title: "Homepage UX + CTA Positioning",
     label: "Conversion Architecture",
     image: "/website/homepage-ux.png",
     caption:
-      "Reframed owner-facing hierarchy, trust signals, and CTA placement around a clearer lead-conversion path.",
+      "Reframed owner facing hierarchy, trust signals, and CTA placement around a clearer lead conversion path.",
   },
   {
     title: "Owner Journey Content Blocks",
     label: "Audience Segmentation",
     image: "/website/owner-guidance-cards.png",
     caption:
-      "Mapped distinct conversion pathways for switchers, accidental landlords, and first-time investors.",
+      "Mapped distinct conversion pathways for switchers, accidental landlords, and first time investors.",
   },
   {
     title: "LA Rental Market Resource",
     label: "SEO / AEO Content",
     image: "/website/la-market-resource.png",
     caption:
-      "Structured search-focused educational content to support discovery, decision-making, and lead capture.",
+      "Structured search focused educational content to support discovery, decision making, and lead capture.",
   },
   {
     title: "Accidental Landlord Guide",
     label: "Lead Generation",
     image: "/website/accidental-landlord-guide.png",
     caption:
-      "Built a problem-aware resource experience that moves uncertain owners toward a measurable next action.",
+      "Built a problem aware resource experience that moves uncertain owners toward a measurable next action.",
   },
   {
     title: "Guide Cover / Resource Design",
@@ -412,20 +373,16 @@ const websiteProofSlides = [
     label: "Conversion Flow",
     image: "/website/consultation-confirmation.png",
     caption:
-      "Clarified post-conversion expectations and next steps after consultation requests.",
+      "Clarified post conversion expectations and next steps after consultation requests.",
   },
   {
     title: "Santa Monica Local SEO Page",
     label: "Local Search",
     image: "/website/santa-monica-local-seo.png",
     caption:
-      "Aligned local search intent, service messaging, trust signals, and lead pathways for high-value property owners.",
+      "Aligned local search intent, service messaging, trust signals, and lead pathways for high value property owners.",
   },
 ];
-
-/* -------------------------------------------------------------------------- */
-/*                                   SKILLS                                   */
-/* -------------------------------------------------------------------------- */
 
 const toolGroups = [
   {
@@ -489,10 +446,6 @@ const toolGroups = [
   },
 ];
 
-/* -------------------------------------------------------------------------- */
-/*                                CREDENTIALS                                 */
-/* -------------------------------------------------------------------------- */
-
 const credentials = [
   {
     title: "SQL Advanced",
@@ -500,7 +453,7 @@ const credentials = [
     date: "Issued Aug 2025",
     proofType: "Verified SQL Credential",
     detail:
-      "Advanced SQL certification validating SQL querying, database logic, and analytical problem-solving.",
+      "Advanced SQL certification validating SQL querying, database logic, and analytical problem solving.",
     skills: ["SQL", "Advanced Queries", "Data Analysis"],
     href: "https://www.hackerrank.com/certificates/944c5575cd92",
   },
@@ -532,7 +485,7 @@ const credentials = [
     date: "Issued Jul 2023",
     proofType: "Statistical Analysis Training",
     detail:
-      "Training in R programming, statistical analysis, and analytical workflows for business problem-solving.",
+      "Training in R programming, statistical analysis, and analytical workflows for business problem solving.",
     skills: ["R", "Statistics", "Data Analysis"],
     href:
       "https://www.udemy.com/certificate/UC-ffd34fc5-ccfd-4cdf-a457-536fd89f85bb/",
@@ -541,9 +494,9 @@ const credentials = [
     title: "R Systems Certificate",
     issuer: "R Systems",
     date: "Professional Recognition",
-    proofType: "Go-to-Market Strategy Recognition",
+    proofType: "Go to Market Strategy Recognition",
     detail:
-      "Certificate of appreciation for customer research and development of a go-to-market strategy.",
+      "Certificate of appreciation for customer research and development of a go to market strategy.",
     skills: ["Customer Research", "GTM Strategy", "Market Analysis"],
     href: "/R-systems-certificate.pdf",
   },
@@ -562,7 +515,7 @@ const credentials = [
 const resourceLinks = [
   {
     title: "GitHub",
-    text: "Lead intelligence, SQL, automation, analytics engineering, and growth-system case studies",
+    text: "Lead intelligence, SQL, automation, analytics engineering, and growth system case studies",
     href: "https://github.com/AnoohyaAlluri",
   },
   {
@@ -581,10 +534,6 @@ const resourceLinks = [
     href: "/resume",
   },
 ];
-
-/* -------------------------------------------------------------------------- */
-/*                                  COMPONENT                                 */
-/* -------------------------------------------------------------------------- */
 
 export default function Home() {
   const [certificationsOpen, setCertificationsOpen] = useState(false);
@@ -704,10 +653,17 @@ export default function Home() {
               </h2>
 
               <p className="mt-5 max-w-3xl text-base leading-7 text-[#3d3d3d] sm:text-lg">
-                I connect <strong>SQL, Power BI, GA4/GTM, Adobe Analytics,
-                CRM, and campaign data</strong> to answer three questions:
-                <strong> Which sources create quality leads? Where does the
-                funnel break? What should we optimize next?</strong>
+                I connect{" "}
+                <strong>
+                  SQL, Power BI, GA4/GTM, Adobe Analytics, CRM, and campaign
+                  data
+                </strong>{" "}
+                to answer three questions:
+                <strong>
+                  {" "}
+                  Which sources create quality leads? Where does the funnel
+                  break? What should we optimize next?
+                </strong>
               </p>
 
               <p className="mt-4 max-w-3xl text-sm leading-6 text-[#555]">
@@ -739,25 +695,6 @@ export default function Home() {
                 >
                   Contact ✉
                 </a>
-              </div>
-
-              <div className="mt-9 grid max-w-4xl grid-cols-2 gap-3 lg:grid-cols-4">
-                {heroMetrics.map((metric) => (
-                  <div
-                    key={metric.label}
-                    className="rounded-2xl border border-[#e4d7c5] bg-white/80 p-4 shadow-sm"
-                  >
-                    <p className="font-serif text-2xl font-black text-[#203354] sm:text-3xl">
-                      {metric.value}
-                    </p>
-                    <p className="mt-1 text-xs font-black leading-4 text-[#2d2d2d]">
-                      {metric.label}
-                    </p>
-                    <p className="mt-1 text-[10px] leading-4 text-[#777]">
-                      {metric.detail}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -1083,7 +1020,6 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* ADDITIONAL SYSTEMS */}
               <section className="mt-14 rounded-[2rem] border border-white/70 bg-white/45 p-6 shadow-[0_18px_50px_rgba(32,51,84,0.10)] backdrop-blur-xl sm:p-8">
                 <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
                   <div>
@@ -1099,7 +1035,7 @@ export default function Home() {
                   <p className="max-w-xl text-sm leading-6 text-[#555]">
                     Additional analytical systems supporting executive
                     reporting, marketing performance, experimentation, and
-                    operational decision-making.
+                    operational decision making.
                   </p>
                 </div>
 
@@ -1148,7 +1084,6 @@ export default function Home() {
                 </div>
               </section>
 
-              {/* TECHNICAL PROJECTS */}
               <div className="mt-14">
                 <button
                   type="button"
@@ -1254,7 +1189,7 @@ export default function Home() {
                 </h2>
 
                 <p className="mt-5 max-w-xl text-sm leading-7 text-[#555] sm:text-base">
-                  Search intent, landing-page behavior, CTA architecture,
+                  Search intent, landing page behavior, CTA architecture,
                   audience pathways, lead capture, and conversion measurement
                   are analyzed as one connected customer journey.
                 </p>
@@ -1262,7 +1197,7 @@ export default function Home() {
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
                   {[
                     "SEO / AEO / GEO",
-                    "Landing-page analytics",
+                    "Landing page analytics",
                     "Customer journeys",
                     "Lead capture",
                     "CRO & funnel analysis",
@@ -1459,14 +1394,18 @@ export default function Home() {
                     <p className="font-serif text-2xl font-black text-[#203354]">
                       201
                     </p>
-                    <p className="text-xs font-bold">audited first-touch emails</p>
+                    <p className="text-xs font-bold">
+                      audited first touch emails
+                    </p>
                   </div>
 
                   <div className="rounded-2xl bg-[#f5edf0] p-4">
                     <p className="font-serif text-2xl font-black text-[#70323c]">
                       177
                     </p>
-                    <p className="text-xs font-bold">unique prospects reached</p>
+                    <p className="text-xs font-bold">
+                      unique prospects reached
+                    </p>
                   </div>
                 </div>
               </div>
@@ -1671,11 +1610,14 @@ export default function Home() {
               </h2>
 
               <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-white/85">
-                I am targeting <strong>Lead Generation Analyst, Growth Marketing
-                Analyst, Marketing Data Analyst, Marketing Analytics, and
-                MarTech</strong> roles where I can improve acquisition
-                measurement, lead quality, attribution, CRM workflows,
-                experimentation, and executive reporting.
+                I am targeting{" "}
+                <strong>
+                  Lead Generation Analyst, Growth Marketing Analyst, Marketing
+                  Data Analyst, Marketing Analytics, and MarTech
+                </strong>{" "}
+                roles where I can improve acquisition measurement, lead quality,
+                attribution, CRM workflows, experimentation, and executive
+                reporting.
               </p>
 
               <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap">
